@@ -1,0 +1,747 @@
+Analysis & Elaboration report for Calculadora
+Mon Apr 13 18:45:26 2020
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Parameter Settings for User Entity Instance: Top-level Entity: |calculadora
+  5. Parameter Settings for User Entity Instance: processador:Processador
+  6. Parameter Settings for User Entity Instance: processador:Processador|UC:UC
+  7. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD
+  8. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|registradorGenerico:PC
+  9. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|somaConstante:SomadorConstante
+ 10. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux1
+ 11. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|extendeSinalGenerico:Extensor
+ 12. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|somador:Somador
+ 13. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux4
+ 14. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|memoriaROM:ROM
+ 15. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs
+ 16. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux2
+ 17. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|ULA:ULA
+ 18. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux3
+ 19. Parameter Settings for User Entity Instance: memoriaRAM:RAM
+ 20. Parameter Settings for User Entity Instance: decodificador:decodificador
+ 21. Parameter Settings for User Entity Instance: interfaceLEDs:saidaLEDs
+ 22. Parameter Settings for User Entity Instance: interfaceCHAVES:entradaChaves
+ 23. Parameter Settings for User Entity Instance: doubleHex7:DISPLAY0_1
+ 24. Parameter Settings for User Entity Instance: doubleHex7:DISPLAY0_1|registradorGenerico:REG
+ 25. Parameter Settings for User Entity Instance: doubleHex7:DISPLAY2_3
+ 26. Parameter Settings for User Entity Instance: doubleHex7:DISPLAY2_3|registradorGenerico:REG
+ 27. Parameter Settings for User Entity Instance: doubleHex7:DISPLAY4_5
+ 28. Parameter Settings for User Entity Instance: doubleHex7:DISPLAY4_5|registradorGenerico:REG
+ 29. Parameter Settings for User Entity Instance: doubleHex7:DISPLAY6_7
+ 30. Parameter Settings for User Entity Instance: doubleHex7:DISPLAY6_7|registradorGenerico:REG
+ 31. Analysis & Elaboration Settings
+ 32. Port Connectivity Checks: "conversorHex7Seg:DISPLAY7"
+ 33. Port Connectivity Checks: "conversorHex7Seg:DISPLAY6"
+ 34. Port Connectivity Checks: "conversorHex7Seg:DISPLAY5"
+ 35. Port Connectivity Checks: "conversorHex7Seg:DISPLAY4"
+ 36. Port Connectivity Checks: "conversorHex7Seg:DISPLAY3"
+ 37. Port Connectivity Checks: "conversorHex7Seg:DISPLAY2"
+ 38. Port Connectivity Checks: "conversorHex7Seg:DISPLAY1"
+ 39. Port Connectivity Checks: "conversorHex7Seg:DISPLAY0"
+ 40. Port Connectivity Checks: "doubleHex7:DISPLAY0_1|registradorGenerico:REG"
+ 41. Port Connectivity Checks: "decodificador:decodificador"
+ 42. Port Connectivity Checks: "processador:Processador|fluxo_de_dados:FD|registradorGenerico:PC"
+ 43. Analysis & Elaboration Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                                   ;
++------------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status      ; Failed - Mon Apr 13 18:45:26 2020           ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; Calculadora                                 ;
+; Top-level Entity Name              ; calculadora                                 ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |calculadora ;
++-------------------+-------+-------------------------------------------------+
+; Parameter Name    ; Value ; Type                                            ;
++-------------------+-------+-------------------------------------------------+
+; DATA_WIDTH        ; 8     ; Signed Integer                                  ;
+; ADDR_WIDTH        ; 14    ; Signed Integer                                  ;
+; addrRAMWidth      ; 8     ; Signed Integer                                  ;
+; DATA_ROM_WIDTH    ; 18    ; Signed Integer                                  ;
+; OPCODE_WIDTH      ; 4     ; Signed Integer                                  ;
+; CONTROLWORD_WIDTH ; 11    ; Signed Integer                                  ;
++-------------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processador:Processador ;
++-------------------+-------+------------------------------------------+
+; Parameter Name    ; Value ; Type                                     ;
++-------------------+-------+------------------------------------------+
+; data_width        ; 8     ; Signed Integer                           ;
+; addrramwidth      ; 8     ; Signed Integer                           ;
+; opcode_width      ; 4     ; Signed Integer                           ;
+; controlword_width ; 11    ; Signed Integer                           ;
++-------------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processador:Processador|UC:UC ;
++-------------------+-------+------------------------------------------------+
+; Parameter Name    ; Value ; Type                                           ;
++-------------------+-------+------------------------------------------------+
+; opcode_width      ; 4     ; Signed Integer                                 ;
+; controlword_width ; 11    ; Signed Integer                                 ;
++-------------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD ;
++-------------------+-------+------------------------------------------------------------+
+; Parameter Name    ; Value ; Type                                                       ;
++-------------------+-------+------------------------------------------------------------+
+; datawidth         ; 8     ; Signed Integer                                             ;
+; addrwidth         ; 14    ; Signed Integer                                             ;
+; addrramwidth      ; 8     ; Signed Integer                                             ;
+; opcode_width      ; 4     ; Signed Integer                                             ;
+; controlword_width ; 11    ; Signed Integer                                             ;
+; dataromwidth      ; 18    ; Signed Integer                                             ;
++-------------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|registradorGenerico:PC ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; larguradados   ; 14    ; Signed Integer                                                                       ;
++----------------+-------+--------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|somaConstante:SomadorConstante ;
++----------------+-------+----------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                         ;
++----------------+-------+----------------------------------------------------------------------------------------------+
+; larguradados   ; 14    ; Signed Integer                                                                               ;
+; constante      ; 1     ; Signed Integer                                                                               ;
++----------------+-------+----------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux1 ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                              ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; larguradados   ; 14    ; Signed Integer                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|extendeSinalGenerico:Extensor ;
++--------------------+-------+-----------------------------------------------------------------------------------------+
+; Parameter Name     ; Value ; Type                                                                                    ;
++--------------------+-------+-----------------------------------------------------------------------------------------+
+; larguradadoentrada ; 8     ; Signed Integer                                                                          ;
+; larguradadosaida   ; 14    ; Signed Integer                                                                          ;
++--------------------+-------+-----------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|somador:Somador ;
++----------------+-------+-------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------+
+; larguradados   ; 14    ; Signed Integer                                                                ;
++----------------+-------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux4 ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                              ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; larguradados   ; 14    ; Signed Integer                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|memoriaROM:ROM ;
++----------------+-------+------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                         ;
++----------------+-------+------------------------------------------------------------------------------+
+; datawidth      ; 18    ; Signed Integer                                                               ;
+; addrwidth      ; 14    ; Signed Integer                                                               ;
+; opcode_width   ; 4     ; Signed Integer                                                               ;
++----------------+-------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs ;
++---------------------+-------+----------------------------------------------------------------------------------------+
+; Parameter Name      ; Value ; Type                                                                                   ;
++---------------------+-------+----------------------------------------------------------------------------------------+
+; larguradados        ; 8     ; Signed Integer                                                                         ;
+; larguraendbancoregs ; 3     ; Signed Integer                                                                         ;
++---------------------+-------+----------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux2 ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                              ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|ULA:ULA ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux3 ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                              ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memoriaRAM:RAM ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; datawidth      ; 8     ; Signed Integer                     ;
+; addrwidth      ; 7     ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: decodificador:decodificador ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; addr_width     ; 8     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: interfaceLEDs:saidaLEDs ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; datawidth      ; 8     ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: interfaceCHAVES:entradaChaves ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; datawidth      ; 8     ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: doubleHex7:DISPLAY0_1 ;
++--------------------+-------+---------------------------------------+
+; Parameter Name     ; Value ; Type                                  ;
++--------------------+-------+---------------------------------------+
+; larguradados       ; 8     ; Signed Integer                        ;
+; tamanhosetesegmtos ; 7     ; Signed Integer                        ;
++--------------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: doubleHex7:DISPLAY0_1|registradorGenerico:REG ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: doubleHex7:DISPLAY2_3 ;
++--------------------+-------+---------------------------------------+
+; Parameter Name     ; Value ; Type                                  ;
++--------------------+-------+---------------------------------------+
+; larguradados       ; 8     ; Signed Integer                        ;
+; tamanhosetesegmtos ; 7     ; Signed Integer                        ;
++--------------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: doubleHex7:DISPLAY2_3|registradorGenerico:REG ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: doubleHex7:DISPLAY4_5 ;
++--------------------+-------+---------------------------------------+
+; Parameter Name     ; Value ; Type                                  ;
++--------------------+-------+---------------------------------------+
+; larguradados       ; 8     ; Signed Integer                        ;
+; tamanhosetesegmtos ; 7     ; Signed Integer                        ;
++--------------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: doubleHex7:DISPLAY4_5|registradorGenerico:REG ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: doubleHex7:DISPLAY6_7 ;
++--------------------+-------+---------------------------------------+
+; Parameter Name     ; Value ; Type                                  ;
++--------------------+-------+---------------------------------------+
+; larguradados       ; 8     ; Signed Integer                        ;
+; tamanhosetesegmtos ; 7     ; Signed Integer                        ;
++--------------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: doubleHex7:DISPLAY6_7|registradorGenerico:REG ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; larguradados   ; 8     ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration Settings                                                                            ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; calculadora        ; Calculadora        ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation              ; All                ;                    ;
+; VHDL Show LMF Mapping Messages                                   ; Off                ;                    ;
+; VHDL Version                                                     ; VHDL_2008          ; VHDL_1993          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:DISPLAY7" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:DISPLAY6" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:DISPLAY5" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:DISPLAY4" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:DISPLAY3" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:DISPLAY2" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:DISPLAY1" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:DISPLAY0" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; apaga    ; Input ; Info     ; Stuck at GND            ;
+; negativo ; Input ; Info     ; Stuck at GND            ;
+; overflow ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++---------------------------------------------------------------------------+
+; Port Connectivity Checks: "doubleHex7:DISPLAY0_1|registradorGenerico:REG" ;
++------+-------+----------+-------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                         ;
++------+-------+----------+-------------------------------------------------+
+; rst  ; Input ; Info     ; Stuck at GND                                    ;
++------+-------+----------+-------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "decodificador:decodificador"                                                                   ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; habilita[10..5] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; habilita[3..2]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processador:Processador|fluxo_de_dados:FD|registradorGenerico:PC" ;
++--------+-------+----------+------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                          ;
++--------+-------+----------+------------------------------------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                                                     ;
+; rst    ; Input ; Info     ; Stuck at GND                                                     ;
++--------+-------+----------+------------------------------------------------------------------+
+
+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Elaboration
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Mon Apr 13 18:45:17 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Calculadora -c Calculadora --analysis_and_elaboration
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file muxGenerico2x1.vhd
+    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/muxGenerico2x1.vhd Line: 15
+    Info (12023): Found entity 1: muxGenerico2x1 File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/muxGenerico2x1.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file registradorGenerico.vhd
+    Info (12022): Found design unit 1: registradorGenerico-comportamento File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/registradorGenerico.vhd Line: 15
+    Info (12023): Found entity 1: registradorGenerico File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/registradorGenerico.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file somaConstante.vhdl
+    Info (12022): Found design unit 1: somaConstante-comportamento File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/somaConstante.vhdl Line: 18
+    Info (12023): Found entity 1: somaConstante File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/somaConstante.vhdl Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file somador.vhd
+    Info (12022): Found design unit 1: somador-comportamento File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/somador.vhd Line: 18
+    Info (12023): Found entity 1: somador File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/somador.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file UC.vhd
+    Info (12022): Found design unit 1: UC-comportamento File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/UC.vhd Line: 18
+    Info (12023): Found entity 1: UC File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/UC.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file memoriaROM.vhd
+    Info (12022): Found design unit 1: memoriaROM-assincrona File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/memoriaROM.vhd Line: 17
+    Info (12023): Found entity 1: memoriaROM File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/memoriaROM.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file memoriaRAM.vhd
+    Info (12022): Found design unit 1: memoriaRAM-rtl File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/memoriaRAM.vhd Line: 22
+    Info (12023): Found entity 1: memoriaRAM File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/memoriaRAM.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file interfaceLEDs.vhd
+    Info (12022): Found design unit 1: interfaceLEDs-comportamento File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/interfaceLEDs.vhd Line: 16
+    Info (12023): Found entity 1: interfaceLEDs File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/interfaceLEDs.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file interfaceCHAVES.vhd
+    Info (12022): Found design unit 1: interfaceCHAVES-comportamento File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/interfaceCHAVES.vhd Line: 15
+    Info (12023): Found entity 1: interfaceCHAVES File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/interfaceCHAVES.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file decodificador.vhd
+    Info (12022): Found design unit 1: decodificador-comportamento File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/decodificador.vhd Line: 17
+    Info (12023): Found entity 1: decodificador File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/decodificador.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file calculadora.vhd
+    Info (12022): Found design unit 1: calculadora-calculadoraArch File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/calculadora.vhd Line: 33
+    Info (12023): Found entity 1: calculadora File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/calculadora.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file bancoRegistradores.vhd
+    Info (12022): Found design unit 1: bancoRegistradores-comportamento File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/bancoRegistradores.vhd Line: 30
+    Info (12023): Found entity 1: bancoRegistradores File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/bancoRegistradores.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file ULA.vhd
+    Info (12022): Found design unit 1: ULA-comportamento File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/ULA.vhd Line: 20
+    Info (12023): Found entity 1: ULA File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/ULA.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file fluxo_de_dados.vhd
+    Info (12022): Found design unit 1: fluxo_de_dados-comportamento File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/fluxo_de_dados.vhd Line: 27
+    Info (12023): Found entity 1: fluxo_de_dados File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/fluxo_de_dados.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file extendeSinalGenerico.vhd
+    Info (12022): Found design unit 1: extendeSinalGenerico-comportamento File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/extendeSinalGenerico.vhd Line: 19
+    Info (12023): Found entity 1: extendeSinalGenerico File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/extendeSinalGenerico.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file processador.vhd
+    Info (12022): Found design unit 1: processador-processadorArch File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/processador.vhd Line: 26
+    Info (12023): Found entity 1: processador File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/processador.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file conversorHex7Seg.vhd
+    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/conversorHex7Seg.vhd Line: 17
+    Info (12023): Found entity 1: conversorHex7Seg File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/conversorHex7Seg.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file edgeDetector.vhd
+    Info (12022): Found design unit 1: edgeDetector-bordaDescida File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/edgeDetector.vhd Line: 10
+    Info (12023): Found entity 1: edgeDetector File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/edgeDetector.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file doubleHex7.vhd
+    Info (12022): Found design unit 1: doubleHex7-comportamento File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/doubleHex7.vhd Line: 18
+    Info (12023): Found entity 1: doubleHex7 File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/doubleHex7.vhd Line: 4
+Info (12127): Elaborating entity "calculadora" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at calculadora.vhd(26): used implicit default value for signal "LEDG" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/calculadora.vhd Line: 26
+Warning (10541): VHDL Signal Declaration warning at calculadora.vhd(28): used implicit default value for signal "HEX4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/calculadora.vhd Line: 28
+Warning (10541): VHDL Signal Declaration warning at calculadora.vhd(28): used implicit default value for signal "HEX5" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/calculadora.vhd Line: 28
+Warning (10873): Using initial value X (don't care) for net "LEDR[17..8]" at calculadora.vhd(25) File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/calculadora.vhd Line: 25
+Info (12128): Elaborating entity "processador" for hierarchy "processador:Processador" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/calculadora.vhd Line: 72
+Info (12128): Elaborating entity "UC" for hierarchy "processador:Processador|UC:UC" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/processador.vhd Line: 34
+Info (12128): Elaborating entity "fluxo_de_dados" for hierarchy "processador:Processador|fluxo_de_dados:FD" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/processador.vhd Line: 42
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "processador:Processador|fluxo_de_dados:FD|registradorGenerico:PC" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/fluxo_de_dados.vhd Line: 57
+Info (12128): Elaborating entity "somaConstante" for hierarchy "processador:Processador|fluxo_de_dados:FD|somaConstante:SomadorConstante" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/fluxo_de_dados.vhd Line: 66
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux1" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/fluxo_de_dados.vhd Line: 72
+Info (12128): Elaborating entity "extendeSinalGenerico" for hierarchy "processador:Processador|fluxo_de_dados:FD|extendeSinalGenerico:Extensor" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/fluxo_de_dados.vhd Line: 84
+Info (12128): Elaborating entity "somador" for hierarchy "processador:Processador|fluxo_de_dados:FD|somador:Somador" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/fluxo_de_dados.vhd Line: 95
+Info (12128): Elaborating entity "memoriaROM" for hierarchy "processador:Processador|fluxo_de_dados:FD|memoriaROM:ROM" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/fluxo_de_dados.vhd Line: 118
+Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/fluxo_de_dados.vhd Line: 130
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux2" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/fluxo_de_dados.vhd Line: 143
+Info (12128): Elaborating entity "ULA" for hierarchy "processador:Processador|fluxo_de_dados:FD|ULA:ULA" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/fluxo_de_dados.vhd Line: 155
+Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/calculadora.vhd Line: 82
+Info (12128): Elaborating entity "decodificador" for hierarchy "decodificador:decodificador" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/calculadora.vhd Line: 94
+Info (12128): Elaborating entity "interfaceLEDs" for hierarchy "interfaceLEDs:saidaLEDs" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/calculadora.vhd Line: 103
+Info (12128): Elaborating entity "interfaceCHAVES" for hierarchy "interfaceCHAVES:entradaChaves" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/calculadora.vhd Line: 111
+Info (12128): Elaborating entity "doubleHex7" for hierarchy "doubleHex7:DISPLAY0_1" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/calculadora.vhd Line: 123
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "doubleHex7:DISPLAY0_1|registradorGenerico:REG" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/doubleHex7.vhd Line: 21
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:DISPLAY0" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/calculadora.vhd Line: 158
+Error (12014): Net "HEX2[6]", which fans out to "HEX2[6]", cannot be assigned more than one value File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/calculadora.vhd Line: 28
+    Error (12015): Net is fed by "conversorHex7Seg:DISPLAY2|saida7seg[6]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/conversorHex7Seg.vhd Line: 13
+    Error (12015): Net is fed by "conversorHex7Seg:DISPLAY4|saida7seg[6]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/conversorHex7Seg.vhd Line: 13
+Error (12014): Net "HEX2[5]", which fans out to "HEX2[5]", cannot be assigned more than one value File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/calculadora.vhd Line: 28
+    Error (12015): Net is fed by "conversorHex7Seg:DISPLAY2|saida7seg[5]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/conversorHex7Seg.vhd Line: 13
+    Error (12015): Net is fed by "conversorHex7Seg:DISPLAY4|saida7seg[5]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/conversorHex7Seg.vhd Line: 13
+Error (12014): Net "HEX2[4]", which fans out to "HEX2[4]", cannot be assigned more than one value File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/calculadora.vhd Line: 28
+    Error (12015): Net is fed by "conversorHex7Seg:DISPLAY2|saida7seg[4]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/conversorHex7Seg.vhd Line: 13
+    Error (12015): Net is fed by "conversorHex7Seg:DISPLAY4|saida7seg[4]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/conversorHex7Seg.vhd Line: 13
+Error (12014): Net "HEX2[3]", which fans out to "HEX2[3]", cannot be assigned more than one value File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/calculadora.vhd Line: 28
+    Error (12015): Net is fed by "conversorHex7Seg:DISPLAY2|saida7seg[3]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/conversorHex7Seg.vhd Line: 13
+    Error (12015): Net is fed by "conversorHex7Seg:DISPLAY4|saida7seg[3]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/conversorHex7Seg.vhd Line: 13
+Error (12014): Net "HEX2[2]", which fans out to "HEX2[2]", cannot be assigned more than one value File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/calculadora.vhd Line: 28
+    Error (12015): Net is fed by "conversorHex7Seg:DISPLAY2|saida7seg[2]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/conversorHex7Seg.vhd Line: 13
+    Error (12015): Net is fed by "conversorHex7Seg:DISPLAY4|saida7seg[2]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/conversorHex7Seg.vhd Line: 13
+Error (12014): Net "HEX2[1]", which fans out to "HEX2[1]", cannot be assigned more than one value File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/calculadora.vhd Line: 28
+    Error (12015): Net is fed by "conversorHex7Seg:DISPLAY2|saida7seg[1]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/conversorHex7Seg.vhd Line: 13
+    Error (12015): Net is fed by "conversorHex7Seg:DISPLAY4|saida7seg[1]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/conversorHex7Seg.vhd Line: 13
+Error (12014): Net "HEX2[0]", which fans out to "HEX2[0]", cannot be assigned more than one value File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/calculadora.vhd Line: 28
+    Error (12015): Net is fed by "conversorHex7Seg:DISPLAY2|saida7seg[0]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/conversorHex7Seg.vhd Line: 13
+    Error (12015): Net is fed by "conversorHex7Seg:DISPLAY4|saida7seg[0]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/conversorHex7Seg.vhd Line: 13
+Error (12014): Net "HEX3[6]", which fans out to "HEX3[6]", cannot be assigned more than one value File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/calculadora.vhd Line: 28
+    Error (12015): Net is fed by "conversorHex7Seg:DISPLAY3|saida7seg[6]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/conversorHex7Seg.vhd Line: 13
+    Error (12015): Net is fed by "conversorHex7Seg:DISPLAY5|saida7seg[6]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/conversorHex7Seg.vhd Line: 13
+Error (12014): Net "HEX3[5]", which fans out to "HEX3[5]", cannot be assigned more than one value File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/calculadora.vhd Line: 28
+    Error (12015): Net is fed by "conversorHex7Seg:DISPLAY3|saida7seg[5]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/conversorHex7Seg.vhd Line: 13
+    Error (12015): Net is fed by "conversorHex7Seg:DISPLAY5|saida7seg[5]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/conversorHex7Seg.vhd Line: 13
+Error (12014): Net "HEX3[4]", which fans out to "HEX3[4]", cannot be assigned more than one value File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/calculadora.vhd Line: 28
+    Error (12015): Net is fed by "conversorHex7Seg:DISPLAY3|saida7seg[4]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/conversorHex7Seg.vhd Line: 13
+    Error (12015): Net is fed by "conversorHex7Seg:DISPLAY5|saida7seg[4]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/conversorHex7Seg.vhd Line: 13
+Error (12014): Net "HEX3[3]", which fans out to "HEX3[3]", cannot be assigned more than one value File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/calculadora.vhd Line: 28
+    Error (12015): Net is fed by "conversorHex7Seg:DISPLAY3|saida7seg[3]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/conversorHex7Seg.vhd Line: 13
+    Error (12015): Net is fed by "conversorHex7Seg:DISPLAY5|saida7seg[3]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/conversorHex7Seg.vhd Line: 13
+Error (12014): Net "HEX3[2]", which fans out to "HEX3[2]", cannot be assigned more than one value File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/calculadora.vhd Line: 28
+    Error (12015): Net is fed by "conversorHex7Seg:DISPLAY3|saida7seg[2]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/conversorHex7Seg.vhd Line: 13
+    Error (12015): Net is fed by "conversorHex7Seg:DISPLAY5|saida7seg[2]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/conversorHex7Seg.vhd Line: 13
+Error (12014): Net "HEX3[1]", which fans out to "HEX3[1]", cannot be assigned more than one value File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/calculadora.vhd Line: 28
+    Error (12015): Net is fed by "conversorHex7Seg:DISPLAY3|saida7seg[1]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/conversorHex7Seg.vhd Line: 13
+    Error (12015): Net is fed by "conversorHex7Seg:DISPLAY5|saida7seg[1]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/conversorHex7Seg.vhd Line: 13
+Error (12014): Net "HEX3[0]", which fans out to "HEX3[0]", cannot be assigned more than one value File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/calculadora.vhd Line: 28
+    Error (12015): Net is fed by "conversorHex7Seg:DISPLAY3|saida7seg[0]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/conversorHex7Seg.vhd Line: 13
+    Error (12015): Net is fed by "conversorHex7Seg:DISPLAY5|saida7seg[0]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/Projeto1/conversorHex7Seg.vhd Line: 13
+Error: Quartus Prime Analysis & Elaboration was unsuccessful. 42 errors, 4 warnings
+    Error: Peak virtual memory: 1267 megabytes
+    Error: Processing ended: Mon Apr 13 18:45:26 2020
+    Error: Elapsed time: 00:00:09
+    Error: Total CPU time (on all processors): 00:00:23
+
+

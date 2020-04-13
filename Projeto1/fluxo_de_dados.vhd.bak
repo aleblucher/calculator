@@ -1,0 +1,22 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity fluxo_de_dados is
+   generic (
+          dataWidth: natural := 8;
+          addrWidth: natural := 8;
+			 -- Utilizar o que for maior entre: dataWidth e addrWidth e somar com a quantidade de sinais de controle:
+			 dataROMWidth: natural := 8 + 7
+   );
+	port (
+		-- Entradas (placa)
+		CLOCK_50 : in STD_LOGIC;
+--		KEY: in STD_LOGIC_VECTOR(3 DOWNTO 0);
+		SW: in STD_LOGIC_VECTOR(7 DOWNTO 0);
+		
+		-- Saidas (placa)
+		LEDR	: out STD_LOGIC_VECTOR(7 DOWNTO 0) := (others => '0')
+--		LEDG  : out STD_LOGIC_VECTOR(8 DOWNTO 0) := (others => '0')
+--		HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7 : OUT STD_LOGIC_VECTOR(6 downto 0)
+	);
+end entity;

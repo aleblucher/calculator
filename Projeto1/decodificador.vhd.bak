@@ -1,0 +1,45 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity decodificador is
+  port (
+    endereco  : in std_logic_vector(7 downto 0);
+    habilita : out std_logic_vector(3 downto 0)
+  );
+end entity;
+
+architecture comportamento of decodificador is
+
+signal paginacao: 	std_logic_vector(3 downto 0);
+signal chaves:			std_logic;
+signal LEDs:			std_logic;
+signal hab0:			std_logic;
+signal hab1:			std_logic;
+signal hab2:			std_logic;
+signal hab3:			std_logic;
+  begin
+  
+	 with endereco(7 downto 6) select
+	 paginacao <=  "0001" when "00",	-- 0   ~ 63
+				      "0010" when "01",	-- 64  ~ 127
+					   "0100" when "10",	-- 128 ~ 191
+						"1000" when "11",	--	192 ~ 255
+						"0000" when others;
+					 				 
+					 
+	with endereco(5 downto 0) select
+	chaves <= '1' when "000100",	-- chaves : 132
+	'0' when others;
+	
+	
+	with endereco(5 downto 0) select
+	LEDs <= '1' when "001000",	-- LEDs : 200
+	'0' when others;
+	
+	hab0 <= paginacao(0);
+	hab1 <= paginacao(1);
+	hab2 <= paginacao(2) and chaves;
+	hab3 <= paginacao(3) and LEDs;
+	habilita <= hab3 & hab2 & hab1 & hab0; 
+	
+end architecture;
