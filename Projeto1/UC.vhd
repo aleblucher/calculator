@@ -4,7 +4,7 @@ use ieee.std_logic_1164.all;
 entity UC is
    generic (
     OPCODE_WIDTH: natural := 4;
-	 CONTROLWORD_WIDTH: natural := 11
+	 CONTROLWORD_WIDTH: natural := 12
    );
 	port
     (
@@ -30,6 +30,7 @@ constant op_not : std_logic_vector(OPCODE_WIDTH-1 downto 0) := "1000";	-- not
 constant op_xor : std_logic_vector(OPCODE_WIDTH-1 downto 0) := "1001";	-- xor
 
 
+alias sel_mux_5:				std_logic is pontosDeControle(11);
 alias sel_mux_1:				std_logic is pontosDeControle(10);
 alias hab_escrita_banco:	std_logic is pontosDeControle(9);
 alias sel_mux_2:				std_logic is pontosDeControle(8);
@@ -74,6 +75,10 @@ begin
 	
 	sel_mux_4			<= '1' when (opcode = beq and Z_out_ula = '1') 
 								else '0';
+												
+	sel_mux_5			<= '1' when (opcode = store) 
+								else '0';
+								
 								
 	read_write_ram <= read_ram & write_ram; -- read_write_ram(1) = read |  read_write_ram(0) = write
 	

@@ -9,7 +9,7 @@ entity processador is
 		addrRAMWidth: natural:= 8;
 	
 		OPCODE_WIDTH: natural := 4;
-		CONTROLWORD_WIDTH: natural := 11
+		CONTROLWORD_WIDTH: natural := 12
 	);
 	port
 	(

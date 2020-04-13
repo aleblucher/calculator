@@ -75,9 +75,9 @@ constant op_xor     : opCode_t := "1001";
         return blocoMemoria is variable tmp : blocoMemoria := (others => (others => '0'));
   begin
         -- Inicializa os endereços:
-        tmp(0) := LW & "00000010000010";  --Endereco 130 Le chave
-		  tmp(1) := sub & "00000000000001";   -- Subtrai 1
-        tmp(2) := SW & "00000011001000";  --Endereco 200 Escreve LEDs
+        tmp(0) := LW & "000" & "000" & "10000010";  --Endereco 130 Le chave
+--		  tmp(1) := sub & "00000000000001";   -- Subtrai 1
+        tmp(1) := SW & "00000011001000";  --Endereco 200 Escreve LEDs
 --		  tmp(3) := SomaImed & "00000001";   -- Soma 1
 --        tmp(4) := SW & "01000000";  --Endereco 64  Salva RAM
 --		  tmp(5) := SomaImed & "00000001";   -- Soma 1
@@ -85,7 +85,7 @@ constant op_xor     : opCode_t := "1001";
 --		  tmp(7) := LW & "01000000";  --Endereco 64  Le RAM
 --		  tmp(8) := LW & "01000001";  --Endereco 65  Le RAM
 --		  tmp(9) := SW & "11000000";  --Endereco 192 Escreve LEDs
-        tmp(3) := Jump & "00000000000000";
+--        tmp(2) := Jump & "00000000000000";
         return tmp;
     end initMemory;
 

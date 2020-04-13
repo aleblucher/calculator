@@ -8,7 +8,7 @@ entity fluxo_de_dados is
 			 addrRAMWidth: natural:= 8;
 			 
 			 OPCODE_WIDTH: natural := 4;
-			 CONTROLWORD_WIDTH: natural := 11;
+			 CONTROLWORD_WIDTH: natural := 12;
 			  
 			  -- Utilizar o que for maior entre: dataWidth e  e somar com a quantidade de sinais de controle:
 			 dataROMWidth: natural := 14 + 4			 
@@ -29,7 +29,7 @@ architecture comportamento of fluxo_de_dados is
 signal out_PC, out_mux_4, out_mux_1, out_adder1, out_extensor, out_adder2 : std_logic_vector(13 downto 0);
 signal out_bank_1, out_bank_2, out_mux_2, out_ula, out_mux_3: std_logic_vector(7 downto 0);
 signal out_rom: std_logic_vector(17 downto 0);
-	 
+signal out_mux_5:	std_logic_vector(2 downto 0);
 
 alias addr_reg_1: 		std_logic_vector is out_rom(13 downto 11);
 alias addr_reg_2: 		std_logic_vector is out_rom(10 downto 8);
@@ -38,6 +38,7 @@ alias imediato: 			std_logic_vector is out_rom(7 downto 0);
 alias op_code_out_rom: 	std_logic_vector is out_rom(17 downto 14);
 alias jump_addr: 			std_logic_vector is out_rom(13 downto 0);
 
+alias sel_mux_5:				std_logic is pontosDeControle(11);
 alias sel_mux_1:				std_logic is pontosDeControle(10);
 alias hab_escrita_banco:	std_logic is pontosDeControle(9);
 alias sel_mux_2:				std_logic is pontosDeControle(8);
@@ -130,13 +131,24 @@ begin
 	Banco_Regs: entity work.bancoRegistradores
 				port map(
 					enderecoA => addr_reg_1,
-					enderecoB => addr_reg_2,
+					enderecoB => out_mux_5,
 					enderecoC => addr_reg_3,
 					clk          => clk,
 					dadoEscritaC => out_mux_3,
 					escreveC     => hab_escrita_banco,	-- hab_escrita_banco alias da palavra de controle[x]
 					saidaA       => out_bank_1,
 					saidaB       => out_bank_2
+				);
+				
+	Mux5: entity work.muxGenerico2x1
+				generic map(
+					larguraDados => 3 
+				)
+				port map(
+					entradaA_MUX => addr_reg_2,
+					entradaB_MUX => addr_reg_3,
+					seletor_MUX  => sel_mux_5,			-- sel_mux_5 alias da palavra de controle[11]
+					saida_MUX	 => out_mux_5
 				);
 				
 					

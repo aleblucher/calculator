@@ -161,8 +161,8 @@ begin
 	 DISPLAY2 : entity work.conversorHex7seg port map (saida7seg => HEX2, dadoHex =>  dado_hex_2_3(3 downto 0));	 
 	 DISPLAY3 : entity work.conversorHex7seg port map (saida7seg => HEX3, dadoHex => dado_hex_2_3(7 downto 4));	
 	 
-	 DISPLAY4 : entity work.conversorHex7seg port map (saida7seg => HEX2, dadoHex =>  dado_hex_4_5(3 downto 0));	 
-	 DISPLAY5 : entity work.conversorHex7seg port map (saida7seg => HEX3, dadoHex =>  dado_hex_4_5(7 downto 4));	 
+	 DISPLAY4 : entity work.conversorHex7seg port map (saida7seg => HEX4, dadoHex =>  dado_hex_4_5(3 downto 0));	 
+	 DISPLAY5 : entity work.conversorHex7seg port map (saida7seg => HEX5, dadoHex =>  dado_hex_4_5(7 downto 4));	 
 	 
 	 DISPLAY6 : entity work.conversorHex7seg port map (saida7seg => HEX6, dadoHex =>  dado_hex_6_7(3 downto 0));
 	 DISPLAY7 : entity work.conversorHex7seg port map (saida7seg => HEX7, dadoHex => dado_hex_6_7(7 downto 4));
