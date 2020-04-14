@@ -18,7 +18,9 @@ entity processador is
 		barramentoLeituraDados: in  std_logic_vector(DATA_WIDTH-1 downto 0);
 		barramentoEscritaDados: out std_logic_vector(DATA_WIDTH-1 downto 0);
 		barramentoEnderecos:    out std_logic_vector(addrRAMWidth-1 downto 0);
-		barramentoControle: 		out std_logic_vector(1 downto 0)
+		barramentoControle: 		out std_logic_vector(1 downto 0);
+		programcounter: 	OUT STD_LOGIC_VECTOR(13 DOWNTO 0);
+		pontosdecontrole:	OUT STD_LOGIC_VECTOR(CONTROLWORD_WIDTH-1 downto 0)
 		
 	);
 end entity;
@@ -30,6 +32,8 @@ signal out_fd_opcode:												std_logic_vector(OPCODE_WIDTH-1 DOWNTO 0);
 
 
 begin
+
+	pontosdecontrole <= out_uc_pontosDeControle;
 
 	UC: entity work.UC
 				port map(
@@ -47,6 +51,7 @@ begin
 						dadoEscrita			=> barramentoEscritaDados,
 						endereco				=> barramentoEnderecos,
 						Z_out_ula			=> out_fd_Z,
+						programcounter		=> programcounter,
 						clk					=> clk
 				);
 

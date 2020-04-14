@@ -6,12 +6,11 @@ use ieee.numeric_std.all;
 entity calculadora is
 	Generic ( 
 		DATA_WIDTH : natural := 8;
-		ADDR_WIDTH : natural := 14; -- RAM - 14 bits/ ROM - 8 bits
 		addrRAMWidth: natural:= 8;
 		
 		DATA_ROM_WIDTH: natural := 18;
 		OPCODE_WIDTH: natural := 4;
-		CONTROLWORD_WIDTH: natural := 11
+		CONTROLWORD_WIDTH: natural := 12
 	);
 	port
 	(
@@ -24,6 +23,10 @@ entity calculadora is
 		-- Saidas (placa)
 		LEDR : out std_logic_vector(17 downto 0);-- := (others => '0');
 		LEDG : out std_logic_vector(7 downto 0);
+		
+		enderecamento: out std_logic_vector(14 downto 0);
+		programcounter: 	OUT STD_LOGIC_VECTOR(13 DOWNTO 0);
+		pontosdecontrole:	OUT STD_LOGIC_VECTOR(CONTROLWORD_WIDTH-1 downto 0);
 		
 		HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7 : OUT STD_LOGIC_VECTOR(6 downto 0) --Saida para os displays
 		
@@ -69,19 +72,24 @@ alias habilita_hex_6_7: 			std_logic is habilita(14);
 
 begin
 
+	clk <= CLOCK_50;
+--	pontosdecontrole <= 
+
 	Processador: entity work.processador
 				port map (
-					clk => CLOCK_50,
+					clk => clk,
 					barramentoLeituraDados => barramentoLeituraDados,
 					barramentoEscritaDados => barramentoEscritaDados,
 					barramentoEnderecos => barramentoEnderecos,
-					barramentoControle => barramentoControle
+					barramentoControle => barramentoControle,
+					programcounter => programcounter,
+					pontosdecontrole => pontosdecontrole
 				);
 
 
 	RAM: entity work.memoriaRAM
             port map (
-				clk => CLOCK_50, 
+				clk => clk, 
 				addr => barramentoEnderecos(6 downto 0), 
 				we => barramentoControle(0), 
 				re => barramentoControle(1), 
@@ -96,13 +104,13 @@ begin
 				endereco => barramentoEnderecos,
 				leitura 	=> barramentoControle(1), -- read
 				escrita 	=> barramentoControle(0), -- write
-				habilita => habilita
+				habilita => enderecamento
 				);
 	
 	
 	saidaLEDs: entity work.interfaceLEDs
 				port map (
-				clk => CLOCK_50, 
+				clk => clk, 
 				entrada => barramentoEscritaDados, 
 				saida => LEDR(DATA_WIDTH-1 downto 0), 
 				habilita => habilita_LED_R_0_7 
@@ -125,7 +133,7 @@ begin
 							din => barramentoEscritaDados,
 							dout => dado_hex_0_1, 
 							habilita => habilita_hex_0_1,
-							clk => CLOCK_50
+							clk => clk
 					);
 					
 	DISPLAY2_3 : entity work.doubleHex7
@@ -133,7 +141,7 @@ begin
 							din => barramentoEscritaDados,
 							dout => dado_hex_2_3, 
 							habilita => habilita_hex_2_3,
-							clk => CLOCK_50
+							clk => clk
 					);
 					
 					
@@ -142,7 +150,7 @@ begin
 							din => barramentoEscritaDados,
 							dout => dado_hex_4_5, 
 							habilita => habilita_hex_4_5,
-							clk => CLOCK_50
+							clk => clk
 					);
 					
 					
@@ -151,7 +159,7 @@ begin
 							din => barramentoEscritaDados,
 							dout => dado_hex_6_7, 
 							habilita => habilita_hex_6_7,
-							clk => CLOCK_50
+							clk => clk
 					);
 	 
 	 

@@ -20,6 +20,7 @@ entity fluxo_de_dados is
 	dadoEscrita: 		OUT STD_LOGIC_VECTOR(dataWidth-1 DOWNTO 0);
 	endereco: 			OUT STD_LOGIC_VECTOR(addrRAMWidth-1 DOWNTO 0);
 	Z_out_ula:			OUT std_logic;
+	programcounter: 	OUT STD_LOGIC_VECTOR(13 DOWNTO 0);
 	clk:					IN std_logic
 	);
 end entity;
@@ -53,13 +54,14 @@ begin
 	opcode <= op_code_out_rom;
 	endereco <= out_ula;
 	dadoEscrita <= out_bank_2;
+	programcounter <= out_PC;
 	
 
 	PC: entity work.registradorGenerico
             port map (
 					CLK => clk, 
-					DIN => out_mux_4, 
-					DOUT => out_PC, 
+					DIN => out_mux_4,
+					DOUT => out_PC,
 					ENABLE => '1', 
 					RST => '0'
 				);

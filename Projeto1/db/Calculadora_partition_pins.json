@@ -2,7 +2,96 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "programcounter[0]",
+					"strict" : false
+				},
+				{
+					"name" : "programcounter[1]",
+					"strict" : false
+				},
+				{
+					"name" : "programcounter[2]",
+					"strict" : false
+				},
+				{
+					"name" : "programcounter[3]",
+					"strict" : false
+				},
+				{
+					"name" : "programcounter[4]",
+					"strict" : false
+				},
+				{
+					"name" : "programcounter[5]",
+					"strict" : false
+				},
+				{
+					"name" : "programcounter[6]",
+					"strict" : false
+				},
+				{
+					"name" : "programcounter[7]",
+					"strict" : false
+				},
+				{
+					"name" : "programcounter[8]",
+					"strict" : false
+				},
+				{
+					"name" : "programcounter[9]",
+					"strict" : false
+				},
+				{
+					"name" : "programcounter[10]",
+					"strict" : false
+				},
+				{
+					"name" : "programcounter[11]",
+					"strict" : false
+				},
+				{
+					"name" : "programcounter[12]",
+					"strict" : false
+				},
+				{
+					"name" : "programcounter[13]",
+					"strict" : false
+				},
+				{
+					"name" : "pontosdecontrole[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pontosdecontrole[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pontosdecontrole[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pontosdecontrole[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pontosdecontrole[8]",
+					"strict" : false
+				},
+				{
+					"name" : "pontosdecontrole[9]",
+					"strict" : false
+				},
+				{
+					"name" : "pontosdecontrole[11]",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK_50",
+					"strict" : false
+				}
+			]
 		}
 	]
 }
