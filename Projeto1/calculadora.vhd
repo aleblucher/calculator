@@ -24,11 +24,20 @@ entity calculadora is
 		LEDR : out std_logic_vector(17 downto 0);-- := (others => '0');
 		LEDG : out std_logic_vector(7 downto 0);
 		
-		enderecamento: out std_logic_vector(14 downto 0);
+		enderecamento: out std_logic_vector(7 downto 0);
 		programcounter: 	OUT STD_LOGIC_VECTOR(13 DOWNTO 0);
 		pontosdecontrole:	OUT STD_LOGIC_VECTOR(CONTROLWORD_WIDTH-1 downto 0);
 		
-		HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7 : OUT STD_LOGIC_VECTOR(6 downto 0) --Saida para os displays
+		HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7 : OUT STD_LOGIC_VECTOR(6 downto 0); --Saida para os displays
+		
+					--teste
+		  bancoR3:			out std_logic_vector((3-1) downto 0);
+		  banco001:			out std_logic_vector((DATA_WIDTH-1) downto 0);
+		  saidaA          : out std_logic_vector((DATA_WIDTH -1) downto 0);
+        saidaB          : out std_logic_vector((DATA_WIDTH -1) downto 0);
+		  entradaA_ULA		: out std_logic_vector((DATA_WIDTH -1) downto 0);
+		  entradaB_ULA		: out std_logic_vector((DATA_WIDTH -1) downto 0);
+		  saida_ULA			: out std_logic_vector((DATA_WIDTH -1) downto 0)
 		
 	);
 end entity;
@@ -52,6 +61,7 @@ signal dado_hex_4_5: 														std_logic_vector(DATA_WIDTH-1 downto 0);
 signal dado_hex_6_7: 														std_logic_vector(DATA_WIDTH-1 downto 0);
 --signal out_fd
 
+signal program_counter: 													std_logic_vector(14-1 downto 0);				
 
 alias habilita_ram:					std_logic is habilita(0);
 alias habilita_chave_0_7:			std_logic is habilita(1);
@@ -71,9 +81,13 @@ alias habilita_hex_6_7: 			std_logic is habilita(14);
 
 
 begin
-
 	clk <= CLOCK_50;
---	pontosdecontrole <= 
+	
+--	Divisor:	entity work.divisorGenerico
+--				port map(
+--					clk			=> CLOCK_50, 
+--					saida_clk	=> clk
+--				);
 
 	Processador: entity work.processador
 				port map (
@@ -82,11 +96,20 @@ begin
 					barramentoEscritaDados => barramentoEscritaDados,
 					barramentoEnderecos => barramentoEnderecos,
 					barramentoControle => barramentoControle,
-					programcounter => programcounter,
-					pontosdecontrole => pontosdecontrole
+					programcounter => program_counter,
+					pontosdecontrole => pontosdecontrole,
+					bancoR3 => bancoR3,
+					banco001 => banco001,
+					saidaA => saidaA,
+					saidaB => saidaB,
+					entradaA_ULA		=> entradaA_ULA,
+					entradaB_ULA		=> entradaB_ULA,
+					saida_ULA			=> saida_ULA
+					
 				);
 
-
+			programcounter <= program_counter;
+			
 	RAM: entity work.memoriaRAM
             port map (
 				clk => clk, 
@@ -104,17 +127,28 @@ begin
 				endereco => barramentoEnderecos,
 				leitura 	=> barramentoControle(1), -- read
 				escrita 	=> barramentoControle(0), -- write
-				habilita => enderecamento
+				habilita => habilita
 				);
 	
+	enderecamento <= barramentoEnderecos;
 	
-	saidaLEDs: entity work.interfaceLEDs
+	saidaLED_Vermelhos: entity work.interfaceLEDs
 				port map (
 				clk => clk, 
 				entrada => barramentoEscritaDados, 
 				saida => LEDR(DATA_WIDTH-1 downto 0), 
 				habilita => habilita_LED_R_0_7 
 				);
+				
+	LEDG(DATA_WIDTH-1 downto 0) <= program_counter(7 downto 0);
+				
+--	saidaLED_Verdes: entity work.interfaceLEDs
+--				port map (
+--				clk => clk, 
+--				entrada => program_counter(7 downto 0), 
+--				saida => LEDG(DATA_WIDTH-1 downto 0), 
+--				habilita => habilita_LED_G_0_7 
+--				);
 
 	entradaChaves: entity work.interfaceCHAVES
 				port map (

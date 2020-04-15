@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Mon Apr 13 21:59:04 2020
+Analysis & Synthesis Status : Successful - Wed Apr 15 15:15:08 2020
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Calculadora
 Top-level Entity Name : calculadora
 Family : Cyclone IV E
-Total logic elements : 33
-    Total combinational functions : 33
-    Dedicated logic registers : 14
-Total registers : 14
-Total pins : 146
+Total logic elements : 2,048
+    Total combinational functions : 992
+    Dedicated logic registers : 1,086
+Total registers : 1086
+Total pins : 190
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

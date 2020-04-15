@@ -42,39 +42,40 @@ alias sel_mux_4:				std_logic is pontosDeControle(0);
 
 
 begin
-	 
-	sel_mux_1 			<= '1' when (opcode = jump or opcode = beq) 
-								else '0';
-							
-					
-	hab_escrita_banco <= '1' when (opcode = load) 
-								else '0';
-								
-						
-	sel_mux_2 			<= '1' when (opcode = beq or opcode = load) 
-								else '0';
-								
 
-	sel_ula	 			<= "0000" when (opcode = add) else
+
+	sel_mux_4			<= '0' when (opcode = beq and Z_out_ula = '1') 
+								else '1';
+
+	write_ram			<= '1' when (opcode = store) 
+								else '0';
+	 
+	read_ram				<= '1' when (opcode = load) 
+								else '0';
+								
+	sel_mux_3			<= '0' when (opcode = load) 
+								else '1';
+								
+	sel_ula	 			<= "0000" when (opcode = add or opcode = load or opcode = store) else
 								"0001" when (opcode = sub or opcode = beq) else
 								"0010" when (opcode = op_and) else
 								"0011" when (opcode = op_or) else
 								"0100" when (opcode = op_xor) else
 								"0101" when (opcode = op_not) else
 								"1000";
+				
+				
+	sel_mux_2 			<= '1' when (opcode = beq or opcode = load or opcode = store) 
+								else '0';
+				
+				
+	hab_escrita_banco <= '1' when (opcode = load or opcode = add or opcode = sub or opcode = op_and or opcode = op_or or opcode = op_xor or opcode = op_not) 
+								else '0';
 								
-								
-	sel_mux_3			<= '0' when (opcode = load) 
-								else '1';
 	
-	read_ram				<= '1' when (opcode = load) 
+	sel_mux_1 			<= '1' when (opcode = jump or opcode = beq) 
 								else '0';
-	
-	write_ram			<= '1' when (opcode = store) 
-								else '0';
-	
-	sel_mux_4			<= '1' when (opcode = beq and Z_out_ula = '1') 
-								else '0';
+						
 												
 	sel_mux_5			<= '1' when (opcode = store) 
 								else '0';

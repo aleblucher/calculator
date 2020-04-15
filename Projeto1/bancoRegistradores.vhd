@@ -23,7 +23,12 @@ entity bancoRegistradores is
 --
         escreveC        : in std_logic := '0';
         saidaA          : out std_logic_vector((larguraDados -1) downto 0);
-        saidaB          : out std_logic_vector((larguraDados -1) downto 0)
+        saidaB          : out std_logic_vector((larguraDados -1) downto 0);
+		  
+		  
+		  --teste
+		  bancoR3:			out std_logic_vector((larguraEndBancoRegs-1) downto 0);
+		  banco001:			out std_logic_vector((larguraDados-1) downto 0)
     );
 end entity;
 
@@ -36,6 +41,8 @@ architecture comportamento of bancoRegistradores is
     shared variable registrador : memoria_t;
 
 begin
+	bancoR3 <= enderecoC;
+	banco001 <= registrador(1);
     process(clk) is
     begin
         if (rising_edge(clk)) then

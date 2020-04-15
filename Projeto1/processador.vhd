@@ -20,7 +20,17 @@ entity processador is
 		barramentoEnderecos:    out std_logic_vector(addrRAMWidth-1 downto 0);
 		barramentoControle: 		out std_logic_vector(1 downto 0);
 		programcounter: 	OUT STD_LOGIC_VECTOR(13 DOWNTO 0);
-		pontosdecontrole:	OUT STD_LOGIC_VECTOR(CONTROLWORD_WIDTH-1 downto 0)
+		pontosdecontrole:	OUT STD_LOGIC_VECTOR(CONTROLWORD_WIDTH-1 downto 0);
+		
+		
+			--teste
+		  bancoR3:			out std_logic_vector((3-1) downto 0);
+		  banco001:			out std_logic_vector((DATA_WIDTH-1) downto 0);
+		  saidaA          : out std_logic_vector((DATA_WIDTH -1) downto 0);
+        saidaB          : out std_logic_vector((DATA_WIDTH -1) downto 0);
+		  entradaA_ULA		: out std_logic_vector((DATA_WIDTH -1) downto 0);
+		  entradaB_ULA		: out std_logic_vector((DATA_WIDTH -1) downto 0);
+		  saida_ULA			: out std_logic_vector((DATA_WIDTH -1) downto 0)
 		
 	);
 end entity;
@@ -52,7 +62,16 @@ begin
 						endereco				=> barramentoEnderecos,
 						Z_out_ula			=> out_fd_Z,
 						programcounter		=> programcounter,
-						clk					=> clk
+						clk					=> clk,
+						bancoR3				=> bancoR3,
+						banco001				=> banco001,
+						saidaA				=> saidaA,
+						saidaB				=> saidaB,
+						entradaA_ULA		=> entradaA_ULA,
+						entradaB_ULA		=> entradaB_ULA,
+						saida_ULA			=> saida_ULA
 				);
+		
+				
 
 end architecture;

@@ -78,10 +78,11 @@ constant op_xor     : opCode_t := "1001";
   --		Opcode (4 bits) + Reg3 (3 bits) + Reg1 (3 bits) + Imediato (8 bits)
   
   
-        tmp(0) := LW & "000" & "000" & "10000010";  --Endereco 130 Le chave
---		  tmp(1) := sub & "00000000000001";   -- Subtrai 1
-        tmp(1) := SW & "000" & "000" & "11001000";  --Endereco 200 Escreve LEDs
---		  tmp(3) := SomaImed & "00000001";   -- Soma 1
+        tmp(0) := LW & "001" & "000" & "10000010";  --Endereco 130 Le chave
+		  tmp(1) := add & "001" & "001" & "001" & "00000";
+        tmp(2) := SW & "001" & "000" & "11001000";  --Endereco 200 Escreve LEDs
+-- 	  tmp(3) := beq & "001" & "001" & "00000010";  -- Soma 1
+		  tmp(4) := SW & "001" & "000" & "11001101";  --Endereco 200 Escreve LEDs
 --        tmp(4) := SW & "01000000";  --Endereco 64  Salva RAM
 --		  tmp(5) := SomaImed & "00000001";   -- Soma 1
 --        tmp(6) := SW & "01000001";  --Endereco 65

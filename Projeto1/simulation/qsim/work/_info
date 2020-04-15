@@ -8,8 +8,8 @@ z2
 !i10f 100
 cModel Technology
 Z0 d/home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/simulation/qsim
-Ecalculadora
-Z1 w1586826424
+Ebancoregistradores
+Z1 w1586962264
 Z2 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 g8;l:a_bzlE?3R3d7zk3Z0
 Z3 DPx10 cycloneive 21 cycloneive_components 0 22 Yj^f[Ven<H;0LiK:6PWEg0
 Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
@@ -23,13 +23,13 @@ Z10 8Calculadora.vho
 Z11 FCalculadora.vho
 l0
 L36
-Vm96[D>f[[cFnj2Vinn8AT1
-!s100 mQF]jRDd:`cTAeV5cTYSS0
+VZ[<iB]CX0oNlg70Wj>GF`2
+!s100 5Ni`V`bdRegoQo<NjL`mh3
 Z12 OV;C;10.5b;63
 32
-Z13 !s110 1586826425
+Z13 !s110 1586962265
 !i10b 1
-Z14 !s108 1586826425.000000
+Z14 !s108 1586962265.000000
 Z15 !s90 -work|work|Calculadora.vho|
 Z16 !s107 Calculadora.vho|
 !i113 1
@@ -44,11 +44,11 @@ R6
 R7
 R8
 R9
-DEx4 work 11 calculadora 0 22 m96[D>f[[cFnj2Vinn8AT1
-l290
-L57
-Vbk0KagCeiVe4?1SPQL5iM3
-!s100 9I=e@JfZ`8^L2j?E5e@ho1
+DEx4 work 18 bancoregistradores 0 22 Z[<iB]CX0oNlg70Wj>GF`2
+l272
+L51
+VJl=hLCR6l1DiWOmz@JJ@P1
+!s100 f[BjcoR>@jUoenKR3=W8h0
 R12
 32
 R13
@@ -59,35 +59,35 @@ R16
 !i113 1
 R17
 R18
-Ecalculadora_vhd_vec_tst
-Z19 w1586826423
+Ebancoregistradores_vhd_vec_tst
+Z19 w1586962263
 R7
 R8
 R0
-Z20 8Waveform.vwf.vht
-Z21 FWaveform.vwf.vht
+Z20 8Waveform2.vwf.vht
+Z21 FWaveform2.vwf.vht
 l0
 L31
-VzDWd:2eJ8QLoTdT4_oR[J3
-!s100 XT6Wnhfg9A3?B`:aSaoJf2
+V[ge;38Y@078_f=mTV7C[F2
+!s100 37c5dm1bJTi1Bf=iX2jkN1
 R12
 32
 R13
 !i10b 1
 R14
-Z22 !s90 -work|work|Waveform.vwf.vht|
-Z23 !s107 Waveform.vwf.vht|
+Z22 !s90 -work|work|Waveform2.vwf.vht|
+Z23 !s107 Waveform2.vwf.vht|
 !i113 1
 R17
 R18
-Acalculadora_arch
+Abancoregistradores_arch
 R7
 R8
-Z24 DEx4 work 23 calculadora_vhd_vec_tst 0 22 zDWd:2eJ8QLoTdT4_oR[J3
-l72
+DEx4 work 30 bancoregistradores_vhd_vec_tst 0 22 [ge;38Y@078_f=mTV7C[F2
+l60
 L33
-VjzKTkB8?BWj23D_kL52K:3
-!s100 NAWaC4hT>R`H4m:j?DaHa3
+VIG3NAA^l@mKUojH60aeRZ0
+!s100 >AlKZUbo:z6:;nA:d;PkH1
 R12
 32
 R13
@@ -98,8 +98,98 @@ R23
 !i113 1
 R17
 R18
+Ecalculadora
+Z24 w1586967858
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R0
+R10
+R11
+l0
+L36
+VV[XNRVgnT3;>QWR0Rd?SR2
+!s100 zWNZ<Ci[9kKc1XMRGTh_O1
+R12
+32
+!s110 1586967858
+!i10b 1
+Z25 !s108 1586967858.000000
+R15
+R16
+!i113 1
+R17
+R18
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 11 calculadora 0 22 V[XNRVgnT3;>QWR0Rd?SR2
+l2174
+L64
+VNie;NMoXkhfnYS^GQ3>i<0
+!s100 :kU44mBa5=:m@eY5Sjg[T1
+R12
+32
+Z26 !s110 1586967859
+!i10b 1
+R25
+R15
+R16
+!i113 1
+R17
+R18
+Ecalculadora_vhd_vec_tst
+Z27 w1586967856
+R7
+R8
+R0
+Z28 8Waveform1.vwf.vht
+Z29 FWaveform1.vwf.vht
+l0
+L31
+VzDWd:2eJ8QLoTdT4_oR[J3
+!s100 XT6Wnhfg9A3?B`:aSaoJf2
+R12
+32
+R26
+!i10b 1
+Z30 !s108 1586967859.000000
+Z31 !s90 -work|work|Waveform1.vwf.vht|
+Z32 !s107 Waveform1.vwf.vht|
+!i113 1
+R17
+R18
+Acalculadora_arch
+R7
+R8
+Z33 DEx4 work 23 calculadora_vhd_vec_tst 0 22 zDWd:2eJ8QLoTdT4_oR[J3
+l86
+L33
+Z34 VH95ae8Oh:J50m>a<8L^O30
+Z35 !s100 QNbP?@ZC;Lz^hf;dPe?Ab3
+R12
+32
+R26
+!i10b 1
+R30
+R31
+R32
+!i113 1
+R17
+R18
 Ehard_block
-Z25 w1586824149
+Z36 w1586967240
 R4
 R2
 R6
@@ -115,9 +205,9 @@ VOgIg9T_BR7joedFDVM>H13
 !s100 A`ID_i56<Ua56=ZD=[EG=2
 R12
 32
-Z26 !s110 1586824150
+Z37 !s110 1586967241
 !i10b 1
-Z27 !s108 1586824150.000000
+Z38 !s108 1586967241.000000
 R15
 R16
 !i113 1
@@ -137,9 +227,9 @@ V`^CmQg<48W[ez[JL_5@Yn2
 !s100 2S?JL;LJ@<3:BHXTNcXS]3
 R12
 32
-R26
+R37
 !i10b 1
-R27
+R38
 R15
 R16
 !i113 1

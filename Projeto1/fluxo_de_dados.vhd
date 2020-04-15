@@ -21,7 +21,17 @@ entity fluxo_de_dados is
 	endereco: 			OUT STD_LOGIC_VECTOR(addrRAMWidth-1 DOWNTO 0);
 	Z_out_ula:			OUT std_logic;
 	programcounter: 	OUT STD_LOGIC_VECTOR(13 DOWNTO 0);
-	clk:					IN std_logic
+	clk:					IN std_logic;
+	
+	
+	--teste
+		  bancoR3:			out std_logic_vector((3-1) downto 0);
+		  banco001:			out std_logic_vector((dataWidth-1) downto 0);
+		  saidaA          : out std_logic_vector((dataWidth -1) downto 0);
+        saidaB          : out std_logic_vector((dataWidth -1) downto 0);
+		  entradaA_ULA		: out std_logic_vector((dataWidth -1) downto 0);
+		  entradaB_ULA		: out std_logic_vector((dataWidth -1) downto 0);
+		  saida_ULA			: out std_logic_vector((dataWidth -1) downto 0)
 	);
 end entity;
 
@@ -32,9 +42,9 @@ signal out_bank_1, out_bank_2, out_mux_2, out_ula, out_mux_3: std_logic_vector(7
 signal out_rom: std_logic_vector(17 downto 0);
 signal out_mux_5:	std_logic_vector(2 downto 0);
 
-alias addr_reg_1: 		std_logic_vector is out_rom(13 downto 11);
-alias addr_reg_2: 		std_logic_vector is out_rom(10 downto 8);
-alias addr_reg_3:			std_logic_vector is out_rom(7 downto 5);
+alias addr_reg_3: 		std_logic_vector is out_rom(13 downto 11);
+alias addr_reg_1: 		std_logic_vector is out_rom(10 downto 8);
+alias addr_reg_2:			std_logic_vector is out_rom(7 downto 5);
 alias imediato: 			std_logic_vector is out_rom(7 downto 0);
 alias op_code_out_rom: 	std_logic_vector is out_rom(17 downto 14);
 alias jump_addr: 			std_logic_vector is out_rom(13 downto 0);
@@ -139,8 +149,13 @@ begin
 					dadoEscritaC => out_mux_3,
 					escreveC     => hab_escrita_banco,	-- hab_escrita_banco alias da palavra de controle[x]
 					saidaA       => out_bank_1,
-					saidaB       => out_bank_2
+					saidaB       => out_bank_2, 
+					bancoR3			=> bancoR3,
+					banco001			=> banco001
 				);
+				
+				saidaA <= out_bank_1;
+				saidaB <= out_bank_2;
 				
 	Mux5: entity work.muxGenerico2x1
 				generic map(
@@ -177,6 +192,10 @@ begin
             saida   => out_ula,
             Z   => Z_out_ula
         );
+		  
+	entradaA_ULA <=  out_bank_1;
+	entradaB_ULA <=  out_mux_2;
+	saida_ULA	 <= out_ula;
 	
 	Mux3: entity work.muxGenerico2x1
 				generic map(
