@@ -40,7 +40,7 @@ Abaixo está representada todas as instruções e suas sintaxes:
 | Not       | R | 0101          | R3 = ! R1     |
 | Jump      | J | 0010          | PC = jumpAddr                                         |
 | Load      | I | 1000          | R3 (dest) = M[Imm + R1]                                           |
-| Store     | I | 1000          | M[R1+Imm] = R3 (fonte)                                          |
+| Store     | I | 0101          | M[R1+Imm] = R3 (fonte)                                          |
 | Beq       | I | 0011          | if R3 = R1: {PC = PC + 1 + branchAddr} else: {PC = PC + 1}|
 
 
