@@ -43,7 +43,7 @@ alias sel_mux_4:				std_logic is pontosDeControle(0);
 
 begin
 
-
+   --- 
 	sel_mux_4			<= '0' when (opcode = beq and Z_out_ula = '1') 
 								else '1';
 
@@ -65,7 +65,7 @@ begin
 								"1000";
 				
 				
-	sel_mux_2 			<= '1' when (opcode = beq or opcode = load or opcode = store) 
+	sel_mux_2 			<= '1' when (opcode = load or opcode = store)
 								else '0';
 				
 				
@@ -73,7 +73,7 @@ begin
 								else '0';
 								
 	
-	sel_mux_1 			<= '1' when (opcode = jump or opcode = beq) 
+	sel_mux_1 			<= '1' when (opcode = jump) 
 								else '0';
 						
 												

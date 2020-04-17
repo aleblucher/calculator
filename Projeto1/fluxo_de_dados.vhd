@@ -185,7 +185,7 @@ begin
 				)
 				port map(
 					entradaA_MUX => out_bank_2,
-					entradaB_MUX => imediato,
+					entradaB_MUX => imediato, 
 					seletor_MUX  => sel_mux_2,			-- sel_mux_2 alias da palavra de controle[x]
 					saida_MUX	 => out_mux_2
 				);

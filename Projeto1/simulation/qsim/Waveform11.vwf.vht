@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "04/16/2020 23:43:16"
+-- Generated on "04/17/2020 00:48:48"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          calculadora
 -- 
@@ -54,6 +54,7 @@ SIGNAL LEDG : STD_LOGIC_VECTOR(8 DOWNTO 0);
 SIGNAL LEDR : STD_LOGIC_VECTOR(17 DOWNTO 0);
 SIGNAL pontosdecontrole : STD_LOGIC_VECTOR(11 DOWNTO 0);
 SIGNAL programcounter : STD_LOGIC_VECTOR(13 DOWNTO 0);
+SIGNAL saida_somador : STD_LOGIC_VECTOR(13 DOWNTO 0);
 SIGNAL saida_ULA : STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL saidaA : STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL saidaB : STD_LOGIC_VECTOR(7 DOWNTO 0);
@@ -83,6 +84,7 @@ COMPONENT calculadora
 	LEDR : OUT STD_LOGIC_VECTOR(17 DOWNTO 0);
 	pontosdecontrole : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
 	programcounter : OUT STD_LOGIC_VECTOR(13 DOWNTO 0);
+	saida_somador : OUT STD_LOGIC_VECTOR(13 DOWNTO 0);
 	saida_ULA : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
 	saidaA : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
 	saidaB : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
@@ -116,6 +118,7 @@ BEGIN
 	LEDR => LEDR,
 	pontosdecontrole => pontosdecontrole,
 	programcounter => programcounter,
+	saida_somador => saida_somador,
 	saida_ULA => saida_ULA,
 	saidaA => saidaA,
 	saidaB => saidaB,

@@ -2550,6 +2550,156 @@ GROUP("perif")
 	MEMBERS = "HEX0", "HEX1", "HEX2", "HEX3", "HEX4", "HEX5", "HEX6", "HEX7", "KEY", "LEDG", "LEDR";
 }
 
+SIGNAL("saida_somador")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 14;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("saida_somador[13]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "saida_somador";
+}
+
+SIGNAL("saida_somador[12]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "saida_somador";
+}
+
+SIGNAL("saida_somador[11]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "saida_somador";
+}
+
+SIGNAL("saida_somador[10]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "saida_somador";
+}
+
+SIGNAL("saida_somador[9]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "saida_somador";
+}
+
+SIGNAL("saida_somador[8]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "saida_somador";
+}
+
+SIGNAL("saida_somador[7]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "saida_somador";
+}
+
+SIGNAL("saida_somador[6]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "saida_somador";
+}
+
+SIGNAL("saida_somador[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "saida_somador";
+}
+
+SIGNAL("saida_somador[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "saida_somador";
+}
+
+SIGNAL("saida_somador[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "saida_somador";
+}
+
+SIGNAL("saida_somador[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "saida_somador";
+}
+
+SIGNAL("saida_somador[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "saida_somador";
+}
+
+SIGNAL("saida_somador[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "saida_somador";
+}
+
 TRANSITION_LIST("banco003[7]")
 {
 	NODE
@@ -4545,6 +4695,132 @@ TRANSITION_LIST("SW[0]")
 }
 
 TRANSITION_LIST("Z_out_ula")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("saida_somador[13]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("saida_somador[12]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("saida_somador[11]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("saida_somador[10]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("saida_somador[9]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("saida_somador[8]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("saida_somador[7]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("saida_somador[6]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("saida_somador[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("saida_somador[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("saida_somador[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("saida_somador[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("saida_somador[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("saida_somador[0]")
 {
 	NODE
 	{
@@ -7040,6 +7316,156 @@ DISPLAY_LINE
 	RADIX = Binary;
 	TREE_INDEX = 247;
 	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "saida_somador";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 248;
+	TREE_LEVEL = 0;
+	CHILDREN = 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "saida_somador[13]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 249;
+	TREE_LEVEL = 1;
+	PARENT = 248;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "saida_somador[12]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 250;
+	TREE_LEVEL = 1;
+	PARENT = 248;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "saida_somador[11]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 251;
+	TREE_LEVEL = 1;
+	PARENT = 248;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "saida_somador[10]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 252;
+	TREE_LEVEL = 1;
+	PARENT = 248;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "saida_somador[9]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 253;
+	TREE_LEVEL = 1;
+	PARENT = 248;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "saida_somador[8]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 254;
+	TREE_LEVEL = 1;
+	PARENT = 248;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "saida_somador[7]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 255;
+	TREE_LEVEL = 1;
+	PARENT = 248;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "saida_somador[6]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 256;
+	TREE_LEVEL = 1;
+	PARENT = 248;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "saida_somador[5]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 257;
+	TREE_LEVEL = 1;
+	PARENT = 248;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "saida_somador[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 258;
+	TREE_LEVEL = 1;
+	PARENT = 248;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "saida_somador[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 259;
+	TREE_LEVEL = 1;
+	PARENT = 248;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "saida_somador[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 260;
+	TREE_LEVEL = 1;
+	PARENT = 248;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "saida_somador[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 261;
+	TREE_LEVEL = 1;
+	PARENT = 248;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "saida_somador[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 262;
+	TREE_LEVEL = 1;
+	PARENT = 248;
 }
 
 TIME_BAR
