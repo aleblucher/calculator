@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Calculadora
-Wed Apr 15 15:15:08 2020
+Thu Apr 16 19:32:26 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,30 +13,30 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: Top-level Entity: |calculadora
- 13. Parameter Settings for User Entity Instance: processador:Processador
- 14. Parameter Settings for User Entity Instance: processador:Processador|UC:UC
- 15. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD
- 16. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|registradorGenerico:PC
- 17. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|somaConstante:SomadorConstante
- 18. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux1
- 19. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|extendeSinalGenerico:Extensor
- 20. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|somador:Somador
- 21. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux4
- 22. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|memoriaROM:ROM
- 23. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs
- 24. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux5
- 25. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux2
- 26. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|ULA:ULA
- 27. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux3
- 28. Parameter Settings for User Entity Instance: memoriaRAM:RAM
- 29. Parameter Settings for User Entity Instance: decodificador:decodificador
- 30. Parameter Settings for User Entity Instance: interfaceLEDs:saidaLED_Vermelhos
- 31. Parameter Settings for User Entity Instance: interfaceCHAVES:entradaChaves
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |calculadora
+ 11. Parameter Settings for User Entity Instance: processador:Processador
+ 12. Parameter Settings for User Entity Instance: processador:Processador|UC:UC
+ 13. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD
+ 14. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|registradorGenerico:PC
+ 15. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|somaConstante:SomadorConstante
+ 16. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux1
+ 17. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|extendeSinalGenerico:Extensor
+ 18. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux4
+ 19. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|memoriaROM:ROM
+ 20. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs
+ 21. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux5
+ 22. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux2
+ 23. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|ULA:ULA
+ 24. Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux3
+ 25. Parameter Settings for User Entity Instance: memoriaRAM:RAM
+ 26. Parameter Settings for User Entity Instance: decodificador:decodificador
+ 27. Parameter Settings for User Entity Instance: interfaceLEDs:saidaLED_Vermelhos
+ 28. Parameter Settings for User Entity Instance: interfaceCHAVES:entradaChaves_0_7
+ 29. Parameter Settings for User Entity Instance: interfaceCHAVES:entradaChaves_8_15
+ 30. Parameter Settings for User Entity Instance: interfaceCHAVES:entradaChaves_16_17
+ 31. Parameter Settings for User Entity Instance: button:Botao
  32. Parameter Settings for User Entity Instance: doubleHex7:DISPLAY0_1
  33. Parameter Settings for User Entity Instance: doubleHex7:DISPLAY0_1|registradorGenerico:REG
  34. Parameter Settings for User Entity Instance: doubleHex7:DISPLAY2_3
@@ -45,21 +45,22 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  37. Parameter Settings for User Entity Instance: doubleHex7:DISPLAY4_5|registradorGenerico:REG
  38. Parameter Settings for User Entity Instance: doubleHex7:DISPLAY6_7
  39. Parameter Settings for User Entity Instance: doubleHex7:DISPLAY6_7|registradorGenerico:REG
- 40. Parameter Settings for Inferred Entity Instance: processador:Processador|fluxo_de_dados:FD|ULA:ULA|lpm_add_sub:Add0
- 41. Port Connectivity Checks: "conversorHex7Seg:DISPLAY7"
- 42. Port Connectivity Checks: "conversorHex7Seg:DISPLAY6"
- 43. Port Connectivity Checks: "conversorHex7Seg:DISPLAY5"
- 44. Port Connectivity Checks: "conversorHex7Seg:DISPLAY4"
- 45. Port Connectivity Checks: "conversorHex7Seg:DISPLAY3"
- 46. Port Connectivity Checks: "conversorHex7Seg:DISPLAY2"
- 47. Port Connectivity Checks: "conversorHex7Seg:DISPLAY1"
- 48. Port Connectivity Checks: "conversorHex7Seg:DISPLAY0"
- 49. Port Connectivity Checks: "doubleHex7:DISPLAY0_1|registradorGenerico:REG"
- 50. Port Connectivity Checks: "decodificador:decodificador"
- 51. Port Connectivity Checks: "processador:Processador|fluxo_de_dados:FD|registradorGenerico:PC"
- 52. Post-Synthesis Netlist Statistics for Top Partition
- 53. Elapsed Time Per Partition
- 54. Analysis & Synthesis Messages
+ 40. Port Connectivity Checks: "conversorHex7Seg:DISPLAY7"
+ 41. Port Connectivity Checks: "conversorHex7Seg:DISPLAY6"
+ 42. Port Connectivity Checks: "conversorHex7Seg:DISPLAY5"
+ 43. Port Connectivity Checks: "conversorHex7Seg:DISPLAY4"
+ 44. Port Connectivity Checks: "conversorHex7Seg:DISPLAY3"
+ 45. Port Connectivity Checks: "conversorHex7Seg:DISPLAY2"
+ 46. Port Connectivity Checks: "conversorHex7Seg:DISPLAY1"
+ 47. Port Connectivity Checks: "conversorHex7Seg:DISPLAY0"
+ 48. Port Connectivity Checks: "doubleHex7:DISPLAY0_1|registradorGenerico:REG"
+ 49. Port Connectivity Checks: "button:Botao"
+ 50. Port Connectivity Checks: "interfaceCHAVES:entradaChaves_16_17"
+ 51. Port Connectivity Checks: "decodificador:decodificador"
+ 52. Port Connectivity Checks: "processador:Processador|fluxo_de_dados:FD|registradorGenerico:PC"
+ 53. Post-Synthesis Netlist Statistics for Top Partition
+ 54. Elapsed Time Per Partition
+ 55. Analysis & Synthesis Messages
 
 
 
@@ -85,16 +86,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Apr 15 15:15:08 2020       ;
+; Analysis & Synthesis Status        ; Successful - Thu Apr 16 19:32:26 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Calculadora                                 ;
 ; Top-level Entity Name              ; calculadora                                 ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 2,048                                       ;
-;     Total combinational functions  ; 992                                         ;
-;     Dedicated logic registers      ; 1,086                                       ;
-; Total registers                    ; 1086                                        ;
-; Total pins                         ; 190                                         ;
+; Total logic elements               ; 2,218                                       ;
+;     Total combinational functions  ; 1,106                                       ;
+;     Dedicated logic registers      ; 1,142                                       ;
+; Total registers                    ; 1142                                        ;
+; Total pins                         ; 208                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -204,45 +205,37 @@ refer to the applicable agreement for further details.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.1%      ;
-;     Processor 3            ;   0.1%      ;
+;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
 ;     Processor 5            ;   0.0%      ;
 ;     Processor 6            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                         ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                     ; Library ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------+---------+
-; muxGenerico2x1.vhd               ; yes             ; User VHDL File               ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/muxGenerico2x1.vhd       ;         ;
-; registradorGenerico.vhd          ; yes             ; User VHDL File               ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/registradorGenerico.vhd  ;         ;
-; somaConstante.vhdl               ; yes             ; User VHDL File               ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/somaConstante.vhdl       ;         ;
-; somador.vhd                      ; yes             ; User VHDL File               ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/somador.vhd              ;         ;
-; UC.vhd                           ; yes             ; User VHDL File               ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/UC.vhd                   ;         ;
-; memoriaROM.vhd                   ; yes             ; User VHDL File               ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/memoriaROM.vhd           ;         ;
-; memoriaRAM.vhd                   ; yes             ; User VHDL File               ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/memoriaRAM.vhd           ;         ;
-; interfaceLEDs.vhd                ; yes             ; User VHDL File               ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/interfaceLEDs.vhd        ;         ;
-; interfaceCHAVES.vhd              ; yes             ; User VHDL File               ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/interfaceCHAVES.vhd      ;         ;
-; decodificador.vhd                ; yes             ; User VHDL File               ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/decodificador.vhd        ;         ;
-; calculadora.vhd                  ; yes             ; User VHDL File               ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd          ;         ;
-; bancoRegistradores.vhd           ; yes             ; User VHDL File               ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/bancoRegistradores.vhd   ;         ;
-; ULA.vhd                          ; yes             ; User VHDL File               ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/ULA.vhd                  ;         ;
-; fluxo_de_dados.vhd               ; yes             ; User VHDL File               ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/fluxo_de_dados.vhd       ;         ;
-; extendeSinalGenerico.vhd         ; yes             ; User VHDL File               ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/extendeSinalGenerico.vhd ;         ;
-; processador.vhd                  ; yes             ; User VHDL File               ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/processador.vhd          ;         ;
-; conversorHex7Seg.vhd             ; yes             ; User VHDL File               ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/conversorHex7Seg.vhd     ;         ;
-; doubleHex7.vhd                   ; yes             ; User VHDL File               ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/doubleHex7.vhd           ;         ;
-; lpm_add_sub.tdf                  ; yes             ; Megafunction                 ; /home/alessandrab/intelFPGA_lite/18.1/quartus/libraries/megafunctions/lpm_add_sub.tdf            ;         ;
-; addcore.inc                      ; yes             ; Megafunction                 ; /home/alessandrab/intelFPGA_lite/18.1/quartus/libraries/megafunctions/addcore.inc                ;         ;
-; look_add.inc                     ; yes             ; Megafunction                 ; /home/alessandrab/intelFPGA_lite/18.1/quartus/libraries/megafunctions/look_add.inc               ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                 ; /home/alessandrab/intelFPGA_lite/18.1/quartus/libraries/megafunctions/bypassff.inc               ;         ;
-; altshift.inc                     ; yes             ; Megafunction                 ; /home/alessandrab/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altshift.inc               ;         ;
-; alt_stratix_add_sub.inc          ; yes             ; Megafunction                 ; /home/alessandrab/intelFPGA_lite/18.1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc    ;         ;
-; aglobal181.inc                   ; yes             ; Megafunction                 ; /home/alessandrab/intelFPGA_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc             ;         ;
-; db/add_sub_cui.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/db/add_sub_cui.tdf       ;         ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                            ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                     ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------+---------+
+; muxGenerico2x1.vhd               ; yes             ; User VHDL File  ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/muxGenerico2x1.vhd       ;         ;
+; registradorGenerico.vhd          ; yes             ; User VHDL File  ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/registradorGenerico.vhd  ;         ;
+; somaConstante.vhdl               ; yes             ; User VHDL File  ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/somaConstante.vhdl       ;         ;
+; UC.vhd                           ; yes             ; User VHDL File  ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/UC.vhd                   ;         ;
+; memoriaROM.vhd                   ; yes             ; User VHDL File  ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/memoriaROM.vhd           ;         ;
+; memoriaRAM.vhd                   ; yes             ; User VHDL File  ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/memoriaRAM.vhd           ;         ;
+; interfaceLEDs.vhd                ; yes             ; User VHDL File  ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/interfaceLEDs.vhd        ;         ;
+; interfaceCHAVES.vhd              ; yes             ; User VHDL File  ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/interfaceCHAVES.vhd      ;         ;
+; decodificador.vhd                ; yes             ; User VHDL File  ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/decodificador.vhd        ;         ;
+; calculadora.vhd                  ; yes             ; User VHDL File  ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd          ;         ;
+; bancoRegistradores.vhd           ; yes             ; User VHDL File  ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/bancoRegistradores.vhd   ;         ;
+; ULA.vhd                          ; yes             ; User VHDL File  ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/ULA.vhd                  ;         ;
+; fluxo_de_dados.vhd               ; yes             ; User VHDL File  ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/fluxo_de_dados.vhd       ;         ;
+; extendeSinalGenerico.vhd         ; yes             ; User VHDL File  ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/extendeSinalGenerico.vhd ;         ;
+; processador.vhd                  ; yes             ; User VHDL File  ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/processador.vhd          ;         ;
+; conversorHex7Seg.vhd             ; yes             ; User VHDL File  ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/conversorHex7Seg.vhd     ;         ;
+; doubleHex7.vhd                   ; yes             ; User VHDL File  ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/doubleHex7.vhd           ;         ;
+; button.vhd                       ; yes             ; User VHDL File  ; /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/button.vhd               ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -250,155 +243,71 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 2,048          ;
+; Estimated Total logic elements              ; 2,218          ;
 ;                                             ;                ;
-; Total combinational functions               ; 992            ;
+; Total combinational functions               ; 1106           ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 823            ;
-;     -- 3 input functions                    ; 99             ;
-;     -- <=2 input functions                  ; 70             ;
+;     -- 4 input functions                    ; 951            ;
+;     -- 3 input functions                    ; 89             ;
+;     -- <=2 input functions                  ; 66             ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 971            ;
+;     -- normal mode                          ; 1085           ;
 ;     -- arithmetic mode                      ; 21             ;
 ;                                             ;                ;
-; Total registers                             ; 1086           ;
-;     -- Dedicated logic registers            ; 1086           ;
+; Total registers                             ; 1142           ;
+;     -- Dedicated logic registers            ; 1142           ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
-; I/O pins                                    ; 190            ;
+; I/O pins                                    ; 208            ;
 ;                                             ;                ;
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 1086           ;
-; Total fan-out                               ; 7328           ;
-; Average fan-out                             ; 2.98           ;
+; Maximum fan-out                             ; 1142           ;
+; Total fan-out                               ; 8008           ;
+; Average fan-out                             ; 3.01           ;
 +---------------------------------------------+----------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                      ;
-+---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node                  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                        ; Entity Name         ; Library Name ;
-+---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |calculadora                                ; 992 (0)             ; 1086 (0)                  ; 0           ; 0            ; 0       ; 0         ; 190  ; 0            ; |calculadora                                                                                               ; calculadora         ; work         ;
-;    |conversorHex7Seg:DISPLAY0|              ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|conversorHex7Seg:DISPLAY0                                                                     ; conversorHex7Seg    ; work         ;
-;    |conversorHex7Seg:DISPLAY1|              ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|conversorHex7Seg:DISPLAY1                                                                     ; conversorHex7Seg    ; work         ;
-;    |conversorHex7Seg:DISPLAY2|              ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|conversorHex7Seg:DISPLAY2                                                                     ; conversorHex7Seg    ; work         ;
-;    |conversorHex7Seg:DISPLAY3|              ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|conversorHex7Seg:DISPLAY3                                                                     ; conversorHex7Seg    ; work         ;
-;    |conversorHex7Seg:DISPLAY4|              ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|conversorHex7Seg:DISPLAY4                                                                     ; conversorHex7Seg    ; work         ;
-;    |conversorHex7Seg:DISPLAY5|              ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|conversorHex7Seg:DISPLAY5                                                                     ; conversorHex7Seg    ; work         ;
-;    |conversorHex7Seg:DISPLAY6|              ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|conversorHex7Seg:DISPLAY6                                                                     ; conversorHex7Seg    ; work         ;
-;    |conversorHex7Seg:DISPLAY7|              ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|conversorHex7Seg:DISPLAY7                                                                     ; conversorHex7Seg    ; work         ;
-;    |decodificador:decodificador|            ; 13 (13)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|decodificador:decodificador                                                                   ; decodificador       ; work         ;
-;    |doubleHex7:DISPLAY0_1|                  ; 0 (0)               ; 8 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|doubleHex7:DISPLAY0_1                                                                         ; doubleHex7          ; work         ;
-;       |registradorGenerico:REG|             ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|doubleHex7:DISPLAY0_1|registradorGenerico:REG                                                 ; registradorGenerico ; work         ;
-;    |doubleHex7:DISPLAY2_3|                  ; 0 (0)               ; 8 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|doubleHex7:DISPLAY2_3                                                                         ; doubleHex7          ; work         ;
-;       |registradorGenerico:REG|             ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|doubleHex7:DISPLAY2_3|registradorGenerico:REG                                                 ; registradorGenerico ; work         ;
-;    |doubleHex7:DISPLAY4_5|                  ; 0 (0)               ; 8 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|doubleHex7:DISPLAY4_5                                                                         ; doubleHex7          ; work         ;
-;       |registradorGenerico:REG|             ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|doubleHex7:DISPLAY4_5|registradorGenerico:REG                                                 ; registradorGenerico ; work         ;
-;    |doubleHex7:DISPLAY6_7|                  ; 0 (0)               ; 8 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|doubleHex7:DISPLAY6_7                                                                         ; doubleHex7          ; work         ;
-;       |registradorGenerico:REG|             ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|doubleHex7:DISPLAY6_7|registradorGenerico:REG                                                 ; registradorGenerico ; work         ;
-;    |interfaceLEDs:saidaLED_Vermelhos|       ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|interfaceLEDs:saidaLED_Vermelhos                                                              ; interfaceLEDs       ; work         ;
-;    |memoriaRAM:RAM|                         ; 831 (831)           ; 1024 (1024)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|memoriaRAM:RAM                                                                                ; memoriaRAM          ; work         ;
-;    |processador:Processador|                ; 92 (0)              ; 22 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador                                                                       ; processador         ; work         ;
-;       |UC:UC|                               ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|UC:UC                                                                 ; UC                  ; work         ;
-;       |fluxo_de_dados:FD|                   ; 88 (0)              ; 22 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|fluxo_de_dados:FD                                                     ; fluxo_de_dados      ; work         ;
-;          |ULA:ULA|                          ; 20 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|fluxo_de_dados:FD|ULA:ULA                                             ; ULA                 ; work         ;
-;             |lpm_add_sub:Add0|              ; 20 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|fluxo_de_dados:FD|ULA:ULA|lpm_add_sub:Add0                            ; lpm_add_sub         ; work         ;
-;                |add_sub_cui:auto_generated| ; 20 (20)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|fluxo_de_dados:FD|ULA:ULA|lpm_add_sub:Add0|add_sub_cui:auto_generated ; add_sub_cui         ; work         ;
-;          |bancoRegistradores:Banco_Regs|    ; 27 (27)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs                       ; bancoRegistradores  ; work         ;
-;          |memoriaROM:ROM|                   ; 15 (15)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|fluxo_de_dados:FD|memoriaROM:ROM                                      ; memoriaROM          ; work         ;
-;          |muxGenerico2x1:Mux2|              ; 12 (12)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux2                                 ; muxGenerico2x1      ; work         ;
-;          |registradorGenerico:PC|           ; 14 (14)             ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|fluxo_de_dados:FD|registradorGenerico:PC                              ; registradorGenerico ; work         ;
-+---------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------+---------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                               ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                   ; Entity Name         ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------+---------------------+--------------+
+; |calculadora                              ; 1106 (0)            ; 1142 (0)                  ; 0           ; 0            ; 0       ; 0         ; 208  ; 0            ; |calculadora                                                                          ; calculadora         ; work         ;
+;    |conversorHex7Seg:DISPLAY0|            ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|conversorHex7Seg:DISPLAY0                                                ; conversorHex7Seg    ; work         ;
+;    |conversorHex7Seg:DISPLAY1|            ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|conversorHex7Seg:DISPLAY1                                                ; conversorHex7Seg    ; work         ;
+;    |conversorHex7Seg:DISPLAY2|            ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|conversorHex7Seg:DISPLAY2                                                ; conversorHex7Seg    ; work         ;
+;    |conversorHex7Seg:DISPLAY3|            ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|conversorHex7Seg:DISPLAY3                                                ; conversorHex7Seg    ; work         ;
+;    |conversorHex7Seg:DISPLAY4|            ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|conversorHex7Seg:DISPLAY4                                                ; conversorHex7Seg    ; work         ;
+;    |conversorHex7Seg:DISPLAY5|            ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|conversorHex7Seg:DISPLAY5                                                ; conversorHex7Seg    ; work         ;
+;    |conversorHex7Seg:DISPLAY6|            ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|conversorHex7Seg:DISPLAY6                                                ; conversorHex7Seg    ; work         ;
+;    |conversorHex7Seg:DISPLAY7|            ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|conversorHex7Seg:DISPLAY7                                                ; conversorHex7Seg    ; work         ;
+;    |decodificador:decodificador|          ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|decodificador:decodificador                                              ; decodificador       ; work         ;
+;    |doubleHex7:DISPLAY0_1|                ; 0 (0)               ; 8 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|doubleHex7:DISPLAY0_1                                                    ; doubleHex7          ; work         ;
+;       |registradorGenerico:REG|           ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|doubleHex7:DISPLAY0_1|registradorGenerico:REG                            ; registradorGenerico ; work         ;
+;    |doubleHex7:DISPLAY2_3|                ; 0 (0)               ; 8 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|doubleHex7:DISPLAY2_3                                                    ; doubleHex7          ; work         ;
+;       |registradorGenerico:REG|           ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|doubleHex7:DISPLAY2_3|registradorGenerico:REG                            ; registradorGenerico ; work         ;
+;    |doubleHex7:DISPLAY4_5|                ; 0 (0)               ; 8 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|doubleHex7:DISPLAY4_5                                                    ; doubleHex7          ; work         ;
+;       |registradorGenerico:REG|           ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|doubleHex7:DISPLAY4_5|registradorGenerico:REG                            ; registradorGenerico ; work         ;
+;    |doubleHex7:DISPLAY6_7|                ; 0 (0)               ; 8 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|doubleHex7:DISPLAY6_7                                                    ; doubleHex7          ; work         ;
+;       |registradorGenerico:REG|           ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|doubleHex7:DISPLAY6_7|registradorGenerico:REG                            ; registradorGenerico ; work         ;
+;    |interfaceLEDs:saidaLED_Vermelhos|     ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|interfaceLEDs:saidaLED_Vermelhos                                         ; interfaceLEDs       ; work         ;
+;    |memoriaRAM:RAM|                       ; 832 (832)           ; 1024 (1024)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|memoriaRAM:RAM                                                           ; memoriaRAM          ; work         ;
+;    |processador:Processador|              ; 210 (0)             ; 78 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador                                                  ; processador         ; work         ;
+;       |UC:UC|                             ; 14 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|UC:UC                                            ; UC                  ; work         ;
+;       |fluxo_de_dados:FD|                 ; 196 (0)             ; 78 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|fluxo_de_dados:FD                                ; fluxo_de_dados      ; work         ;
+;          |ULA:ULA|                        ; 42 (42)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|fluxo_de_dados:FD|ULA:ULA                        ; ULA                 ; work         ;
+;          |bancoRegistradores:Banco_Regs|  ; 65 (65)             ; 64 (64)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs  ; bancoRegistradores  ; work         ;
+;          |memoriaROM:ROM|                 ; 24 (24)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|fluxo_de_dados:FD|memoriaROM:ROM                 ; memoriaROM          ; work         ;
+;          |muxGenerico2x1:Mux2|            ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux2            ; muxGenerico2x1      ; work         ;
+;          |muxGenerico2x1:Mux3|            ; 23 (23)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux3            ; muxGenerico2x1      ; work         ;
+;          |muxGenerico2x1:Mux5|            ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux5            ; muxGenerico2x1      ; work         ;
+;          |registradorGenerico:PC|         ; 6 (6)               ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|fluxo_de_dados:FD|registradorGenerico:PC         ; registradorGenerico ; work         ;
+;          |somaConstante:SomadorConstante| ; 22 (22)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|fluxo_de_dados:FD|somaConstante:SomadorConstante ; somaConstante       ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                      ;
-+-------------------------------------------------------------------------------------------+---------------------------------------------+
-; Register name                                                                             ; Reason for Removal                          ;
-+-------------------------------------------------------------------------------------------+---------------------------------------------+
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[7][7] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[6][7] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[5][7] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[4][7] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[3][7] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[2][7] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[7][6] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[6][6] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[5][6] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[4][6] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[3][6] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[2][6] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[7][5] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[6][5] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[5][5] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[4][5] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[3][5] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[2][5] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[7][4] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[6][4] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[5][4] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[4][4] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[3][4] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[2][4] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[7][3] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[6][3] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[5][3] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[4][3] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[3][3] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[2][3] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[7][2] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[6][2] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[5][2] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[4][2] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[3][2] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[2][2] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[7][1] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[6][1] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[5][1] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[4][1] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[3][1] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[2][1] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[7][0] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[6][0] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[5][0] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[4][0] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[3][0] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[2][0] ; Stuck at GND due to stuck port clock_enable ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[0][7] ; Lost fanout                                 ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[0][6] ; Lost fanout                                 ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[0][5] ; Lost fanout                                 ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[0][4] ; Lost fanout                                 ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[0][3] ; Lost fanout                                 ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[0][2] ; Lost fanout                                 ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[0][1] ; Lost fanout                                 ;
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[0][0] ; Lost fanout                                 ;
-; Total Number of Removed Registers = 56                                                    ;                                             ;
-+-------------------------------------------------------------------------------------------+---------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                                                                             ;
-+-------------------------------------------------------------------------------------------+--------------------------------+--------------------------------------------------------------------------------------------+
-; Register name                                                                             ; Reason for Removal             ; Registers Removed due to This Register                                                     ;
-+-------------------------------------------------------------------------------------------+--------------------------------+--------------------------------------------------------------------------------------------+
-; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[7][7] ; Stuck at GND                   ; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[7][5], ;
-;                                                                                           ; due to stuck port clock_enable ; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[6][5], ;
-;                                                                                           ;                                ; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[5][5], ;
-;                                                                                           ;                                ; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[4][5], ;
-;                                                                                           ;                                ; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[3][5], ;
-;                                                                                           ;                                ; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[2][5], ;
-;                                                                                           ;                                ; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[7][4], ;
-;                                                                                           ;                                ; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[6][4], ;
-;                                                                                           ;                                ; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[5][4], ;
-;                                                                                           ;                                ; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[4][4], ;
-;                                                                                           ;                                ; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[3][4], ;
-;                                                                                           ;                                ; processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|registrador[2][4]  ;
-+-------------------------------------------------------------------------------------------+--------------------------------+--------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -406,12 +315,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1086  ;
+; Total registers                              ; 1142  ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 8     ;
+; Number of registers using Synchronous Load   ; 6     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1072  ;
+; Number of registers using Clock Enable       ; 1128  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -421,8 +330,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |calculadora|processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux3|saida_MUX[1]        ;
-; 9:1                ; 8 bits    ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; No         ; |calculadora|processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|saidaB[0] ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |calculadora|processador:Processador|fluxo_de_dados:FD|registradorGenerico:PC|DOUT[12]         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |calculadora|processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|saidaA[0] ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; No         ; |calculadora|processador:Processador|fluxo_de_dados:FD|ULA:ULA|saida[3]                        ;
+; 9:1                ; 8 bits    ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |calculadora|processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|saidaB[0] ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |calculadora|processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux3|saida_MUX[3]        ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |calculadora|processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux3|saida_MUX[6]        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------+
 
 
@@ -518,16 +431,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; larguradadoentrada ; 8     ; Signed Integer                                                                          ;
 ; larguradadosaida   ; 14    ; Signed Integer                                                                          ;
 +--------------------+-------+-----------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: processador:Processador|fluxo_de_dados:FD|somador:Somador ;
-+----------------+-------+-------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                          ;
-+----------------+-------+-------------------------------------------------------------------------------+
-; larguradados   ; 14    ; Signed Integer                                                                ;
-+----------------+-------+-------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -635,13 +538,44 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: interfaceCHAVES:entradaChaves ;
-+----------------+-------+---------------------------------------------------+
-; Parameter Name ; Value ; Type                                              ;
-+----------------+-------+---------------------------------------------------+
-; datawidth      ; 8     ; Signed Integer                                    ;
-+----------------+-------+---------------------------------------------------+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: interfaceCHAVES:entradaChaves_0_7 ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; datawidth      ; 8     ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: interfaceCHAVES:entradaChaves_8_15 ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; datawidth      ; 8     ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: interfaceCHAVES:entradaChaves_16_17 ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; datawidth      ; 8     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: button:Botao ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; total_key      ; 1     ; Signed Integer                   ;
+; data_size      ; 8     ; Signed Integer                   ;
++----------------+-------+----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -726,34 +660,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-------------------------------------------------------------------+
 ; larguradados   ; 8     ; Signed Integer                                                    ;
 +----------------+-------+-------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: processador:Processador|fluxo_de_dados:FD|ULA:ULA|lpm_add_sub:Add0 ;
-+------------------------+--------------+-----------------------------------------------------------------------------+
-; Parameter Name         ; Value        ; Type                                                                        ;
-+------------------------+--------------+-----------------------------------------------------------------------------+
-; LPM_WIDTH              ; 8            ; Untyped                                                                     ;
-; LPM_REPRESENTATION     ; UNSIGNED     ; Untyped                                                                     ;
-; LPM_DIRECTION          ; DEFAULT      ; Untyped                                                                     ;
-; ONE_INPUT_IS_CONSTANT  ; NO           ; Untyped                                                                     ;
-; LPM_PIPELINE           ; 0            ; Untyped                                                                     ;
-; MAXIMIZE_SPEED         ; 5            ; Untyped                                                                     ;
-; REGISTERED_AT_END      ; 0            ; Untyped                                                                     ;
-; OPTIMIZE_FOR_SPEED     ; 5            ; Untyped                                                                     ;
-; USE_CS_BUFFERS         ; 1            ; Untyped                                                                     ;
-; CARRY_CHAIN            ; MANUAL       ; Untyped                                                                     ;
-; CARRY_CHAIN_LENGTH     ; 48           ; CARRY_CHAIN_LENGTH                                                          ;
-; DEVICE_FAMILY          ; Cyclone IV E ; Untyped                                                                     ;
-; USE_WYS                ; OFF          ; Untyped                                                                     ;
-; STYLE                  ; FAST         ; Untyped                                                                     ;
-; CBXI_PARAMETER         ; add_sub_cui  ; Untyped                                                                     ;
-; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                                                                  ;
-; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                                                                ;
-; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                                                                ;
-; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                                                              ;
-+------------------------+--------------+-----------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -854,13 +760,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+-------------------------------------------------+
 
 
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "button:Botao"                                                                          ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; key_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "interfaceCHAVES:entradaChaves_16_17" ;
++---------------+-------+----------+------------------------------+
+; Port          ; Type  ; Severity ; Details                      ;
++---------------+-------+----------+------------------------------+
+; entrada[5..0] ; Input ; Info     ; Stuck at GND                 ;
++---------------+-------+----------+------------------------------+
+
+
 +---------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "decodificador:decodificador"                                                                   ;
 +-----------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port            ; Type   ; Severity ; Details                                                                             ;
 +-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; habilita[10..5] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; habilita[3..2]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; habilita[10..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; habilita[6..5]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +-----------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -879,24 +803,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 190                         ;
-; cycloneiii_ff         ; 1086                        ;
-;     ENA               ; 1064                        ;
-;     ENA SLD           ; 8                           ;
-;     plain             ; 14                          ;
-; cycloneiii_lcell_comb ; 998                         ;
+; boundary_port         ; 208                         ;
+; cycloneiii_ff         ; 1142                        ;
+;     ENA               ; 1128                        ;
+;     SLD               ; 6                           ;
+;     plain             ; 8                           ;
+; cycloneiii_lcell_comb ; 1115                        ;
 ;     arith             ; 21                          ;
 ;         2 data inputs ; 14                          ;
 ;         3 data inputs ; 7                           ;
-;     normal            ; 977                         ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 5                           ;
-;         2 data inputs ; 55                          ;
-;         3 data inputs ; 92                          ;
-;         4 data inputs ; 823                         ;
+;     normal            ; 1094                        ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 9                           ;
+;         2 data inputs ; 51                          ;
+;         3 data inputs ; 82                          ;
+;         4 data inputs ; 951                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 14.30                       ;
-; Average LUT depth     ; 8.82                        ;
+; Max LUT depth         ; 19.10                       ;
+; Average LUT depth     ; 11.38                       ;
 +-----------------------+-----------------------------+
 
 
@@ -905,7 +829,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -915,7 +839,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Apr 15 15:14:53 2020
+    Info: Processing started: Thu Apr 16 19:32:10 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Calculadora -c Calculadora
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file muxGenerico2x1.vhd
@@ -949,22 +873,22 @@ Info (12021): Found 2 design units, including 1 entities, in source file decodif
     Info (12022): Found design unit 1: decodificador-comportamento File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/decodificador.vhd Line: 17
     Info (12023): Found entity 1: decodificador File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/decodificador.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file calculadora.vhd
-    Info (12022): Found design unit 1: calculadora-calculadoraArch File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 45
+    Info (12022): Found design unit 1: calculadora-calculadoraArch File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 48
     Info (12023): Found entity 1: calculadora File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file bancoRegistradores.vhd
-    Info (12022): Found design unit 1: bancoRegistradores-comportamento File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/bancoRegistradores.vhd Line: 35
+    Info (12022): Found design unit 1: bancoRegistradores-comportamento File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/bancoRegistradores.vhd Line: 39
     Info (12023): Found entity 1: bancoRegistradores File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/bancoRegistradores.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file ULA.vhd
     Info (12022): Found design unit 1: ULA-comportamento File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/ULA.vhd Line: 20
     Info (12023): Found entity 1: ULA File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/ULA.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file fluxo_de_dados.vhd
-    Info (12022): Found design unit 1: fluxo_de_dados-comportamento File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/fluxo_de_dados.vhd Line: 38
+    Info (12022): Found design unit 1: fluxo_de_dados-comportamento File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/fluxo_de_dados.vhd Line: 40
     Info (12023): Found entity 1: fluxo_de_dados File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/fluxo_de_dados.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file extendeSinalGenerico.vhd
     Info (12022): Found design unit 1: extendeSinalGenerico-comportamento File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/extendeSinalGenerico.vhd Line: 19
     Info (12023): Found entity 1: extendeSinalGenerico File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/extendeSinalGenerico.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file processador.vhd
-    Info (12022): Found design unit 1: processador-processadorArch File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/processador.vhd Line: 38
+    Info (12022): Found design unit 1: processador-processadorArch File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/processador.vhd Line: 41
     Info (12023): Found entity 1: processador File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/processador.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file conversorHex7Seg.vhd
     Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/conversorHex7Seg.vhd Line: 17
@@ -978,28 +902,32 @@ Info (12021): Found 2 design units, including 1 entities, in source file doubleH
 Info (12021): Found 2 design units, including 1 entities, in source file output_files/divisorGenerico.vhd
     Info (12022): Found design unit 1: divisorGenerico-divInteiro File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/output_files/divisorGenerico.vhd Line: 16
     Info (12023): Found entity 1: divisorGenerico File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/output_files/divisorGenerico.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file button.vhd
+    Info (12022): Found design unit 1: button-keyArch File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/button.vhd Line: 22
+    Info (12023): Found entity 1: button File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/button.vhd Line: 5
 Info (12127): Elaborating entity "calculadora" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at calculadora.vhd(50): object "sig_button" assigned a value but never read File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 50
 Warning (10873): Using initial value X (don't care) for net "LEDR[17..8]" at calculadora.vhd(24) File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 24
-Info (12128): Elaborating entity "processador" for hierarchy "processador:Processador" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 92
-Info (12128): Elaborating entity "UC" for hierarchy "processador:Processador|UC:UC" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/processador.vhd Line: 48
-Info (12128): Elaborating entity "fluxo_de_dados" for hierarchy "processador:Processador|fluxo_de_dados:FD" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/processador.vhd Line: 56
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "processador:Processador|fluxo_de_dados:FD|registradorGenerico:PC" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/fluxo_de_dados.vhd Line: 70
-Info (12128): Elaborating entity "somaConstante" for hierarchy "processador:Processador|fluxo_de_dados:FD|somaConstante:SomadorConstante" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/fluxo_de_dados.vhd Line: 79
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux1" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/fluxo_de_dados.vhd Line: 85
-Info (12128): Elaborating entity "extendeSinalGenerico" for hierarchy "processador:Processador|fluxo_de_dados:FD|extendeSinalGenerico:Extensor" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/fluxo_de_dados.vhd Line: 97
-Info (12128): Elaborating entity "somador" for hierarchy "processador:Processador|fluxo_de_dados:FD|somador:Somador" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/fluxo_de_dados.vhd Line: 108
-Info (12128): Elaborating entity "memoriaROM" for hierarchy "processador:Processador|fluxo_de_dados:FD|memoriaROM:ROM" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/fluxo_de_dados.vhd Line: 131
-Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/fluxo_de_dados.vhd Line: 143
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux5" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/fluxo_de_dados.vhd Line: 160
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux2" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/fluxo_de_dados.vhd Line: 172
-Info (12128): Elaborating entity "ULA" for hierarchy "processador:Processador|fluxo_de_dados:FD|ULA:ULA" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/fluxo_de_dados.vhd Line: 184
-Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 113
-Info (12128): Elaborating entity "decodificador" for hierarchy "decodificador:decodificador" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 125
-Info (12128): Elaborating entity "interfaceLEDs" for hierarchy "interfaceLEDs:saidaLED_Vermelhos" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 135
-Info (12128): Elaborating entity "interfaceCHAVES" for hierarchy "interfaceCHAVES:entradaChaves" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 153
-Info (12128): Elaborating entity "doubleHex7" for hierarchy "doubleHex7:DISPLAY0_1" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 165
+Info (12128): Elaborating entity "processador" for hierarchy "processador:Processador" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 96
+Info (12128): Elaborating entity "UC" for hierarchy "processador:Processador|UC:UC" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/processador.vhd Line: 51
+Info (12128): Elaborating entity "fluxo_de_dados" for hierarchy "processador:Processador|fluxo_de_dados:FD" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/processador.vhd Line: 59
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "processador:Processador|fluxo_de_dados:FD|registradorGenerico:PC" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/fluxo_de_dados.vhd Line: 72
+Info (12128): Elaborating entity "somaConstante" for hierarchy "processador:Processador|fluxo_de_dados:FD|somaConstante:SomadorConstante" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/fluxo_de_dados.vhd Line: 81
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux1" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/fluxo_de_dados.vhd Line: 87
+Info (12128): Elaborating entity "extendeSinalGenerico" for hierarchy "processador:Processador|fluxo_de_dados:FD|extendeSinalGenerico:Extensor" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/fluxo_de_dados.vhd Line: 99
+Info (12128): Elaborating entity "memoriaROM" for hierarchy "processador:Processador|fluxo_de_dados:FD|memoriaROM:ROM" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/fluxo_de_dados.vhd Line: 133
+Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/fluxo_de_dados.vhd Line: 145
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux5" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/fluxo_de_dados.vhd Line: 164
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux2" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/fluxo_de_dados.vhd Line: 176
+Info (12128): Elaborating entity "ULA" for hierarchy "processador:Processador|fluxo_de_dados:FD|ULA:ULA" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/fluxo_de_dados.vhd Line: 188
+Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 120
+Info (12128): Elaborating entity "decodificador" for hierarchy "decodificador:decodificador" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 132
+Info (12128): Elaborating entity "interfaceLEDs" for hierarchy "interfaceLEDs:saidaLED_Vermelhos" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 142
+Info (12128): Elaborating entity "interfaceCHAVES" for hierarchy "interfaceCHAVES:entradaChaves_0_7" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 160
+Info (12128): Elaborating entity "button" for hierarchy "button:Botao" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 183
+Info (12128): Elaborating entity "doubleHex7" for hierarchy "doubleHex7:DISPLAY0_1" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 197
 Info (12128): Elaborating entity "registradorGenerico" for hierarchy "doubleHex7:DISPLAY0_1|registradorGenerico:REG" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/doubleHex7.vhd Line: 21
-Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:DISPLAY0" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 200
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:DISPLAY0" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 232
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13048): Converted tri-state node "barramentoLeituraDados[7]" into a selector File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/muxGenerico2x1.vhd Line: 11
     Warning (13048): Converted tri-state node "barramentoLeituraDados[6]" into a selector File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/muxGenerico2x1.vhd Line: 11
@@ -1011,16 +939,6 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13048): Converted tri-state node "barramentoLeituraDados[0]" into a selector File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/muxGenerico2x1.vhd Line: 11
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276007): RAM logic "memoriaRAM:RAM|ram" is uninferred due to asynchronous read logic File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/memoriaRAM.vhd Line: 28
-Info (278001): Inferred 1 megafunctions from design logic
-    Info (278002): Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "processador:Processador|fluxo_de_dados:FD|ULA:ULA|Add0" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/ULA.vhd Line: 31
-Info (12130): Elaborated megafunction instantiation "processador:Processador|fluxo_de_dados:FD|ULA:ULA|lpm_add_sub:Add0" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/ULA.vhd Line: 31
-Info (12133): Instantiated megafunction "processador:Processador|fluxo_de_dados:FD|ULA:ULA|lpm_add_sub:Add0" with the following parameter: File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/ULA.vhd Line: 31
-    Info (12134): Parameter "LPM_WIDTH" = "8"
-    Info (12134): Parameter "LPM_DIRECTION" = "DEFAULT"
-    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "ONE_INPUT_IS_CONSTANT" = "NO"
-Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_cui.tdf
-    Info (12023): Found entity 1: add_sub_cui File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/db/add_sub_cui.tdf Line: 22
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[8]" is stuck at GND File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 24
     Warning (13410): Pin "LEDR[9]" is stuck at GND File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 24
@@ -1032,40 +950,22 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[15]" is stuck at GND File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 24
     Warning (13410): Pin "LEDR[16]" is stuck at GND File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 24
     Warning (13410): Pin "LEDR[17]" is stuck at GND File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 24
-    Warning (13410): Pin "pontosdecontrole[0]" is stuck at VCC File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 29
-    Warning (13410): Pin "pontosdecontrole[5]" is stuck at GND File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 29
     Warning (13410): Pin "pontosdecontrole[6]" is stuck at GND File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 29
-    Warning (13410): Pin "pontosdecontrole[7]" is stuck at GND File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 29
-    Warning (13410): Pin "pontosdecontrole[10]" is stuck at GND File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 29
-    Warning (13410): Pin "bancoR3[1]" is stuck at GND File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 34
-    Warning (13410): Pin "bancoR3[2]" is stuck at GND File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 34
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 8 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 14 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[8]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 19
-    Warning (15610): No output dependent on input pin "SW[9]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 19
-    Warning (15610): No output dependent on input pin "SW[10]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 19
-    Warning (15610): No output dependent on input pin "SW[11]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 19
-    Warning (15610): No output dependent on input pin "SW[12]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 19
-    Warning (15610): No output dependent on input pin "SW[13]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 19
-    Warning (15610): No output dependent on input pin "SW[14]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 19
-    Warning (15610): No output dependent on input pin "SW[15]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 19
-    Warning (15610): No output dependent on input pin "SW[16]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 19
-    Warning (15610): No output dependent on input pin "SW[17]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 19
-    Warning (15610): No output dependent on input pin "KEY[0]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 20
+Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 20
     Warning (15610): No output dependent on input pin "KEY[2]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 20
     Warning (15610): No output dependent on input pin "KEY[3]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 20
-Info (21057): Implemented 2246 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2442 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 23 input pins
-    Info (21059): Implemented 167 output pins
-    Info (21061): Implemented 2056 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 43 warnings
-    Info: Peak virtual memory: 1037 megabytes
-    Info: Processing ended: Wed Apr 15 15:15:08 2020
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:30
+    Info (21059): Implemented 185 output pins
+    Info (21061): Implemented 2234 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
+    Info: Peak virtual memory: 1060 megabytes
+    Info: Processing ended: Thu Apr 16 19:32:26 2020
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:29
 
 

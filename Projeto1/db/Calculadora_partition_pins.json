@@ -68,6 +68,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "LEDG[8]",
+					"strict" : false
+				},
+				{
 					"name" : "enderecamento[0]",
 					"strict" : false
 				},
@@ -156,6 +160,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "pontosdecontrole[0]",
+					"strict" : false
+				},
+				{
 					"name" : "pontosdecontrole[1]",
 					"strict" : false
 				},
@@ -172,11 +180,23 @@
 					"strict" : false
 				},
 				{
+					"name" : "pontosdecontrole[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pontosdecontrole[7]",
+					"strict" : false
+				},
+				{
 					"name" : "pontosdecontrole[8]",
 					"strict" : false
 				},
 				{
 					"name" : "pontosdecontrole[9]",
+					"strict" : false
+				},
+				{
+					"name" : "pontosdecontrole[10]",
 					"strict" : false
 				},
 				{
@@ -412,35 +432,107 @@
 					"strict" : false
 				},
 				{
-					"name" : "banco001[0]",
+					"name" : "bancoR3[1]",
 					"strict" : false
 				},
 				{
-					"name" : "banco001[1]",
+					"name" : "bancoR3[2]",
 					"strict" : false
 				},
 				{
-					"name" : "banco001[2]",
+					"name" : "banco007[0]",
 					"strict" : false
 				},
 				{
-					"name" : "banco001[3]",
+					"name" : "banco007[1]",
 					"strict" : false
 				},
 				{
-					"name" : "banco001[4]",
+					"name" : "banco007[2]",
 					"strict" : false
 				},
 				{
-					"name" : "banco001[5]",
+					"name" : "banco007[3]",
 					"strict" : false
 				},
 				{
-					"name" : "banco001[6]",
+					"name" : "banco007[4]",
 					"strict" : false
 				},
 				{
-					"name" : "banco001[7]",
+					"name" : "banco007[5]",
+					"strict" : false
+				},
+				{
+					"name" : "banco007[6]",
+					"strict" : false
+				},
+				{
+					"name" : "banco007[7]",
+					"strict" : false
+				},
+				{
+					"name" : "banco003[0]",
+					"strict" : false
+				},
+				{
+					"name" : "banco003[1]",
+					"strict" : false
+				},
+				{
+					"name" : "banco003[2]",
+					"strict" : false
+				},
+				{
+					"name" : "banco003[3]",
+					"strict" : false
+				},
+				{
+					"name" : "banco003[4]",
+					"strict" : false
+				},
+				{
+					"name" : "banco003[5]",
+					"strict" : false
+				},
+				{
+					"name" : "banco003[6]",
+					"strict" : false
+				},
+				{
+					"name" : "banco003[7]",
+					"strict" : false
+				},
+				{
+					"name" : "banco004[0]",
+					"strict" : false
+				},
+				{
+					"name" : "banco004[1]",
+					"strict" : false
+				},
+				{
+					"name" : "banco004[2]",
+					"strict" : false
+				},
+				{
+					"name" : "banco004[3]",
+					"strict" : false
+				},
+				{
+					"name" : "banco004[4]",
+					"strict" : false
+				},
+				{
+					"name" : "banco004[5]",
+					"strict" : false
+				},
+				{
+					"name" : "banco004[6]",
+					"strict" : false
+				},
+				{
+					"name" : "banco004[7]",
 					"strict" : false
 				},
 				{
@@ -604,7 +696,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "Z_out_ula",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[0]",
+					"strict" : false
+				},
+				{
 					"name" : "CLOCK_50",
+					"strict" : false
+				},
+				{
+					"name" : "SW[8]",
 					"strict" : false
 				},
 				{
@@ -612,7 +716,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "SW[9]",
+					"strict" : false
+				},
+				{
 					"name" : "SW[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[10]",
 					"strict" : false
 				},
 				{
@@ -620,11 +732,23 @@
 					"strict" : false
 				},
 				{
+					"name" : "SW[11]",
+					"strict" : false
+				},
+				{
 					"name" : "SW[3]",
 					"strict" : false
 				},
 				{
+					"name" : "SW[12]",
+					"strict" : false
+				},
+				{
 					"name" : "SW[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[13]",
 					"strict" : false
 				},
 				{
@@ -636,7 +760,23 @@
 					"strict" : false
 				},
 				{
+					"name" : "SW[14]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[16]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[15]",
+					"strict" : false
+				},
+				{
 					"name" : "SW[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[17]",
 					"strict" : false
 				}
 			]

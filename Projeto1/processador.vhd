@@ -25,12 +25,15 @@ entity processador is
 		
 			--teste
 		  bancoR3:			out std_logic_vector((3-1) downto 0);
-		  banco001:			out std_logic_vector((DATA_WIDTH-1) downto 0);
+		  banco007:			out std_logic_vector((DATA_WIDTH-1) downto 0);
+		  banco003:			out std_logic_vector((DATA_WIDTH-1) downto 0);
+		  banco004:			out std_logic_vector((DATA_WIDTH-1) downto 0);
 		  saidaA          : out std_logic_vector((DATA_WIDTH -1) downto 0);
         saidaB          : out std_logic_vector((DATA_WIDTH -1) downto 0);
 		  entradaA_ULA		: out std_logic_vector((DATA_WIDTH -1) downto 0);
 		  entradaB_ULA		: out std_logic_vector((DATA_WIDTH -1) downto 0);
-		  saida_ULA			: out std_logic_vector((DATA_WIDTH -1) downto 0)
+		  saida_ULA			: out std_logic_vector((DATA_WIDTH -1) downto 0);
+		  Z_out_ula			:	out std_logic
 		
 	);
 end entity;
@@ -64,7 +67,9 @@ begin
 						programcounter		=> programcounter,
 						clk					=> clk,
 						bancoR3				=> bancoR3,
-						banco001				=> banco001,
+						banco007				=> banco007,
+						banco003				=> banco003,
+						banco004				=> banco004,
 						saidaA				=> saidaA,
 						saidaB				=> saidaB,
 						entradaA_ULA		=> entradaA_ULA,
@@ -73,5 +78,5 @@ begin
 				);
 		
 				
-
+	 Z_out_ula <= out_fd_Z;
 end architecture;

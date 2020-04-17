@@ -66,15 +66,15 @@ alias habilita_hex_6_7: 			std_logic is habilita(14);
 				-- IO INPUT
 			
 	with endereco(5 downto 0) select
-	chave_0_7 <= '1' when "000010",				-- chave_0_7 : 130
+	chave_0_7 <= '1' when "000010",				-- chave_0_7 : 130 = 10000010
 						'0' when others;
 	
 	with endereco(5 downto 0) select
-	chave_8_15 <= '1' when "000011",				-- chave_8_15 : 131
+	chave_8_15 <= '1' when "000011",				-- chave_8_15 : 131 = 10000011
 						'0' when others;
 	
 	with endereco(5 downto 0) select
-	chave_16_17 <= '1' when "000100",			-- chave_16_17 : 132
+	chave_16_17 <= '1' when "000100",			-- chave_16_17 : 132 = 10000100
 						'0' when others;
 	
 	with endereco(5 downto 0) select

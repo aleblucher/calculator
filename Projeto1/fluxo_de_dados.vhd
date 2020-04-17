@@ -26,7 +26,9 @@ entity fluxo_de_dados is
 	
 	--teste
 		  bancoR3:			out std_logic_vector((3-1) downto 0);
-		  banco001:			out std_logic_vector((dataWidth-1) downto 0);
+		  banco007:			out std_logic_vector((dataWidth-1) downto 0);
+		  banco003:			out std_logic_vector((dataWidth-1) downto 0);
+		  banco004:			out std_logic_vector((dataWidth-1) downto 0);
 		  saidaA          : out std_logic_vector((dataWidth -1) downto 0);
         saidaB          : out std_logic_vector((dataWidth -1) downto 0);
 		  entradaA_ULA		: out std_logic_vector((dataWidth -1) downto 0);
@@ -105,23 +107,23 @@ begin
 				);
 				
 				
-	Somador: entity work.somador
-				generic map (
-					larguraDados => addrWidth
-				)
-				port map(
-					entradaA => out_adder1,
-					entradaB => out_extensor,
-					saida => out_adder2
-				);
-								
+--	Somador: entity work.somador
+--				generic map (
+--					larguraDados => addrWidth
+--				)
+--				port map(
+--					entradaA => out_adder1,
+--					entradaB => out_extensor,
+--					saida => out_adder2
+--				);
+--								
 				
 	Mux4: entity work.muxGenerico2x1
 				generic map(
 					larguraDados => addrWidth 
 				)
 				port map(
-					entradaA_MUX => out_adder2,
+					entradaA_MUX => out_extensor,
 					entradaB_MUX => out_mux_1,
 					seletor_MUX  => sel_mux_4,			-- sel_mux_4 alias da palavra de controle[x]
 					saida_MUX	 => out_mux_4
@@ -151,7 +153,9 @@ begin
 					saidaA       => out_bank_1,
 					saidaB       => out_bank_2, 
 					bancoR3			=> bancoR3,
-					banco001			=> banco001
+					banco007			=> banco007,
+					banco003			=> banco003,
+					banco004			=> banco004
 				);
 				
 				saidaA <= out_bank_1;

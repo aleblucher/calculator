@@ -22,7 +22,7 @@ entity calculadora is
 		
 		-- Saidas (placa)
 		LEDR : out std_logic_vector(17 downto 0);-- := (others => '0');
-		LEDG : out std_logic_vector(7 downto 0);
+		LEDG : out std_logic_vector(8 downto 0);
 		
 		enderecamento: out std_logic_vector(7 downto 0);
 		programcounter: 	OUT STD_LOGIC_VECTOR(13 DOWNTO 0);
@@ -32,19 +32,22 @@ entity calculadora is
 		
 					--teste
 		  bancoR3:			out std_logic_vector((3-1) downto 0);
-		  banco001:			out std_logic_vector((DATA_WIDTH-1) downto 0);
+		  banco007:			out std_logic_vector((DATA_WIDTH-1) downto 0);
+		  banco003:			out std_logic_vector((DATA_WIDTH-1) downto 0);
+		  banco004:			out std_logic_vector((DATA_WIDTH-1) downto 0);
 		  saidaA          : out std_logic_vector((DATA_WIDTH -1) downto 0);
         saidaB          : out std_logic_vector((DATA_WIDTH -1) downto 0);
 		  entradaA_ULA		: out std_logic_vector((DATA_WIDTH -1) downto 0);
 		  entradaB_ULA		: out std_logic_vector((DATA_WIDTH -1) downto 0);
-		  saida_ULA			: out std_logic_vector((DATA_WIDTH -1) downto 0)
+		  saida_ULA			: out std_logic_vector((DATA_WIDTH -1) downto 0);
+		  Z_out_ula			: out std_logic
 		
 	);
 end entity;
 
 architecture calculadoraArch of calculadora is
 
-signal barramentoEscritaDados, barramentoLeituraDados :	std_logic_vector(DATA_WIDTH-1 downto 0);
+signal barramentoEscritaDados, barramentoLeituraDados, sig_button :	std_logic_vector(DATA_WIDTH-1 downto 0);
 signal barramentoEnderecos : 										std_logic_vector(addrRAMWidth-1 downto 0);
 signal barramentoControle :										std_logic_vector(1 downto 0);
 signal habilita:			 											std_logic_vector(14 DOWNTO 0);	-- blocos de habilitacoes
@@ -61,7 +64,8 @@ signal dado_hex_4_5: 														std_logic_vector(DATA_WIDTH-1 downto 0);
 signal dado_hex_6_7: 														std_logic_vector(DATA_WIDTH-1 downto 0);
 --signal out_fd
 
-signal program_counter: 													std_logic_vector(14-1 downto 0);				
+signal program_counter: 													std_logic_vector(14-1 downto 0);	
+	
 
 alias habilita_ram:					std_logic is habilita(0);
 alias habilita_chave_0_7:			std_logic is habilita(1);
@@ -99,12 +103,15 @@ begin
 					programcounter => program_counter,
 					pontosdecontrole => pontosdecontrole,
 					bancoR3 => bancoR3,
-					banco001 => banco001,
+					banco007 => banco007,
+					banco003 => banco003,
+					banco004 => banco004,
 					saidaA => saidaA,
 					saidaB => saidaB,
 					entradaA_ULA		=> entradaA_ULA,
 					entradaB_ULA		=> entradaB_ULA,
-					saida_ULA			=> saida_ULA
+					saida_ULA			=> saida_ULA, 
+					Z_out_ula			=> Z_out_ula
 					
 				);
 
@@ -150,7 +157,7 @@ begin
 --				habilita => habilita_LED_G_0_7 
 --				);
 
-	entradaChaves: entity work.interfaceCHAVES
+	entradaChaves_0_7: entity work.interfaceCHAVES
 				port map (
 				entrada => SW(DATA_WIDTH-1 downto 0), 
 				saida => barramentoLeituraDados(DATA_WIDTH-1 downto 0), 
@@ -158,7 +165,32 @@ begin
 				);
 				
 				
-	-- BTN_CLK : entity work.edgeDetector port map (clk => clk, entrada => (not KEY(0)), saida => next_op);
+	entradaChaves_8_15: entity work.interfaceCHAVES
+				port map (
+				entrada => SW(DATA_WIDTH+DATA_WIDTH-1 downto DATA_WIDTH), 
+				saida => barramentoLeituraDados(DATA_WIDTH-1 downto 0), 
+				habilita => habilita_chave_8_15
+				);
+				
+	entradaChaves_16_17: entity work.interfaceCHAVES
+				port map (
+				entrada => SW(DATA_WIDTH+DATA_WIDTH+1 downto 16) & "000000", 		-- 17 ate 16
+				saida => barramentoLeituraDados(DATA_WIDTH-1 downto 0), 
+				habilita => habilita_chave_16_17
+				);
+				
+				
+		Botao: entity work.button
+		Generic Map(
+			TOTAL_KEY => 1,
+			DATA_SIZE => DATA_WIDTH
+		)
+		Port Map(
+		   led_in=> LEDG(8 downto 8),
+			key_in => KEY(0 downto 0),
+			enable => habilita_but_0_prox_input,
+			key_out => sig_button
+		);
 
 	
 	

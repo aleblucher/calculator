@@ -64,10 +64,46 @@ constant jump	     : opCode_t := "0010";
 constant beq		  : opCode_t := "0011";
 constant LW         : opCode_t := "0100";
 constant SW         : opCode_t := "0101";
-constant op_and     : opCode_t := "0110";
-constant op_or      : opCode_t := "0111";
-constant op_not     : opCode_t := "1000";
-constant op_xor     : opCode_t := "1001";
+constant inst_and     : opCode_t := "0110";
+constant inst_or      : opCode_t := "0111";
+constant inst_not     : opCode_t := "1000";
+constant inst_xor     : opCode_t := "1001";
+
+
+constant op_add    	  : std_logic_vector(7 downto 0) := "00000001";
+constant op_sub		  : std_logic_vector(7 downto 0) := "00000010";
+constant op_mult		  : std_logic_vector(7 downto 0) := "00000100";
+constant op_div		  : std_logic_vector(7 downto 0) := "00001000";
+constant op_or			  : std_logic_vector(7 downto 0) := "00010000";
+constant op_xor		  : std_logic_vector(7 downto 0) := "00100000";
+constant op_and		  : std_logic_vector(7 downto 0) := "01000000";
+constant op_not		  : std_logic_vector(7 downto 0) := "10000000";
+
+
+constant R0				  : std_logic_vector(2 downto 0) := "000";
+constant R1				  : std_logic_vector(2 downto 0) := "001";
+constant R2				  : std_logic_vector(2 downto 0) := "010";
+constant R3				  : std_logic_vector(2 downto 0) := "011";
+constant R4				  : std_logic_vector(2 downto 0) := "100";
+constant R5				  : std_logic_vector(2 downto 0) := "101";
+constant R6				  : std_logic_vector(2 downto 0) := "110";
+constant R7				  : std_logic_vector(2 downto 0) := "111";
+
+-- Enderecos (8 bits)
+constant botao				: std_logic_vector(7 downto 0) := "10000111"; 
+--constant led_red_low		: std_logic_vector(7 downto 0) := ""; 
+--constant led_red_high	: std_logic_vector(7 downto 0) := ""; 
+constant sw_super_high	: std_logic_vector(7 downto 0) := "10000100"; -- 0 a 3
+constant sw_high			: std_logic_vector(7 downto 0) := "10000011"; 
+constant sw_low			: std_logic_vector(7 downto 0) := "10000010"; 
+constant hex_0_1			: std_logic_vector(7 downto 0) := "11001101"; -- 205
+constant hex_2_3			: std_logic_vector(7 downto 0) := "11001110"; -- 206
+constant hex_4_5			: std_logic_vector(7 downto 0) := "11001111"; -- 207
+constant hex_6_7			: std_logic_vector(7 downto 0) := "11010000"; -- 208
+
+
+constant inicio_tipo_I				: std_logic_vector(7 downto 0) := "00000000";
+constant inicio_tipo_J				: std_logic_vector(13 downto 0) := "00000000000000";
 
   type blocoMemoria is array(0 TO 2**addrWidth - 1) of std_logic_vector(dataWidth-1 DOWNTO 0);
 
@@ -78,18 +114,41 @@ constant op_xor     : opCode_t := "1001";
   --		Opcode (4 bits) + Reg3 (3 bits) + Reg1 (3 bits) + Imediato (8 bits)
   
   
-        tmp(0) := LW & "001" & "000" & "10000010";  --Endereco 130 Le chave
-		  tmp(1) := add & "001" & "001" & "001" & "00000";
-        tmp(2) := SW & "001" & "000" & "11001000";  --Endereco 200 Escreve LEDs
--- 	  tmp(3) := beq & "001" & "001" & "00000010";  -- Soma 1
-		  tmp(4) := SW & "001" & "000" & "11001101";  --Endereco 200 Escreve LEDs
---        tmp(4) := SW & "01000000";  --Endereco 64  Salva RAM
---		  tmp(5) := SomaImed & "00000001";   -- Soma 1
---        tmp(6) := SW & "01000001";  --Endereco 65
---		  tmp(7) := LW & "01000000";  --Endereco 64  Le RAM
---		  tmp(8) := LW & "01000001";  --Endereco 65  Le RAM
---		  tmp(9) := SW & "11000000";  --Endereco 192 Escreve LEDs
---        tmp(2) := Jump & "00000000000000";
+		  tmp(0) := LW & R7 & "000" & "00000000";
+        
+		  tmp(1) := LW & R3 & R7 & sw_super_high; 		-- carrega o SW de operacao
+		  
+		  tmp(2) := beq & R3 & R7 & inicio_tipo_I; 		-- checa se o SW de operacao e um se 																	nao volta pro inicio
+		  tmp(3) := LW & R4 & R7 & sw_super_high;			-- carrega o valor do botao de confirmar
+		  
+		  tmp(4) := LW & R5 & R7 & "00000011";				-- carrega o numero 3 em R5
+		
+		  tmp(5) := beq & R4 & R5 & inicio_tipo_I; 		-- checa se o botao ainda nao foi 															pressionado e continua lendo os SWs ate ser
+		  tmp(6) := LW & R1 & R7 & sw_low;			-- carrega a primeria metada do input
+		  
+		  tmp(7) := LW & R2 & R7 & sw_high;			-- carrega a segunda metada do input
+		  
+		  tmp(8) := SW & R1 & R7 & hex_0_1;
+		  
+		  tmp(9) := SW & R2 & R7 & hex_2_3;
+		  
+		  tmp(10) := jump & inicio_tipo_J;
+		  
+		  
+--		  tmp(0) := LW & R3 & R0 & sw_super_high;
+--		  tmp(1) := add & "001" & "001" & "001" & "00000";
+--        tmp(2) := SW & "001" & "000" & "11001000";  --Endereco 200 Escreve LEDs
+---- 	  tmp(3) := beq & "001" & "001" & "00000010";  -- Soma 1
+--		  tmp(4) := SW & "001" & "000" & "11001101";  --Endereco 200 Escreve LEDs
+----        tmp(4) := SW & "01000000";  --Endereco 64  Salva RAM
+----		  tmp(5) := SomaImed & "00000001";   -- Soma 1
+----        tmp(6) := SW & "01000001";  --Endereco 65
+----		  tmp(7) := LW & "01000000";  --Endereco 64  Le RAM
+----		  tmp(8) := LW & "01000001";  --Endereco 65  Le RAM
+----		  tmp(9) := SW & "11000000";  --Endereco 192 Escreve LEDs
+
+--	Fim:
+--        tmp(5) := Jump & ;
         return tmp;
     end initMemory;
 
