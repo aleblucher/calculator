@@ -42,7 +42,7 @@ Abaixo está representada todas as instruções e suas sintaxes:
 | Load      | I | 0100          | R3 (dest) = M[Imm + R1]                                           |
 | Store     | I | 0101          | M[R1+Imm] = R3 (fonte)                                          |
 | Beq       | I | 0011          | if R3 = R1: {PC = PC + 1 + branchAddr} else: {PC = PC + 1}|
-| Addi      | I | 1000         | R3 = R1 + imediato | 
+| Addi      | I | 1010         | R3 = R1 + imediato | 
 
 
 O funcionamento do decodificador de endereço e os seus respectivos mapas de memória podem ser vistos abaixo:
