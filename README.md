@@ -88,7 +88,7 @@ O fluxo de dados principal pode ser observado abaixo:
 
 | Bit | 11         | 10        | 9                 | 8         | 4 - 7   | 3         | 2        |        1 |          0 |
 | -------------| ---------- |---------- |------------------ |---------- |-------- |---------- |--------- |--------- |----------- | 
-| Ponto de controle | sel _mux_ 5| sel_mux_1 | hab_escrita_banco | sel_mux_2 | sel_ula | sel_mux_3 | read_ram | wrie_ram | sel_mux_4  |
+| Ponto de controle | sel_mux_5 | sel_mux_1 | hab_escrita_banco | sel_mux_2 | sel_ula | sel_mux_3 | read_ram | wrie_ram | sel_mux_4  |
 | Legenda do fluxo | H          |    A      |          B        |  C        | D       | E         |    F(1)  |   F(0)   | G          |
 
 
