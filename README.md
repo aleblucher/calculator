@@ -35,7 +35,7 @@ Abaixo está representada todas as instruções e suas sintaxes:
 | Add       | R | 0000          | R3 = R1 + R2  |
 | Sub       | R | 0001          | R3 = R1 - R2  |
 | And       | R | 0110          | R3 = R1 & R2  |
-| Or        | R | 0111          | R3 = R1 | R2  |
+| Or        | R | 0111          | R3 = R1 or R2  |
 | Xor       | R | 1001          | R3 = R1 xor R2|
 | Not       | R | 1000          | R3 = ! R1     |
 | Jump      | J | 0010          | PC = jumpAddr                                         |
