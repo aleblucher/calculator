@@ -34,14 +34,15 @@ Abaixo está representada todas as instruções e suas sintaxes:
 | ------------- | ------------- | ------------- | ------------- |
 | Add       | R | 0000          | R3 = R1 + R2  |
 | Sub       | R | 0001          | R3 = R1 - R2  |
-| And       | R | 0010          | R3 = R1 & R2  |
-| Or        | R | 0011          | R3 = R1 | R2  |
-| Xor       | R | 0100          | R3 = R1 xor R2|
-| Not       | R | 0101          | R3 = ! R1     |
+| And       | R | 0110          | R3 = R1 & R2  |
+| Or        | R | 0111          | R3 = R1 or R2  |
+| Xor       | R | 1001          | R3 = R1 xor R2|
+| Not       | R | 1000          | R3 = ! R1     |
 | Jump      | J | 0010          | PC = jumpAddr                                         |
-| Load      | I | 1000          | R3 (dest) = M[Imm + R1]                                           |
+| Load      | I | 0100          | R3 (dest) = M[Imm + R1]                                           |
 | Store     | I | 0101          | M[R1+Imm] = R3 (fonte)                                          |
 | Beq       | I | 0011          | if R3 = R1: {PC = PC + 1 + branchAddr} else: {PC = PC + 1}|
+| Addi      | I | 1010         | R3 = R1 + imediato | 
 
 
 O funcionamento do decodificador de endereço e os seus respectivos mapas de memória podem ser vistos abaixo:
@@ -75,7 +76,7 @@ O funcionamento do decodificador de endereço e os seus respectivos mapas de mem
 | ------------- | ------------- |
 | LED_R_0_7 | 200 |
 | LED_R_8_15 | 201 |
-| LED_R_8_15 | 202 |
+| LED_G_0_7 | 202 |
 | sete_segmentos_0 | 205 |
 | sete_segmentos_1 | 206 |
 | sete_segmentos_2 | 207 |
@@ -83,6 +84,13 @@ O funcionamento do decodificador de endereço e os seus respectivos mapas de mem
 
  
 O fluxo de dados principal pode ser observado abaixo:
+
+### Palavra de controle 
+
+| Bit | 11         | 10        | 9                 | 8         | 4 - 7   | 3         | 2        |        1 |          0 |
+| -------------| ---------- |---------- |------------------ |---------- |-------- |---------- |--------- |--------- |----------- | 
+| Ponto de controle | sel_mux_5 | sel_mux_1 | hab_escrita_banco | sel_mux_2 | sel_ula | sel_mux_3 | read_ram | wrie_ram | sel_mux_4  |
+| Legenda do fluxo | H          |    A      |          B        |  C        | D       | E         |    F(1)  |   F(0)   | G          |
 
 
 ![alt text](fluxo_dados_legendado.png)
