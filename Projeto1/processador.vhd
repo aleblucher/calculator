@@ -28,6 +28,10 @@ entity processador is
 		  banco007:			out std_logic_vector((DATA_WIDTH-1) downto 0);
 		  banco003:			out std_logic_vector((DATA_WIDTH-1) downto 0);
 		  banco004:			out std_logic_vector((DATA_WIDTH-1) downto 0);
+		  banco001:			out std_logic_vector((DATA_WIDTH-1) downto 0);
+		  banco002:			out std_logic_vector((DATA_WIDTH-1) downto 0);
+		  banco006:			out std_logic_vector((DATA_WIDTH-1) downto 0);
+		  
 		  saidaA          : out std_logic_vector((DATA_WIDTH -1) downto 0);
         saidaB          : out std_logic_vector((DATA_WIDTH -1) downto 0);
 		  entradaA_ULA		: out std_logic_vector((DATA_WIDTH -1) downto 0);
@@ -78,7 +82,10 @@ begin
 						entradaB_ULA		=> entradaB_ULA,
 						saida_ULA			=> saida_ULA,
 						sinal_estendido 	=> sinal_estendido,
-						saida_somador	   => saida_somador
+						saida_somador	   => saida_somador,
+						banco001			=> banco001,
+						banco002			=> banco002,
+						banco006			=> banco006
 				);
 		
 				

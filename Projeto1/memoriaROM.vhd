@@ -48,14 +48,16 @@ architecture assincrona of memoriaROM is
 
 -- "0000";	-- add
 -- "0001";	-- sub
--- "0010";	-- jump
--- "0011";	-- beq
--- "0100";	-- load
--- "0101";	-- store
 -- "0110";	-- and
 -- "0111";	-- or
--- "1000";	-- not
 -- "1001";	-- xor
+-- "1000";	-- not
+-- "0010";	-- jump
+-- "0100";	-- load
+-- "0101";	-- store
+-- "0011";	-- beq
+
+
 
 subtype opCode_t is std_logic_vector(oPcode_Width-1 downto 0);
 constant add    	  : opCode_t := "0000";
@@ -93,9 +95,10 @@ constant R7				  : std_logic_vector(2 downto 0) := "111";
 constant botao				: std_logic_vector(7 downto 0) := "10000111"; 
 --constant led_red_low		: std_logic_vector(7 downto 0) := ""; 
 --constant led_red_high	: std_logic_vector(7 downto 0) := ""; 
-constant sw_super_high	: std_logic_vector(7 downto 0) := "10000100"; -- 0 a 3
-constant sw_high			: std_logic_vector(7 downto 0) := "10000011"; 
-constant sw_low			: std_logic_vector(7 downto 0) := "10000010"; 
+constant sw_17				: std_logic_vector(7 downto 0) := "10000100"; -- 132
+constant sw_16				: std_logic_vector(7 downto 0) := "10000101"; -- 133
+constant sw_high			: std_logic_vector(7 downto 0) := "10000011"; -- 131
+constant sw_low			: std_logic_vector(7 downto 0) := "10000010"; -- 130
 constant hex_0_1			: std_logic_vector(7 downto 0) := "11001101"; -- 205
 constant hex_2_3			: std_logic_vector(7 downto 0) := "11001110"; -- 206
 constant hex_4_5			: std_logic_vector(7 downto 0) := "11001111"; -- 207
@@ -116,26 +119,35 @@ constant inicio_tipo_J				: std_logic_vector(13 downto 0) := "00000000000000";
   
  -- CUIDADO COM beq: O endereco passado para ele deve ser relativo a posicao atual do PC.
   
-		  tmp(0) := LW & R7 & "000" & "00000000";
         
-		  tmp(1) := LW & R3 & R7 & sw_super_high; 		-- carrega o SW de operacao
+		  tmp(0) := LW & R3 & R0 & sw_17; 					-- carrega o SW de operacao
 		  
-		  tmp(2) := beq & R7 & R3 & "11111101"; 		-- checa se o SW de operacao e um s enao volta pro inicio
+		  tmp(1) := beq & R3 & R0 & "11111110"; 			-- checa se o SW de operacao e diferente de 0 se nao volta pro inicio
 		  
-		  tmp(3) := LW & R4 & R7 & sw_super_high;			-- carrega o valor do botao de confirmar
+		  tmp(2) := LW & R4 & R0 & sw_16;					-- carrega o valor do botao de confirmar
 		  
-		  tmp(4) := LW & R5 & R7 & "00000011";				-- carrega o numero 3 em R5
-		
-		  tmp(5) := beq & R4 & R5 & inicio_tipo_I; 		-- checa se o botao ainda nao foi 															pressionado e continua lendo os SWs ate ser
-		  tmp(6) := LW & R1 & R7 & sw_low;			-- carrega a primeria metada do input
+		  tmp(3) := beq & R4 & R0 & "11111100"; 			-- checa se o botao ainda nao foi 												pressionado e continua lendo os SWs ate ser
+		  tmp(4) := LW & R1 & R0 & sw_high;					-- carrega a primeria metada do input
 		  
-		  tmp(7) := LW & R2 & R7 & sw_high;			-- carrega a segunda metada do input
+		  tmp(5) := LW & R2 & R0 & sw_low;					-- carrega a segunda metada do input
 		  
-		  tmp(8) := SW & R1 & R7 & hex_0_1;
+		  tmp(6) := beq & R1 & R0 & "00000110";			-- para o tmp 10
 		  
-		  tmp(9) := SW & R2 & R7 & hex_2_3;
+		  tmp(7) := add & R6 & R2 & R2 & "00000";
 		  
-		  tmp(10) := jump & inicio_tipo_J;
+		  tmp(8) := SW & R6 & R0 & hex_0_1;
+		  
+		  tmp(9) := LW & R5 & R0 & "11111111";
+		  
+		  tmp(10) := sub & R1 & R1 & R5 & "00000"; --"00100000"; -- R2 & 00000
+		  
+		  tmp(11) := SW & R1 & R0 & hex_2_3;
+		  
+		  tmp(12) := jump & "00000000000110" ; -- para o tmp 6
+		  
+		  tmp(13) := SW & R2 & R0 & hex_0_1;
+		  
+		  tmp(14) := jump & inicio_tipo_J;
 		  
 		  
 --		  tmp(0) := LW & R3 & R0 & sw_super_high;

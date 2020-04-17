@@ -3,32 +3,44 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 entity button is
-	Generic ( 
-		TOTAL_KEY : natural := 2;
-		DATA_SIZE : natural := 8
-	);
-	
 	port
 	(
-		key_in : in std_logic_vector(TOTAL_KEY-1 downto 0); 
-		enable : in std_logic;
-		
-		led_in : out std_logic_vector(TOTAL_KEY-1 downto 0);
-		key_out : out std_logic_vector(DATA_SIZE-1 downto 0)
+		key_in 			: in std_logic; 		
+		key_out 			: out std_logic;
+		enable_edge 	: in std_logic;
+		enable_flip 	: in std_logic;
+		but_clean		: in std_logic;
+		clk				: in std_logic
 	);
 end button;
 
 
 architecture keyArch of button is
 
-	signal sig_key : std_logic_vector(DATA_SIZE-1 downto 0);
+	signal sig_key : std_logic;
+	signal sinal_Q : std_logic;
 	
 begin
-	
-	sig_key <= ( std_logic_vector(to_unsigned(0, key_out'length - key_in'length)) & not(key_in)); 
-	
-	key_out <= sig_key when (enable = '1') else (others=>'Z'); 
-	led_in <= not(key_in); -- Acende os leds
-	
+--	
+--	Edge_Key_A: entity work.edgeDetector
+--		Port Map(
+--			clk => clk,
+--			entrada => key_in,
+--			saida => sig_key		
+--		);
+--		
+--	Flip_Flop: entity work.registradorGenerico
+--		Generic Map(
+--			larguraDados => 1
+--		)
+--		port map (
+--			CLK => clk, 
+--			DIN => sig_key,
+--			DOUT => sinal_Q,
+--			ENABLE => enable_flip, 
+--			RST => but_clean
+--		);
+--	
+--	key_out <= sinal_Q when (enable_edge = '1') else 'Z';
 	
 end keyArch;

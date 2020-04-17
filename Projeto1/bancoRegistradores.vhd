@@ -29,7 +29,9 @@ entity bancoRegistradores is
 		  --teste
 		  bancoR3:			out std_logic_vector((larguraEndBancoRegs-1) downto 0);
 		  banco007:			out std_logic_vector((larguraDados-1) downto 0);
-		  
+		  banco001:			out std_logic_vector((larguraDados-1) downto 0);
+		  banco002:			out std_logic_vector((larguraDados-1) downto 0);
+		  banco006:			out std_logic_vector((larguraDados-1) downto 0);
 		  banco003:			out std_logic_vector((larguraDados-1) downto 0);
 		  banco004:			out std_logic_vector((larguraDados-1) downto 0)
 		  
@@ -46,9 +48,12 @@ architecture comportamento of bancoRegistradores is
 
 begin
 	bancoR3 <= enderecoC;
-	banco007 <= registrador(1);
+	banco007 <= registrador(7);
 	banco003 <= registrador(3);
-	banco004 <= registrador(4);
+	banco004 <= registrador(4);	
+	banco002 <= registrador(2);	
+	banco006 <= registrador(6);	
+	banco001 <= registrador(1);	
 	
     process(clk) is
     begin

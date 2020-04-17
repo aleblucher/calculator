@@ -36,5 +36,7 @@ begin
         end if;
     end process;
     -- A leitura é sempre assincrona e quando houver habilitacao:
-    dado_out <= ram(to_integer(unsigned(addr))) when (re = '1' and habilita='1') else (others => 'Z');
+    dado_out <= ram(to_integer(unsigned(addr))) when (re = '1' and habilita='1') 
+					else (others => 'Z');
+	 
 end architecture;

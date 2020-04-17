@@ -29,7 +29,7 @@ architecture comportamento of ULA is
 	 
     begin
 		  soma 		<= STD_LOGIC_VECTOR(unsigned(entradaA) + unsigned(entradaB));
-		  subtracao <= STD_LOGIC_VECTOR(unsigned(entradaB) - unsigned(entradaA));
+		  subtracao <= STD_LOGIC_VECTOR(unsigned(entradaA) - unsigned(entradaB));
 		  op_and		<= entradaA and entradaB;
 		  op_or		<= entradaA or entradaB;
 		  op_xor		<= entradaA xor entradaB;

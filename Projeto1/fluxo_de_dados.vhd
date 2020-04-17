@@ -29,6 +29,10 @@ entity fluxo_de_dados is
 		  banco007:			out std_logic_vector((dataWidth-1) downto 0);
 		  banco003:			out std_logic_vector((dataWidth-1) downto 0);
 		  banco004:			out std_logic_vector((dataWidth-1) downto 0);
+		  banco001:			out std_logic_vector((dataWidth-1) downto 0);
+		  banco002:			out std_logic_vector((dataWidth-1) downto 0);
+		  banco006:			out std_logic_vector((dataWidth-1) downto 0);
+		  
 		  saidaA          : out std_logic_vector((dataWidth -1) downto 0);
         saidaB          : out std_logic_vector((dataWidth -1) downto 0);
 		  entradaA_ULA		: out std_logic_vector((dataWidth -1) downto 0);
@@ -161,7 +165,11 @@ begin
 					bancoR3			=> bancoR3,
 					banco007			=> banco007,
 					banco003			=> banco003,
-					banco004			=> banco004
+					banco004			=> banco004,
+					banco001			=> banco001,
+					banco002			=> banco002,
+					banco006			=> banco006
+					
 				);
 				
 				saidaA <= out_bank_1;

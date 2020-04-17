@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "04/17/2020 01:06:16"
+-- Generated on "04/17/2020 19:20:42"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          calculadora
 -- 
@@ -33,8 +33,11 @@ END calculadora_vhd_vec_tst;
 ARCHITECTURE calculadora_arch OF calculadora_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
+SIGNAL banco001 : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL banco002 : STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL banco003 : STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL banco004 : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL banco006 : STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL banco007 : STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL bancoR3 : STD_LOGIC_VECTOR(2 DOWNTO 0);
 SIGNAL CLOCK_50 : STD_LOGIC;
@@ -63,8 +66,11 @@ SIGNAL SW : STD_LOGIC_VECTOR(17 DOWNTO 0);
 SIGNAL Z_out_ula : STD_LOGIC;
 COMPONENT calculadora
 	PORT (
+	banco001 : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+	banco002 : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
 	banco003 : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
 	banco004 : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+	banco006 : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
 	banco007 : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
 	bancoR3 : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
 	CLOCK_50 : IN STD_LOGIC;
@@ -97,8 +103,11 @@ BEGIN
 	i1 : calculadora
 	PORT MAP (
 -- list connections between master ports and signals
+	banco001 => banco001,
+	banco002 => banco002,
 	banco003 => banco003,
 	banco004 => banco004,
+	banco006 => banco006,
 	banco007 => banco007,
 	bancoR3 => bancoR3,
 	CLOCK_50 => CLOCK_50,
@@ -126,18 +135,6 @@ BEGIN
 	SW => SW,
 	Z_out_ula => Z_out_ula
 	);
-
--- CLOCK_50
-t_prcs_CLOCK_50: PROCESS
-BEGIN
-LOOP
-	CLOCK_50 <= '0';
-	WAIT FOR 50000 ps;
-	CLOCK_50 <= '1';
-	WAIT FOR 50000 ps;
-	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
-END LOOP;
-END PROCESS t_prcs_CLOCK_50;
 -- KEY[3]
 t_prcs_KEY_3: PROCESS
 BEGIN
@@ -165,7 +162,7 @@ END PROCESS t_prcs_KEY_0;
 -- SW[17]
 t_prcs_SW_17: PROCESS
 BEGIN
-	SW(17) <= '0';
+	SW(17) <= '1';
 WAIT;
 END PROCESS t_prcs_SW_17;
 -- SW[16]
@@ -213,13 +210,13 @@ END PROCESS t_prcs_SW_10;
 -- SW[9]
 t_prcs_SW_9: PROCESS
 BEGIN
-	SW(9) <= '0';
+	SW(9) <= '1';
 WAIT;
 END PROCESS t_prcs_SW_9;
 -- SW[8]
 t_prcs_SW_8: PROCESS
 BEGIN
-	SW(8) <= '0';
+	SW(8) <= '1';
 WAIT;
 END PROCESS t_prcs_SW_8;
 -- SW[7]
@@ -261,13 +258,25 @@ END PROCESS t_prcs_SW_2;
 -- SW[1]
 t_prcs_SW_1: PROCESS
 BEGIN
-	SW(1) <= '0';
+	SW(1) <= '1';
 WAIT;
 END PROCESS t_prcs_SW_1;
 -- SW[0]
 t_prcs_SW_0: PROCESS
 BEGIN
-	SW(0) <= '0';
+	SW(0) <= '1';
 WAIT;
 END PROCESS t_prcs_SW_0;
+
+-- CLOCK_50
+t_prcs_CLOCK_50: PROCESS
+BEGIN
+LOOP
+	CLOCK_50 <= '0';
+	WAIT FOR 10000 ps;
+	CLOCK_50 <= '1';
+	WAIT FOR 10000 ps;
+	IF (NOW >= 2000000 ps) THEN WAIT; END IF;
+END LOOP;
+END PROCESS t_prcs_CLOCK_50;
 END calculadora_arch;

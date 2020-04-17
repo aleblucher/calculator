@@ -68,10 +68,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "LEDG[8]",
-					"strict" : false
-				},
-				{
 					"name" : "enderecamento[0]",
 					"strict" : false
 				},
@@ -536,6 +532,102 @@
 					"strict" : false
 				},
 				{
+					"name" : "banco001[0]",
+					"strict" : false
+				},
+				{
+					"name" : "banco001[1]",
+					"strict" : false
+				},
+				{
+					"name" : "banco001[2]",
+					"strict" : false
+				},
+				{
+					"name" : "banco001[3]",
+					"strict" : false
+				},
+				{
+					"name" : "banco001[4]",
+					"strict" : false
+				},
+				{
+					"name" : "banco001[5]",
+					"strict" : false
+				},
+				{
+					"name" : "banco001[6]",
+					"strict" : false
+				},
+				{
+					"name" : "banco001[7]",
+					"strict" : false
+				},
+				{
+					"name" : "banco002[0]",
+					"strict" : false
+				},
+				{
+					"name" : "banco002[1]",
+					"strict" : false
+				},
+				{
+					"name" : "banco002[2]",
+					"strict" : false
+				},
+				{
+					"name" : "banco002[3]",
+					"strict" : false
+				},
+				{
+					"name" : "banco002[4]",
+					"strict" : false
+				},
+				{
+					"name" : "banco002[5]",
+					"strict" : false
+				},
+				{
+					"name" : "banco002[6]",
+					"strict" : false
+				},
+				{
+					"name" : "banco002[7]",
+					"strict" : false
+				},
+				{
+					"name" : "banco006[0]",
+					"strict" : false
+				},
+				{
+					"name" : "banco006[1]",
+					"strict" : false
+				},
+				{
+					"name" : "banco006[2]",
+					"strict" : false
+				},
+				{
+					"name" : "banco006[3]",
+					"strict" : false
+				},
+				{
+					"name" : "banco006[4]",
+					"strict" : false
+				},
+				{
+					"name" : "banco006[5]",
+					"strict" : false
+				},
+				{
+					"name" : "banco006[6]",
+					"strict" : false
+				},
+				{
+					"name" : "banco006[7]",
+					"strict" : false
+				},
+				{
 					"name" : "saidaA[0]",
 					"strict" : false
 				},
@@ -812,10 +904,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "KEY[0]",
-					"strict" : false
-				},
-				{
 					"name" : "CLOCK_50",
 					"strict" : false
 				},
@@ -880,15 +968,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[15]",
-					"strict" : false
-				},
-				{
 					"name" : "SW[7]",
 					"strict" : false
 				},
 				{
 					"name" : "SW[17]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[15]",
 					"strict" : false
 				}
 			]

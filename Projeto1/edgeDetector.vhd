@@ -7,7 +7,7 @@ entity edgeDetector is
               saida   : out STD_LOGIC);
 end entity;
 
-architecture bordaDescida of edgeDetector is
+architecture bordaSubida of edgeDetector is
     signal saidaQ : STD_LOGIC;
 begin
   process(clk)
@@ -16,5 +16,5 @@ begin
             saidaQ <= entrada;
         end if;
   end process;
-  saida <= (not entrada) and saidaQ;
-end  architecture bordaDescida;
+  saida <= entrada and (not saidaQ);
+end  architecture bordaSubida;

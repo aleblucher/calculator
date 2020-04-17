@@ -35,6 +35,9 @@ entity calculadora is
 		  banco007:			out std_logic_vector((DATA_WIDTH-1) downto 0);
 		  banco003:			out std_logic_vector((DATA_WIDTH-1) downto 0);
 		  banco004:			out std_logic_vector((DATA_WIDTH-1) downto 0);
+		  banco001:			out std_logic_vector((DATA_WIDTH-1) downto 0);
+		  banco002:			out std_logic_vector((DATA_WIDTH-1) downto 0);
+		  banco006:			out std_logic_vector((DATA_WIDTH-1) downto 0);
 		  saidaA          : out std_logic_vector((DATA_WIDTH -1) downto 0);
         saidaB          : out std_logic_vector((DATA_WIDTH -1) downto 0);
 		  entradaA_ULA		: out std_logic_vector((DATA_WIDTH -1) downto 0);
@@ -77,7 +80,7 @@ alias habilita_LED_R_0_7: 			std_logic is habilita(4);
 alias habilita_LED_R_8_15: 		std_logic is habilita(5);
 alias habilita_LED_G_0_7: 			std_logic is habilita(6);
 alias habilita_but_0_prox_input: std_logic is habilita(7);
-alias habilita_but_1_enter: 		std_logic is habilita(8);
+alias habilita_clean_button: 		std_logic is habilita(8);
 alias habilita_but_2: 				std_logic is habilita(9);
 alias habilita_but_3: 				std_logic is habilita(10);
 alias habilita_hex_0_1: 			std_logic is habilita(11);
@@ -115,7 +118,10 @@ begin
 					saida_ULA			=> saida_ULA, 
 					Z_out_ula			=> Z_out_ula,
 					sinal_estendido 	=> sinal_estendido,
-					saida_somador		=> saida_somador
+					saida_somador		=> saida_somador,
+					banco001			=> banco001,
+					banco002			=> banco002,
+					banco006			=> banco006
 					
 				);
 
@@ -176,27 +182,31 @@ begin
 				habilita => habilita_chave_8_15
 				);
 				
-	entradaChaves_16_17: entity work.interfaceCHAVES
+	entradaChaves_17: entity work.interfaceCHAVES
 				port map (
-				entrada => SW(DATA_WIDTH+DATA_WIDTH+1 downto 16) & "000000", 		-- 17 ate 16
+				entrada => SW(DATA_WIDTH+DATA_WIDTH+1 downto 17) & "0000000", 		-- 17 ate 16
+				saida => barramentoLeituraDados(DATA_WIDTH-1 downto 0), 
+				habilita => habilita_chave_16_17
+				);
+				
+	entradaChaves_16: entity work.interfaceCHAVES
+				port map (
+				entrada => "0" & SW(16 downto 16) & "000000", 		-- 17 ate 16
 				saida => barramentoLeituraDados(DATA_WIDTH-1 downto 0), 
 				habilita => habilita_chave_16_17
 				);
 				
 				
-		Botao: entity work.button
-		Generic Map(
-			TOTAL_KEY => 1,
-			DATA_SIZE => DATA_WIDTH
-		)
-		Port Map(
-		   led_in=> LEDG(8 downto 8),
-			key_in => KEY(0 downto 0),
-			enable => habilita_but_0_prox_input,
-			key_out => sig_button
-		);
+--		Botao: entity work.button
+--		Port Map(
+--				key_in 			=> KEY(0 downto 0), 		
+--				key_out 			=> ,
+--				enable_edge 	=> habilita_but_0_prox_input,
+--				enable_flip 	=> habilita_clean_button,
+--				but_clean		=> ,
+--				clk				=> clk
+--		);
 
-	
 	
 	 DISPLAY0_1 : entity work.doubleHex7
 					port map( 

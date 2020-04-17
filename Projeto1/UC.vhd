@@ -29,6 +29,8 @@ constant op_or : std_logic_vector(OPCODE_WIDTH-1 downto 0) 	:= "0111";	-- or
 constant op_not : std_logic_vector(OPCODE_WIDTH-1 downto 0) := "1000";	-- not
 constant op_xor : std_logic_vector(OPCODE_WIDTH-1 downto 0) := "1001";	-- xor
 
+constant addi	 : std_logic_vector(OPCODE_WIDTH-1 downto 0) := "1001";	-- xor
+
 
 alias sel_mux_5:				std_logic is pontosDeControle(11);
 alias sel_mux_1:				std_logic is pontosDeControle(10);
@@ -43,7 +45,7 @@ alias sel_mux_4:				std_logic is pontosDeControle(0);
 
 begin
 
-   --- 
+   
 	sel_mux_4			<= '0' when (opcode = beq and Z_out_ula = '1') 
 								else '1';
 
@@ -77,7 +79,7 @@ begin
 								else '0';
 						
 												
-	sel_mux_5			<= '1' when (opcode = store) 
+	sel_mux_5			<= '1' when (opcode = store or opcode = beq) 
 								else '0';
 								
 								

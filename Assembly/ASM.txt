@@ -1,0 +1,223 @@
+SETUP:
+	STORE #0, R0, ZERO
+	LOAD R1, R0, ZERO
+	LOAD R2, R0, ZERO
+	LOAD R3, R0, ZERO
+	LOAD R4, R0, ZERO
+	LOAD R5, R0, ZERO
+	LOAD R6, R0, ZERO
+	LOAD R7, R0, ZERO
+
+-----------------------------------------
+
+INICIO:
+	JUMP .LEENTRADA1				-- sub rotina para o primeiro input
+
+-----------------------------------------
+PRIMEIROINPUT:	
+	STORE R1, R0, UM				-- guarda o resultado R1 na memoria 1 da RAM
+	STORE R2, R0, DOIS  			-- guarda o resultado R2 na memoria 2 da RAM
+	STORE R1, R0, sete_segmentos_0	-- printa o resultado R1 na primeria dupla dos sete segmentos
+	STORE R1, R0, sete_segmentos_1	-- printa o resultado R2 na segunda dupla dos sete segmentos
+	JUMP .LEENTRADA2				-- sub rotina para o segundo input
+
+-----------------------------------------
+SEGUNDOINPUT:	
+	STORE R1, R0, TRES				-- guarda o resultado R1 na memoria 3 da RAM
+	STORE R2, R0, QUATRO			-- guarda o resultado R2 na memoria 4 da RAM
+	STORE R1, R0, sete_segmentos_0	-- printa o resultado R1 na primeria dupla dos sete segmentos
+	STORE R1, R0, sete_segmentos_1	-- printa o resultado R2 na segunda dupla dos sete segmentos
+
+-----------------------------------------
+	JUMP .LEOPERACAO 				-- sub rotina para a operacao
+CHECAOPERACAO:
+	STORE R4, R0, CINCO				-- guarda a operacao na memoria 5 da RAM
+	AND R5, R4, OPADD				-- and entre a operacao recebida e a opecerao OP_ADD
+	BEQ R0, R5, NEXT1				-- Caso a opecerao NAO for ADD, vá para o NEXT_1
+	JUMP .ADD						-- Caso a operacao for ADD, vá para o ADD! 
+
+-----------------------------------------
+
+NEXT1:
+	AND R5, R4, OPSUB				-- and entre a operacao recebida e a opecerao OP_SUB	
+	BEQ R0, R5, NEXT2				-- Caso a opecerao NAO for SUB, vá para o NEXT_2
+	JUMP .SUB						-- Caso a operacao for SUB, vá para o SUB!
+
+NEXT2:
+	AND R5, R4, OPMULT				-- and entre a operacao recebida e a opecerao OP_MULT
+	BEQ R0, R5, NEXT3				-- Caso a opecerao NAO for MULT, vá para o NEXT_3
+	JUMP .MULT						-- Caso a operacao for MULT, vá para o MULT!
+
+NEXT3:
+	AND R5, R4, OPDIV				-- and entre a operacao recebida e a opecerao OP_DIV
+	BEQ R0, R5, NEXT4				-- Caso a opecerao NAO for DIV, vá para o NEXT_4
+	JUMP .DIV						-- Caso a operacao for DIV, vá para o DIV!
+
+NEXT4:
+	AND R5, R4, OPOR				-- and entre a operacao recebida e a opecerao OP_OR
+	BEQ R0, R5, NEXT5				-- Caso a opecerao NAO for OR, vá para o NEXT_5
+	JUMP .OR							-- Caso a operacao for OR, vá para o OR!
+
+NEXT5:
+	AND R5, R4, OPXOR				-- and entre a operacao recebida e a opecerao OP_XOR
+	BEQ R0, R5, NEXT6				-- Caso a opecerao NAO for XOR, vá para o NEXT_5
+	JUMP .XOR						-- Caso a operacao for XOR, vá para o XOR!
+
+NEXT6:
+	AND R5, R4, OPAND				-- and entre a operacao recebida e a opecerao OP_AND
+	BEQ R0, R5, NEXT7				-- Caso a opecerao NAO for AND, vá para o NEXT_7
+	JUMP .AND						-- Caso a operacao for AND, vá para o AND!
+
+NEXT7:
+	AND R5, R4, OPNOT				-- and entre a operacao recebida e a opecerao OP_NOT
+	BEQ R0, R5, LEOPERACAO		-- Caso a opecerao NAO for NOT, vamos ler a operacao de novo!
+	JUMP .NOT						-- Caso a operacao for NOT, vá para o NOT!
+
+-----------------------------------------
+
+LEENTRADA1:
+	LOAD R3, R0, chave_17_16		-- Carrega as chaves de operacão em R3
+	BEQ R0, R3, ERRO				-- Caso as chaves de operacao sejam 0, denuncia ERRO
+	LOAD R4, R0, but_0_prox_input	-- Carrega o botao de confirmacao
+	STORE R0, RO, clean_button		-- Limpa o sinal do botao
+	BEQ R4, R0, LE_ENTRADA			-- Continua lendo a entrada até o botão de confirmação ser pressionado
+	LOAD R1, RO, chave_0_7			-- Carrega no R1 a primeira metade do número
+	LOAD R2, R0, chave_8_15			-- Carrega no R2 a segunda metade do número
+	JUMP .PRIMEIRO_INPUT
+
+-----------------------------------------
+LEENTRADA2:
+	LOAD R3, R0, chave_17_16		-- Carrega as chaves de operacão em R3
+	BEQ R0, R3, ERRO				-- Caso as chaves de operacao sejam 0, denuncia ERRO
+	LOAD R4, R0, but_0_prox_input	-- Carrega o botao de confirmacao
+	STORE R0, RO, clean_button		-- Limpa o sinal do botao
+	BEQ R4, R0, LE_ENTRADA			-- Continua lendo a entrada até o botão de confirmação ser pressionado
+	LOAD R1, RO, chave_0_7			-- Carrega no R1 a primeira metade do número
+	LOAD R2, R0, chave_8_15			-- Carrega no R2 a segunda metade do número
+	JUMP .CHECAOPERACAO
+
+-----------------------------------------
+LEOPERACAO:
+	LOAD R3, R0, chave_17_16
+	BEQ R3, R0, PASSOU
+	JUMP .ERRO
+PASSOU:
+	LOAD R4, R0, chave_0_7
+	JUMP
+
+-----------------------------------------
+
+MOSTRARESULTADO:
+	STORE  R6, R0, sete_segmentos_0
+	STORE  R7, R0, sete_segmentos_1
+	JUMP .INICIO
+
+-----------------------------------------
+ADD:
+	LOAD R1, R0, UM
+	LOAD R2, R0, TRES
+	ADD R6, R1, R2
+	LOAD R3, R0, DOIS
+	LOAD R4, RO, QUATRO
+	ADD R7, R3, R4
+	LOAD 
+	JUMP .MOSTRARESULTADO
+-----------------------------------------
+
+SUB:
+	LOAD R1, R0, UM
+	LOAD R2, R0, TRES
+	SUB R6, R1, R2
+	LOAD R3, R0, DOIS
+	LOAD R4, RO, QUATRO
+	SUB R7, R3, R4
+	JUMP .MOSTRARESULTADO
+
+-----------------------------------------
+MULT:
+	LOAD R1, R0, UM
+	LOAD R2, R0, TRES
+
+INICIOMULT1:
+	BEQ R1, R0, MULTINPUT2
+	ADD R6, R2, R2
+	SUB R1, R1, #1
+	JUMP .INICIOMULT1
+
+MULTINPUT2:
+	LOAD R3, R0, DOIS
+	LOAD R4, R0, QUATROS
+
+INICIOMULT2:
+	BEQ R3, R0, MOSTRARESULTADO
+	ADD R7, R4, R4
+	SUB R3, R3, #1
+	JUMP .INICIOMULT2
+
+
+-----------------------------------------
+
+DIV:
+	LOAD R1, R0, UM
+	LOAD R2, R0, TRES
+
+INICIODIV1:
+	BEQ R1, R0, DIVNPUT2
+	SUB R6, R2, R2
+	SUB R1, R1, #1
+	JUMP .INICIODIV1
+
+DIVNPUT2:
+	LOAD R3, R0, DOIS
+	LOAD R4, R0, QUATROS
+
+INICIODIV2:
+	BEQ R3, R0, MOSTRARESULTADO
+	SUB R7, R4, R4
+	SUB R3, R3, #1
+	JUMP .INICIODIV2
+
+-----------------------------------------
+OR:
+	LOAD R1, R0, UM
+	LOAD R2, R0, TRES
+	OR R6, R1, R2
+	LOAD R3, R0, DOIS
+	LOAD R4, RO, QUATRO
+	OR R7, R3, R4
+	JUMP .MOSTRARESULTADO
+
+-----------------------------------------
+XOR:
+	LOAD R1, R0, UM
+	LOAD R2, R0, TRES
+	XOR R6, R1, R2
+	LOAD R3, R0, DOIS
+	LOAD R4, RO, QUATRO
+	XOR R7, R3, R4
+	JUMP .MOSTRARESULTADO
+
+
+AND:
+	LOAD R1, R0, UM
+	LOAD R2, R0, TRES
+	AND R6, R1, R2
+	LOAD R3, R0, DOIS
+	LOAD R4, RO, QUATRO
+	AND R7, R3, R4
+	JUMP .MOSTRARESULTADO
+
+
+NOT:
+	LOAD R1, R0, UM
+	LOAD R2, R0, TRES
+	NOT R6, R1, R2
+	LOAD R3, R0, DOIS
+	LOAD R4, RO, QUATRO
+	NOT R7, R3, R4
+	JUMP .MOSTRARESULTADO
+
+
+
+ERRO: 
+	JUMP .INCIO

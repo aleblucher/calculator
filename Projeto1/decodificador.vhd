@@ -20,7 +20,8 @@ signal paginacao: 			std_logic_vector(3 downto 0);
 
 signal chave_0_7:				std_logic;
 signal chave_8_15:			std_logic;
-signal chave_16_17:			std_logic;
+signal chave_16	:			std_logic;
+signal chave_17	:			std_logic;
 
 signal LED_R_0_7:				std_logic;
 signal LED_R_8_15:			std_logic;
@@ -42,7 +43,7 @@ alias habilita_LED_R_0_7: 			std_logic is habilita(4);
 alias habilita_LED_R_8_15: 		std_logic is habilita(5);
 alias habilita_LED_G_0_7: 			std_logic is habilita(6);
 alias habilita_but_0_prox_input: std_logic is habilita(7);
-alias habilita_but_1_enter: 		std_logic is habilita(8);
+alias habilita_clean_button: 		std_logic is habilita(8);
 alias habilita_but_2: 				std_logic is habilita(9);
 alias habilita_but_3: 				std_logic is habilita(10);
 alias habilita_hex_0_1: 			std_logic is habilita(11);
@@ -56,56 +57,61 @@ alias habilita_hex_6_7: 			std_logic is habilita(14);
  
   
 	 with endereco(7 downto 6) select
-	 paginacao <=  "0001" when "00",	-- 0   ~ 63 	-- RAM1
-				      "0010" when "01",	-- 64  ~ 127  	-- RAM2
-					   "0100" when "10",	-- 128 ~ 191  	-- IO input
-						"1000" when "11",	--	192 ~ 255	-- IO output
+	 paginacao <=  "0001" when "00",						-- 0   ~ 63 	-- RAM1
+				      "0010" when "01",						-- 64  ~ 127  	-- RAM2
+					   "0100" when "10",						-- 128 ~ 191  	-- IO input
+						"1000" when "11",						--	192 ~ 255	-- IO output
 						"0000" when others;
 					 				 
 	
 				-- IO INPUT
 			
 	with endereco(5 downto 0) select
-	chave_0_7 <= '1' when "000010",				-- chave_0_7 : 130 = 10000010
+	chave_0_7 <= '1' when "000010",						-- chave_0_7 : 130 = 10000010
 						'0' when others;
 	
 	with endereco(5 downto 0) select
-	chave_8_15 <= '1' when "000011",				-- chave_8_15 : 131 = 10000011
+	chave_8_15 <= '1' when "000011",						-- chave_8_15 : 131 = 10000011
 						'0' when others;
 	
 	with endereco(5 downto 0) select
-	chave_16_17 <= '1' when "000100",			-- chave_16_17 : 132 = 10000100
+	chave_16	 <= '1' when "000100",						-- chave_16 : 132 = 10000100
+						'0' when others;
+						
+	with endereco(5 downto 0) select
+	chave_17	 <= '1' when "000101",						-- chave_17 : 133 = 10000101
+						'0' when others;					
+	
+	
+	with endereco(5 downto 0) select
+	but_0_prox_input <= '1' when "000111",	 			-- but_0_prox_input : 135 = 10000111
 						'0' when others;
 	
 	with endereco(5 downto 0) select
-	but_0_prox_input <= '1' when "000111",	 	-- but_0_prox_input : 135
+	but_1_enter <= '1' when "001000",					-- clean_button : 136
 						'0' when others;
 	
 	with endereco(5 downto 0) select
-	but_1_enter <= '1' when "001000",			-- but_1_enter : 136
+	but_2 <= '1' when "001001",							-- but_2 : 137
 						'0' when others;
 	
 	with endereco(5 downto 0) select
-	but_2 <= '1' when "001001",					-- but_2 : 137
-						'0' when others;
-	
-	with endereco(5 downto 0) select
-	but_3 <= '1' when "001010",	 				-- but_3 : 138
+	but_3 <= '1' when "001010",	 						-- but_3 : 138
 					'0' when others;
 					
 	
 				-- IO OUTPUT
 	
 	with endereco(5 downto 0) select
-	LED_R_0_7 <= '1' when "001000",				-- LED_R_0_7 : 200
+	LED_R_0_7 <= '1' when "001000",						-- LED_R_0_7 : 200
 					'0' when others;
 		
 	with endereco(5 downto 0) select
-	LED_R_8_15 <= '1' when "001001",				-- LED_R_8_15 : 201
+	LED_R_8_15 <= '1' when "001001",						-- LED_R_8_15 : 201
 					'0' when others;
 					
 	with endereco(5 downto 0) select
-	LED_G_0_7 <= '1' when "001010",				-- LED_R_8_15 : 202
+	LED_G_0_7 <= '1' when "001010",						-- LED_R_8_15 : 202
 					'0' when others;
 					
 		
@@ -131,9 +137,9 @@ alias habilita_hex_6_7: 			std_logic is habilita(14);
 	-------------------------------------------------------------------------------------------------------------------------------------------------------------
 	habilita_chave_0_7 <= chave_0_7 and leitura and paginacao(2);
 	habilita_chave_8_15 <= chave_8_15 and leitura and paginacao(2);
-	habilita_chave_16_17 <= chave_16_17 and leitura and paginacao(2);
+	habilita_chave_16_17 <= (chave_16 or chave_17) and leitura and paginacao(2);
 	habilita_but_0_prox_input <= but_0_prox_input and leitura and paginacao(2);
-	habilita_but_1_enter <= but_1_enter and leitura and paginacao(2);
+	habilita_clean_button <= but_1_enter and leitura and paginacao(2);
 	habilita_but_2 <= but_2 and leitura and paginacao(2);
 	habilita_but_3 <= but_3 and leitura and paginacao(2);
 	-------------------------------------------------------------------------------------------------------------------------------------------------------------
