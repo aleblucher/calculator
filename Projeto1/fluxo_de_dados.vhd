@@ -33,7 +33,8 @@ entity fluxo_de_dados is
         saidaB          : out std_logic_vector((dataWidth -1) downto 0);
 		  entradaA_ULA		: out std_logic_vector((dataWidth -1) downto 0);
 		  entradaB_ULA		: out std_logic_vector((dataWidth -1) downto 0);
-		  saida_ULA			: out std_logic_vector((dataWidth -1) downto 0)
+		  saida_ULA			: out std_logic_vector((dataWidth -1) downto 0);
+		  sinal_estendido :  out std_logic_vector((addrWidth -1) downto 0)
 	);
 end entity;
 
@@ -105,6 +106,8 @@ begin
 					extendeSinal_IN  => imediato,
 					extendeSinal_OUT => out_extensor
 				);
+				
+	sinal_estendido <= out_extensor;
 				
 				
 	Somador: entity work.somador

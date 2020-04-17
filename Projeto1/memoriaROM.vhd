@@ -114,9 +114,7 @@ constant inicio_tipo_J				: std_logic_vector(13 downto 0) := "00000000000000";
   --		Opcode (4 bits) + Reg3 (3 bits) + Reg1 (3 bits) + Imediato (8 bits)
   
   
-  
-	--  3: 0011
-	-- -3: 1101 
+ -- CUIDADO COM beq: O endereco passado para ele deve ser relativo a posicao atual do PC.
   
 		  tmp(0) := LW & R7 & "000" & "00000000";
         
