@@ -1,5 +1,5 @@
 Flow report for Calculadora
-Thu Apr 16 19:32:47 2020
+Thu Apr 16 23:25:57 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Apr 16 19:32:47 2020       ;
+; Flow Status                        ; Successful - Thu Apr 16 23:25:57 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Calculadora                                 ;
 ; Top-level Entity Name              ; calculadora                                 ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 2,218                                       ;
-;     Total combinational functions  ; 1,106                                       ;
+; Total logic elements               ; 2,238                                       ;
+;     Total combinational functions  ; 1,126                                       ;
 ;     Dedicated logic registers      ; 1,142                                       ;
 ; Total registers                    ; 1142                                        ;
 ; Total pins                         ; 208                                         ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/16/2020 19:32:10 ;
+; Start date & time ; 04/16/2020 23:22:36 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Calculadora         ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 229436432934647.158707633019772        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 229436432934647.158709015627139        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --          ; --         ;
@@ -96,10 +96,10 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:16     ; 1.0                     ; 1033 MB             ; 00:00:28                           ;
+; Analysis & Synthesis ; 00:00:18     ; 1.0                     ; 1011 MB             ; 00:00:35                           ;
 ; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 1051 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1059 MB             ; 00:00:01                           ;
-; Total                ; 00:00:17     ; --                      ; --                  ; 00:00:29                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 1059 MB             ; 00:00:01                           ;
+; Total                ; 00:00:18     ; --                      ; --                  ; 00:00:36                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -118,7 +118,7 @@ refer to the applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off Calculadora -c Calculadora
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Calculadora -c Calculadora --vector_source=/home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/Waveform9.vwf --testbench_file=/home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/simulation/qsim/Waveform9.vwf.vht
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Calculadora -c Calculadora --vector_source=/home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/Waveform10.vwf --testbench_file=/home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/simulation/qsim/Waveform10.vwf.vht
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/simulation/qsim/ Calculadora -c Calculadora
 
 

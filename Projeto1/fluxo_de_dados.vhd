@@ -107,23 +107,23 @@ begin
 				);
 				
 				
---	Somador: entity work.somador
---				generic map (
---					larguraDados => addrWidth
---				)
---				port map(
---					entradaA => out_adder1,
---					entradaB => out_extensor,
---					saida => out_adder2
---				);
---								
+	Somador: entity work.somador
+				generic map (
+					larguraDados => addrWidth
+				)
+				port map(
+					entradaA => out_adder1,
+					entradaB => out_extensor,
+					saida => out_adder2
+				);
+								
 				
 	Mux4: entity work.muxGenerico2x1
 				generic map(
 					larguraDados => addrWidth 
 				)
 				port map(
-					entradaA_MUX => out_extensor,
+					entradaA_MUX => out_adder2,
 					entradaB_MUX => out_mux_1,
 					seletor_MUX  => sel_mux_4,			-- sel_mux_4 alias da palavra de controle[x]
 					saida_MUX	 => out_mux_4
