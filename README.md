@@ -75,7 +75,7 @@ O funcionamento do decodificador de endereço e os seus respectivos mapas de mem
 | ------------- | ------------- |
 | LED_R_0_7 | 200 |
 | LED_R_8_15 | 201 |
-| LED_R_8_15 | 202 |
+| LED_G_0_7 | 202 |
 | sete_segmentos_0 | 205 |
 | sete_segmentos_1 | 206 |
 | sete_segmentos_2 | 207 |
