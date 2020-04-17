@@ -41,7 +41,8 @@ entity calculadora is
 		  entradaB_ULA		: out std_logic_vector((DATA_WIDTH -1) downto 0);
 		  saida_ULA			: out std_logic_vector((DATA_WIDTH -1) downto 0);
 		  Z_out_ula			: out std_logic;
-		  sinal_estendido :  out std_logic_vector((14 -1) downto 0)
+		  sinal_estendido :  out std_logic_vector((14 -1) downto 0);
+		  saida_somador	:  out std_logic_vector((14 -1) downto 0)
 		
 	);
 end entity;
@@ -113,7 +114,8 @@ begin
 					entradaB_ULA		=> entradaB_ULA,
 					saida_ULA			=> saida_ULA, 
 					Z_out_ula			=> Z_out_ula,
-					sinal_estendido 	=> sinal_estendido
+					sinal_estendido 	=> sinal_estendido,
+					saida_somador		=> saida_somador
 					
 				);
 

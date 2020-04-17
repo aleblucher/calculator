@@ -34,7 +34,8 @@ entity fluxo_de_dados is
 		  entradaA_ULA		: out std_logic_vector((dataWidth -1) downto 0);
 		  entradaB_ULA		: out std_logic_vector((dataWidth -1) downto 0);
 		  saida_ULA			: out std_logic_vector((dataWidth -1) downto 0);
-		  sinal_estendido :  out std_logic_vector((addrWidth -1) downto 0)
+		  sinal_estendido :  out std_logic_vector((addrWidth -1) downto 0);
+		  saida_somador	:  out std_logic_vector((addrWidth -1) downto 0)
 	);
 end entity;
 
@@ -119,6 +120,8 @@ begin
 					entradaB => out_extensor,
 					saida => out_adder2
 				);
+				
+	saida_somador <= out_adder2; 		
 								
 				
 	Mux4: entity work.muxGenerico2x1

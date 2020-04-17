@@ -756,6 +756,62 @@
 					"strict" : false
 				},
 				{
+					"name" : "saida_somador[0]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_somador[1]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_somador[2]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_somador[3]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_somador[4]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_somador[5]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_somador[6]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_somador[7]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_somador[8]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_somador[9]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_somador[10]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_somador[11]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_somador[12]",
+					"strict" : false
+				},
+				{
+					"name" : "saida_somador[13]",
+					"strict" : false
+				},
+				{
 					"name" : "KEY[0]",
 					"strict" : false
 				},
