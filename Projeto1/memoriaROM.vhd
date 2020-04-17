@@ -120,7 +120,7 @@ constant inicio_tipo_J				: std_logic_vector(13 downto 0) := "00000000000000";
         
 		  tmp(1) := LW & R3 & R7 & sw_super_high; 		-- carrega o SW de operacao
 		  
-		  tmp(2) := beq & R0 & R0 & "11111101"; 		-- checa se o SW de operacao e um s enao volta pro inicio
+		  tmp(2) := beq & R7 & R3 & "11111101"; 		-- checa se o SW de operacao e um s enao volta pro inicio
 		  
 		  tmp(3) := LW & R4 & R7 & sw_super_high;			-- carrega o valor do botao de confirmar
 		  

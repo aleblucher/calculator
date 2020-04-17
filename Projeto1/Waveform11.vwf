@@ -20,6 +20,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -38,6 +39,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 </modelsim_script_timing>
 <hdl_lang>vhdl</hdl_lang>
 </simulation_settings>*/
@@ -2545,11 +2547,6 @@ SIGNAL("Z_out_ula")
 	PARENT = "";
 }
 
-GROUP("perif")
-{
-	MEMBERS = "HEX0", "HEX1", "HEX2", "HEX3", "HEX4", "HEX5", "HEX6", "HEX7", "KEY", "LEDG", "LEDR";
-}
-
 SIGNAL("saida_somador")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
@@ -2698,6 +2695,11 @@ SIGNAL("saida_somador[0]")
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
 	PARENT = "saida_somador";
+}
+
+GROUP("perif")
+{
+	MEMBERS = "HEX0", "HEX1", "HEX2", "HEX3", "HEX4", "HEX5", "HEX6", "HEX7", "KEY", "LEDG", "LEDR";
 }
 
 TRANSITION_LIST("banco003[7]")
