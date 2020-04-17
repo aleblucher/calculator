@@ -34,12 +34,13 @@ Abaixo está representada todas as instruções e suas sintaxes:
 | ------------- | ------------- | ------------- | ------------- |
 | Add       | R | 0000          | R3 = R1 + R2  |
 | Sub       | R | 0001          | R3 = R1 - R2  |
-| And       | R | 0110          | R3 = R1 & R2  |
-| Or        | R | 0111          | R3 = R1 | R2  |
-| Xor       | R | 1001          | R3 = R1 xor R2|
+| And       | R | 0010          | R3 = R1 & R2  |
+| Or        | R | 0011          | R3 = R1 | R2  |
+| Xor       | R | 0100          | R3 = R1 xor R2|
+| Not       | R | 0101          | R3 = ! R1     |
 | Jump      | J | 0010          | PC = jumpAddr                                         |
 | Load      | I | 1000          | R3 (dest) = M[Imm + R1]                                           |
-| Store     | I | 1000          | M[R1+Imm] = R3 (fonte)                                          |
+| Store     | I | 0101          | M[R1+Imm] = R3 (fonte)                                          |
 | Beq       | I | 0011          | if R3 = R1: {PC = PC + 1 + branchAddr} else: {PC = PC + 1}|
 
 
