@@ -180,6 +180,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "pontosdecontrole[6]",
+					"strict" : false
+				},
+				{
 					"name" : "pontosdecontrole[7]",
 					"strict" : false
 				},
@@ -960,19 +964,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[14]",
-					"strict" : false
-				},
-				{
 					"name" : "SW[16]",
 					"strict" : false
 				},
 				{
-					"name" : "SW[7]",
+					"name" : "SW[14]",
 					"strict" : false
 				},
 				{
 					"name" : "SW[17]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[7]",
 					"strict" : false
 				},
 				{

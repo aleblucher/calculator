@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Calculadora
-Fri Apr 17 19:20:29 2020
+Fri Apr 17 20:59:03 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -87,13 +87,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Apr 17 19:20:29 2020       ;
+; Analysis & Synthesis Status        ; Successful - Fri Apr 17 20:59:03 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Calculadora                                 ;
 ; Top-level Entity Name              ; calculadora                                 ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 2,242                                       ;
-;     Total combinational functions  ; 1,130                                       ;
+; Total logic elements               ; 2,253                                       ;
+;     Total combinational functions  ; 1,141                                       ;
 ;     Dedicated logic registers      ; 1,142                                       ;
 ; Total registers                    ; 1142                                        ;
 ; Total pins                         ; 260                                         ;
@@ -206,7 +206,7 @@ refer to the applicable agreement for further details.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.1%      ;
-;     Processor 3            ;   0.0%      ;
+;     Processor 3            ;   0.1%      ;
 ;     Processor 4            ;   0.0%      ;
 ;     Processor 5            ;   0.0%      ;
 ;     Processor 6            ;   0.0%      ;
@@ -244,16 +244,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 2,242          ;
+; Estimated Total logic elements              ; 2,253          ;
 ;                                             ;                ;
-; Total combinational functions               ; 1130           ;
+; Total combinational functions               ; 1141           ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 975            ;
-;     -- 3 input functions                    ; 75             ;
-;     -- <=2 input functions                  ; 80             ;
+;     -- 4 input functions                    ; 972            ;
+;     -- 3 input functions                    ; 149            ;
+;     -- <=2 input functions                  ; 20             ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 1096           ;
+;     -- normal mode                          ; 1107           ;
 ;     -- arithmetic mode                      ; 34             ;
 ;                                             ;                ;
 ; Total registers                             ; 1142           ;
@@ -266,8 +266,8 @@ refer to the applicable agreement for further details.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 1142           ;
-; Total fan-out                               ; 8207           ;
-; Average fan-out                             ; 2.94           ;
+; Total fan-out                               ; 8296           ;
+; Average fan-out                             ; 2.96           ;
 +---------------------------------------------+----------------+
 
 
@@ -276,7 +276,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                   ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------+---------------------+--------------+
-; |calculadora                              ; 1130 (0)            ; 1142 (0)                  ; 0           ; 0            ; 0       ; 0         ; 260  ; 0            ; |calculadora                                                                          ; calculadora         ; work         ;
+; |calculadora                              ; 1141 (0)            ; 1142 (0)                  ; 0           ; 0            ; 0       ; 0         ; 260  ; 0            ; |calculadora                                                                          ; calculadora         ; work         ;
 ;    |conversorHex7Seg:DISPLAY0|            ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|conversorHex7Seg:DISPLAY0                                                ; conversorHex7Seg    ; work         ;
 ;    |conversorHex7Seg:DISPLAY1|            ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|conversorHex7Seg:DISPLAY1                                                ; conversorHex7Seg    ; work         ;
 ;    |conversorHex7Seg:DISPLAY2|            ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|conversorHex7Seg:DISPLAY2                                                ; conversorHex7Seg    ; work         ;
@@ -285,7 +285,7 @@ refer to the applicable agreement for further details.
 ;    |conversorHex7Seg:DISPLAY5|            ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|conversorHex7Seg:DISPLAY5                                                ; conversorHex7Seg    ; work         ;
 ;    |conversorHex7Seg:DISPLAY6|            ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|conversorHex7Seg:DISPLAY6                                                ; conversorHex7Seg    ; work         ;
 ;    |conversorHex7Seg:DISPLAY7|            ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|conversorHex7Seg:DISPLAY7                                                ; conversorHex7Seg    ; work         ;
-;    |decodificador:decodificador|          ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|decodificador:decodificador                                              ; decodificador       ; work         ;
+;    |decodificador:decodificador|          ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|decodificador:decodificador                                              ; decodificador       ; work         ;
 ;    |doubleHex7:DISPLAY0_1|                ; 0 (0)               ; 8 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|doubleHex7:DISPLAY0_1                                                    ; doubleHex7          ; work         ;
 ;       |registradorGenerico:REG|           ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|doubleHex7:DISPLAY0_1|registradorGenerico:REG                            ; registradorGenerico ; work         ;
 ;    |doubleHex7:DISPLAY2_3|                ; 0 (0)               ; 8 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|doubleHex7:DISPLAY2_3                                                    ; doubleHex7          ; work         ;
@@ -295,18 +295,18 @@ refer to the applicable agreement for further details.
 ;    |doubleHex7:DISPLAY6_7|                ; 0 (0)               ; 8 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|doubleHex7:DISPLAY6_7                                                    ; doubleHex7          ; work         ;
 ;       |registradorGenerico:REG|           ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|doubleHex7:DISPLAY6_7|registradorGenerico:REG                            ; registradorGenerico ; work         ;
 ;    |interfaceLEDs:saidaLED_Vermelhos|     ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|interfaceLEDs:saidaLED_Vermelhos                                         ; interfaceLEDs       ; work         ;
-;    |memoriaRAM:RAM|                       ; 823 (823)           ; 1024 (1024)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|memoriaRAM:RAM                                                           ; memoriaRAM          ; work         ;
-;    |processador:Processador|              ; 241 (0)             ; 78 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador                                                  ; processador         ; work         ;
-;       |UC:UC|                             ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|UC:UC                                            ; UC                  ; work         ;
+;    |memoriaRAM:RAM|                       ; 826 (826)           ; 1024 (1024)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|memoriaRAM:RAM                                                           ; memoriaRAM          ; work         ;
+;    |processador:Processador|              ; 251 (0)             ; 78 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador                                                  ; processador         ; work         ;
+;       |UC:UC|                             ; 20 (20)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|UC:UC                                            ; UC                  ; work         ;
 ;       |fluxo_de_dados:FD|                 ; 231 (0)             ; 78 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|fluxo_de_dados:FD                                ; fluxo_de_dados      ; work         ;
-;          |ULA:ULA|                        ; 48 (48)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|fluxo_de_dados:FD|ULA:ULA                        ; ULA                 ; work         ;
-;          |bancoRegistradores:Banco_Regs|  ; 59 (59)             ; 64 (64)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs  ; bancoRegistradores  ; work         ;
-;          |memoriaROM:ROM|                 ; 31 (31)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|fluxo_de_dados:FD|memoriaROM:ROM                 ; memoriaROM          ; work         ;
+;          |ULA:ULA|                        ; 50 (50)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|fluxo_de_dados:FD|ULA:ULA                        ; ULA                 ; work         ;
+;          |bancoRegistradores:Banco_Regs|  ; 65 (65)             ; 64 (64)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs  ; bancoRegistradores  ; work         ;
+;          |memoriaROM:ROM|                 ; 34 (34)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|fluxo_de_dados:FD|memoriaROM:ROM                 ; memoriaROM          ; work         ;
 ;          |muxGenerico2x1:Mux2|            ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux2            ; muxGenerico2x1      ; work         ;
-;          |muxGenerico2x1:Mux3|            ; 38 (38)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux3            ; muxGenerico2x1      ; work         ;
-;          |muxGenerico2x1:Mux4|            ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux4            ; muxGenerico2x1      ; work         ;
-;          |muxGenerico2x1:Mux5|            ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux5            ; muxGenerico2x1      ; work         ;
-;          |registradorGenerico:PC|         ; 13 (13)             ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|fluxo_de_dados:FD|registradorGenerico:PC         ; registradorGenerico ; work         ;
+;          |muxGenerico2x1:Mux3|            ; 29 (29)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux3            ; muxGenerico2x1      ; work         ;
+;          |muxGenerico2x1:Mux4|            ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux4            ; muxGenerico2x1      ; work         ;
+;          |muxGenerico2x1:Mux5|            ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux5            ; muxGenerico2x1      ; work         ;
+;          |registradorGenerico:PC|         ; 12 (12)             ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|fluxo_de_dados:FD|registradorGenerico:PC         ; registradorGenerico ; work         ;
 ;          |somaConstante:SomadorConstante| ; 14 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|fluxo_de_dados:FD|somaConstante:SomadorConstante ; somaConstante       ; work         ;
 ;          |somador:Somador|                ; 14 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |calculadora|processador:Processador|fluxo_de_dados:FD|somador:Somador                ; somador             ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------+---------------------+--------------+
@@ -320,7 +320,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Total registers                              ; 1142  ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 13    ;
+; Number of registers using Synchronous Load   ; 12    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 1128  ;
@@ -333,11 +333,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------+
-; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; Yes        ; |calculadora|processador:Processador|fluxo_de_dados:FD|registradorGenerico:PC|DOUT[8]          ;
-; 8:1                ; 8 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; No         ; |calculadora|processador:Processador|fluxo_de_dados:FD|ULA:ULA|saida[7]                        ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |calculadora|processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|saidaA[0] ;
-; 9:1                ; 8 bits    ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |calculadora|processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|saidaB[6] ;
-; 6:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; No         ; |calculadora|processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux3|saida_MUX[0]        ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; Yes        ; |calculadora|processador:Processador|fluxo_de_dados:FD|registradorGenerico:PC|DOUT[8]          ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |calculadora|processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|saidaA[7] ;
+; 9:1                ; 8 bits    ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |calculadora|processador:Processador|fluxo_de_dados:FD|bancoRegistradores:Banco_Regs|saidaB[5] ;
+; 16:1               ; 8 bits    ; 80 LEs        ; 32 LEs               ; 48 LEs                 ; No         ; |calculadora|processador:Processador|fluxo_de_dados:FD|ULA:ULA|saida[0]                        ;
+; 6:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; No         ; |calculadora|processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux3|saida_MUX[1]        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------+
 
 
@@ -817,21 +817,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; boundary_port         ; 260                         ;
 ; cycloneiii_ff         ; 1142                        ;
 ;     ENA               ; 1128                        ;
-;     SLD               ; 13                          ;
-;     plain             ; 1                           ;
-; cycloneiii_lcell_comb ; 1138                        ;
+;     SLD               ; 12                          ;
+;     plain             ; 2                           ;
+; cycloneiii_lcell_comb ; 1149                        ;
 ;     arith             ; 34                          ;
 ;         2 data inputs ; 14                          ;
 ;         3 data inputs ; 20                          ;
-;     normal            ; 1104                        ;
+;     normal            ; 1115                        ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 8                           ;
-;         2 data inputs ; 65                          ;
-;         3 data inputs ; 55                          ;
-;         4 data inputs ; 975                         ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 129                         ;
+;         4 data inputs ; 972                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 18.30                       ;
-; Average LUT depth     ; 11.04                       ;
+; Max LUT depth         ; 20.00                       ;
+; Average LUT depth     ; 11.67                       ;
 +-----------------------+-----------------------------+
 
 
@@ -840,7 +840,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:06     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -850,7 +850,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Apr 17 19:20:13 2020
+    Info: Processing started: Fri Apr 17 20:58:49 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Calculadora -c Calculadora
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file muxGenerico2x1.vhd
@@ -933,7 +933,6 @@ Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "processador:Pro
 Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "processador:Processador|fluxo_de_dados:FD|muxGenerico2x1:Mux2" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/fluxo_de_dados.vhd Line: 190
 Info (12128): Elaborating entity "ULA" for hierarchy "processador:Processador|fluxo_de_dados:FD|ULA:ULA" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/fluxo_de_dados.vhd Line: 202
 Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 130
-Warning (10620): VHDL warning at memoriaRAM.vhd(39): comparison between unequal length operands always returns FALSE File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/memoriaRAM.vhd Line: 39
 Info (12128): Elaborating entity "decodificador" for hierarchy "decodificador:decodificador" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 142
 Info (12128): Elaborating entity "interfaceLEDs" for hierarchy "interfaceLEDs:saidaLED_Vermelhos" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 152
 Info (12128): Elaborating entity "interfaceCHAVES" for hierarchy "interfaceCHAVES:entradaChaves_0_7" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 170
@@ -963,7 +962,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[16]" is stuck at GND File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 24
     Warning (13410): Pin "LEDR[17]" is stuck at GND File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 24
     Warning (13410): Pin "LEDG[8]" is stuck at GND File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 25
-    Warning (13410): Pin "pontosdecontrole[6]" is stuck at GND File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 29
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -972,14 +970,14 @@ Warning (21074): Design contains 4 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 20
     Warning (15610): No output dependent on input pin "KEY[2]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 20
     Warning (15610): No output dependent on input pin "KEY[3]" File: /home/alessandrab/Dropbox/Leca/Insper/7oSem/DesComp/calculator/Projeto1/calculadora.vhd Line: 20
-Info (21057): Implemented 2518 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2529 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 23 input pins
     Info (21059): Implemented 237 output pins
-    Info (21061): Implemented 2258 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 30 warnings
-    Info: Peak virtual memory: 1049 megabytes
-    Info: Processing ended: Fri Apr 17 19:20:29 2020
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:29
+    Info (21061): Implemented 2269 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 1075 megabytes
+    Info: Processing ended: Fri Apr 17 20:59:03 2020
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:26
 
 

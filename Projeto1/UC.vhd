@@ -29,7 +29,7 @@ constant op_or : std_logic_vector(OPCODE_WIDTH-1 downto 0) 	:= "0111";	-- or
 constant op_not : std_logic_vector(OPCODE_WIDTH-1 downto 0) := "1000";	-- not
 constant op_xor : std_logic_vector(OPCODE_WIDTH-1 downto 0) := "1001";	-- xor
 
-constant addi	 : std_logic_vector(OPCODE_WIDTH-1 downto 0) := "1001";	-- xor
+constant addi	 : std_logic_vector(OPCODE_WIDTH-1 downto 0) := "1010";	-- addi
 
 
 alias sel_mux_5:				std_logic is pontosDeControle(11);
@@ -58,7 +58,7 @@ begin
 	sel_mux_3			<= '0' when (opcode = load) 
 								else '1';
 								
-	sel_ula	 			<= "0000" when (opcode = add or opcode = load or opcode = store) else
+	sel_ula	 			<= "0000" when (opcode = add or opcode = load or opcode = store or opcode = addi) else
 								"0001" when (opcode = sub or opcode = beq) else
 								"0010" when (opcode = op_and) else
 								"0011" when (opcode = op_or) else
@@ -67,15 +67,15 @@ begin
 								"1000";
 				
 				
-	sel_mux_2 			<= '1' when (opcode = load or opcode = store)
+	sel_mux_2 			<= '1' when (opcode = load or opcode = store or opcode = addi)
 								else '0';
 				
 				
-	hab_escrita_banco <= '1' when (opcode = load or opcode = add or opcode = sub or opcode = op_and or opcode = op_or or opcode = op_xor or opcode = op_not) 
+	hab_escrita_banco <= '1' when (opcode = load or opcode = add or opcode = sub or opcode = op_and or opcode = op_or or opcode = op_xor or opcode = op_not or opcode = addi) 
 								else '0';
 								
 	
-	sel_mux_1 			<= '1' when (opcode = jump) 
+	sel_mux_1 			<= '1' when (opcode = jump)
 								else '0';
 						
 												

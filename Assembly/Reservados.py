@@ -70,17 +70,17 @@ ADR_RESERVADO = [
        "sete_segmentos_1",
        "sete_segmentos_2",
        "sete_segmentos_3",
-       "ZERO",
-       "UM",
-       "DOIS", 
-       "TRES",
-       "QUATRO",
-       "CINCO", 
-       "SEIS", 
-       "SETE",
-       "OITO",
-       "NOVE",
-       "DEZ"
+       "ADDR_ZERO",
+       "ADDR_UM",
+       "ADDR_DOIS", 
+       "ADDR_TRES",
+       "ADDR_QUATRO",
+       "ADDR_CINCO", 
+       "ADDR_SEIS", 
+       "ADDR_SETE",
+       "ADDR_OITO",
+       "ADDR_NOVE",
+       "ADDR_DEZ"
        ]
 
 ADR_BIN = [

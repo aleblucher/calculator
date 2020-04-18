@@ -70,6 +70,7 @@ constant inst_and     : opCode_t := "0110";
 constant inst_or      : opCode_t := "0111";
 constant inst_not     : opCode_t := "1000";
 constant inst_xor     : opCode_t := "1001";
+constant addi	  	  : opCode_t := "1010";
 
 
 constant op_add    	  : std_logic_vector(7 downto 0) := "00000001";
@@ -131,15 +132,13 @@ constant inicio_tipo_J				: std_logic_vector(13 downto 0) := "00000000000000";
 		  
 		  tmp(5) := LW & R2 & R0 & sw_low;					-- carrega a segunda metada do input
 		  
-		  tmp(6) := beq & R1 & R0 & "00000110";			-- para o tmp 10
+		  tmp(6) := beq & R1 & R0 & "00000101";			-- para o tmp 10
 		  
 		  tmp(7) := add & R6 & R2 & R2 & "00000";
 		  
 		  tmp(8) := SW & R6 & R0 & hex_0_1;
 		  
-		  tmp(9) := LW & R5 & R0 & "11111111";
-		  
-		  tmp(10) := sub & R1 & R1 & R5 & "00000"; --"00100000"; -- R2 & 00000
+		  tmp(10) := addi & R1 & "11111111111"; --"00100000"; -- R2 & 00000
 		  
 		  tmp(11) := SW & R1 & R0 & hex_2_3;
 		  

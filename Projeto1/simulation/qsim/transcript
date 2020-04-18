@@ -1,33 +1,35 @@
 # do Calculadora.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:20:44 on Apr 17,2020
+# Start time: 21:00:18 on Apr 17,2020
 # vcom -work work Calculadora.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package VITAL_Timing
 # -- Loading package VITAL_Primitives
-# -- Loading package dffeas_pack
-# -- Loading package altera_primitives_components
 # -- Loading package cycloneive_atom_pack
 # -- Loading package cycloneive_components
+# -- Compiling entity hard_block
+# -- Compiling architecture structure of hard_block
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
 # -- Compiling entity calculadora
 # -- Compiling architecture structure of calculadora
-# End time: 19:20:44 on Apr 17,2020, Elapsed time: 0:00:00
+# End time: 21:00:19 on Apr 17,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:20:44 on Apr 17,2020
+# Start time: 21:00:19 on Apr 17,2020
 # vcom -work work Waveform11.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity calculadora_vhd_vec_tst
 # -- Compiling architecture calculadora_arch of calculadora_vhd_vec_tst
-# End time: 19:20:44 on Apr 17,2020, Elapsed time: 0:00:00
+# End time: 21:00:19 on Apr 17,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.calculadora_vhd_vec_tst 
-# Start time: 19:20:44 on Apr 17,2020
+# Start time: 21:00:19 on Apr 17,2020
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -39,17 +41,22 @@
 # Loading cycloneive.cycloneive_atom_pack(body)
 # Loading cycloneive.cycloneive_components
 # Loading work.calculadora(structure)
+# Loading work.hard_block(structure)
 # Loading ieee.std_logic_arith(body)
 # Loading cycloneive.cycloneive_io_obuf(arch)
 # Loading cycloneive.cycloneive_io_ibuf(arch)
+# Loading cycloneive.cycloneive_clkctrl(vital_clkctrl)
+# Loading cycloneive.cycloneive_ena_reg(behave)
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
 # Loading altera.dffeas(vital_dffeas)
-# ** Warning: Design size of 314855 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 373972 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
-# after#33
+# after#35
 # ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# Simulation time: 130000 ps
-# Simulation time: 130000 ps
-# Simulation time: 130000 ps
-# End time: 19:20:54 on Apr 17,2020, Elapsed time: 0:00:10
+# Simulation time: 70000 ps
+# Simulation time: 70000 ps
+# Simulation time: 70000 ps
+# Simulation time: 70000 ps
+# End time: 21:00:32 on Apr 17,2020, Elapsed time: 0:00:13
 # Errors: 0, Warnings: 2
+# Simulation time: 2000000 ps
